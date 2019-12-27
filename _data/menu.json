@@ -1,0 +1,82 @@
+[{
+  "name": "From the Range",
+  "hasMenuItem": [{
+    "name": "Rib Eye",
+    "description": "14-16 oz.",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 30.95
+    }]
+  }, {
+    "name": "New York",
+    "description": "14-16 oz.",
+    "image": [{
+      "url": "https://i.imgur.com/uRFVz9Zm.jpg",
+    }],
+    "offers": [{
+      "price": 27.95
+    }]
+  }, {
+    "name": "Filet",
+    "description": "The most tender cut. 8-10 oz.",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 30.95
+    }]
+  }, {
+    "name": "Paul Bunyan",
+    "description": "28-32 oz. Top Sirloin",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 31.95
+    }]
+  }, {
+    "name": "Top Sirloin",
+    "description": "14-16 oz.",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 23.95
+    }]
+  }, {
+    "name": "Dinner Steak",
+    "description": "8-10 oz. Top Sirloin",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 19.95
+    }]
+  }, {
+    "name": "Ground Sirloin",
+    "description": "With or without sauteed onions.",
+    "image": [{
+      "url": "https://i.imgur.com/8lS8ehXm.jpg",
+    }],
+    "offers": [{
+      "price": 17.95
+    }]
+  }]
+}, {
+  "name": "The Ranch & Garden",
+  "hasMenuItem": [{
+    "name": "Portabello Ravioli",
+    "description": "Mushroom stuffed with light alfredo sauce",
+    "image": [{
+      "url": "https://i.imgur.com/DYOAVoYm.jpg",
+    }],
+    "offers": [{
+      "price": 18.95
+    }],
+    "suitableForDiet": [
+      "VegetarianDiet"
+    ]
+  }]
+}]

@@ -1,5 +1,5 @@
 author: Chris Zuber
-title: Jekyll Template Demo
+title: Paradise Cove Lodge
 # url: ''
 markdown: kramdown
 version: 1.0.0
@@ -20,18 +20,13 @@ description: "A template repository for Jekyll sites, including skeleton JS, CSS
 mobile-web-app-capable: true
 # canonical: ''
 keywords:
-- jekyll
-- static
-- template
-- github
-- CSS3
-- HTML5
-- responsive design
-- progressive web app
-- pwa
-- ecmascript
-- javascript
-- es6
+- lake isabella
+- kern valley
+- kern river valley
+- dining
+- lodging
+- steak
+- lobster
 repository:
   username: shgysk8zer0
   project: jekyll-template

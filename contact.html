@@ -1,0 +1,37 @@
+---
+layout: default
+title: Contact
+pinned: true
+permalink: contact/
+---
+<form name="contact" method="POST" data-netlify="true">
+	<div class="input-group">
+		<label for="contact-name" class="block">
+			{% include icon.html icon="avatar-default" %}
+			<span>Name</span>
+		</label>
+		<input type="text" name="name" id="contact-name" autocomplete="name" placeholder="First Last" required="" />
+	</div>
+	<div class="input-group">
+		<label for="contact-email" class="block">
+			{% include icon.html icon="mail" %}
+			<span>Email</span>
+		</label>
+		<input type="email" name="email" id="contact-email" autocomplete="email" placeholder="user@example.com" required="" />
+	</div>
+	<div class="input-group">
+		<label for="contact-phone" class="block">
+			{% include icon.html icon="call-start" %}
+			<span>Phone</span>
+		</label>
+		<input type="tel" name="phone" id="contact-phone" autocomplete="telephone" placeholder="555-555-5555" />
+	</div>
+	<div class="input-group">
+		<label for="contact-message" class="block">
+			{% include icon.html icon="note" %}
+			<span>Message</span>
+		</label>
+		<textarea name="message" id="contact-message" placeholder="Enter your message here" required=""></textarea>
+	</div>
+	<button type="submit" class="btn btn-accept">Send</button>
+</form>

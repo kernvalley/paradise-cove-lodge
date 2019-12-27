@@ -1,0 +1,6 @@
+{% for menusection in site.data.menu %}
+	{% include menusection.html
+		name=menusection.name
+		hasMenuItem=menusection.hasMenuItem
+	%}
+{% endfor %}
