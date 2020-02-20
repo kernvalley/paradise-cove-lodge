@@ -3,6 +3,7 @@ layout: default
 title: Contact
 pinned: true
 permalink: contact/
+referrer: no-referrer
 ---
 <form name="contact" method="POST" data-netlify="true">
 	<div class="input-group">
@@ -35,3 +36,12 @@ permalink: contact/
 	</div>
 	<button type="submit" class="btn btn-accept">Send</button>
 </form>
+
+<script type="module" src="https://cdn.kernvalley.us/components/leaflet/map.js" async=""></script>
+<script type="module" src="https://cdn.kernvalley.us/components/leaflet/marker.js" async=""></script>
+<leaflet-map center="35.648349,-118.427896" zoom="13" minzoom="13" maxzoom="15" crossorigin="annonymous" zoomcontrol="" detectretina="">
+	<leaflet-marker latitude="35.648349" longitude="-118.427896" open="">
+		<div slot="popup">Paradise Cove Lodge</div>
+		<img slot="icon" src="/img/adwaita-icons/actions/mark-location.svg" width="32" height="32" decoding="async" loading="lazy" />
+	</leaflet-marker>
+</leaflet-map>

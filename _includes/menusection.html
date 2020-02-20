@@ -1,4 +1,4 @@
-<section class="menusection" itemtype="https://schema.org/MenuSection" itemprop="https://schema.org/{{ include.itemprop | default: 'hasMenuSection' }}" itemscope="">
+<section {% if include.identifier %}id="{{ include.identifier }}" {% endif %}class="menusection" itemtype="https://schema.org/MenuSection" itemprop="https://schema.org/{{ include.itemprop | default: 'hasMenuSection' }}" itemscope="">
 	<header class="menusection-header sticky top">
 		<h1 class="menusection-name center" itemprop="name">{{ include.name }}</h1>
 		{% if include.image %}<img src="{{ include.image }}" />{% endif %}
@@ -10,6 +10,7 @@
 			description=menuitem.description
 			offers=menuitem.offers
 			suitableForDiet=menuitem.suitableForDiet
+			identifier=menuitem.identifier
 		%}
 	{% endfor %}
 </section>

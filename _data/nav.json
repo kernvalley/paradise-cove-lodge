@@ -1,0 +1,21 @@
+[{
+  "label": "Home",
+  "href": "/",
+  "icon": "home"
+}, {
+  "label": "Restaurant",
+  "href": "/menu/",
+  "icon": "restaurant"
+}, {
+  "label": "Rooms & Rates",
+  "href": "/rooms/",
+  "icon": "hotel"
+}, {
+  "label": "About",
+  "href": "/about/",
+  "icon": "info"
+}, {
+  "label": "Contact",
+  "href": "/contact/",
+  "icon": "contact-new"
+}]

@@ -1,7 +1,9 @@
 [{
   "name": "From the Range",
+  "identifier": "c6a0afec-013d-4edb-865e-6b0d03a66bc7",
   "hasMenuItem": [{
     "name": "Rib Eye",
+    "identifier": "e78d719e-f38c-4fd5-996e-efc79a34f1c4",
     "description": "14-16 oz.",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -11,6 +13,7 @@
     }]
   }, {
     "name": "New York",
+    "identifier": "6ce3c8c0-83cc-4420-8839-368f0f7737e4",
     "description": "14-16 oz.",
     "image": [{
       "url": "https://i.imgur.com/uRFVz9Zm.jpg",
@@ -20,6 +23,7 @@
     }]
   }, {
     "name": "Filet",
+    "identifier": "a667a3fd-4601-4ee9-95e9-9e7d9a492b26",
     "description": "The most tender cut. 8-10 oz.",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -29,6 +33,7 @@
     }]
   }, {
     "name": "Paul Bunyan",
+    "identifier": "8776f25e-7174-4b08-8cda-ad3626db119b",
     "description": "28-32 oz. Top Sirloin",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -38,6 +43,7 @@
     }]
   }, {
     "name": "Top Sirloin",
+    "identifier": "45547d91-d4b2-4708-9fbc-6727a8b432af",
     "description": "14-16 oz.",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -47,6 +53,7 @@
     }]
   }, {
     "name": "Dinner Steak",
+    "identifier": "9733e7d5-cd5a-4f84-b762-69a8a522fbff",
     "description": "8-10 oz. Top Sirloin",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -56,6 +63,7 @@
     }]
   }, {
     "name": "Ground Sirloin",
+    "identifier": "d3c347c1-618b-4db9-9212-d8402ebbbb8e",
     "description": "With or without sauteed onions.",
     "image": [{
       "url": "https://i.imgur.com/8lS8ehXm.jpg",
@@ -66,8 +74,10 @@
   }]
 }, {
   "name": "The Ranch & Garden",
+  "identifier": "ae03d617-083c-499c-a9c2-dc318d29ae6d",
   "hasMenuItem": [{
     "name": "Portabello Ravioli",
+    "identifier": "d843fda8-34da-445f-984c-47d0330ed3ff",
     "description": "Mushroom stuffed with light alfredo sauce",
     "image": [{
       "url": "https://i.imgur.com/DYOAVoYm.jpg",
