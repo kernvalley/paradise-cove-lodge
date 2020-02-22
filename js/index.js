@@ -17,6 +17,38 @@ document.body.classList.toggle('no-dialog', document.createElement('dialog') ins
 document.body.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
 ready().then(async () => {
+	function updateImage(img, t = 15) {
+		if (img instanceof HTMLImageElement) {
+			const image = new Image();
+			image.crossOrigin = img.crossOrigin;
+			image.alt = img.alt;
+			image.id = img.id;
+			image.className = img.className;
+
+			image.addEventListener('load', ({target}) => {
+				requestAnimationFrame(() => {
+					image.width = image.naturalWidth;
+					image.height = image.naturalHeight;
+
+					img.replaceWith(target);
+					setTimeout(() => updateImage(target, t), t * 1000);
+				});
+			});
+
+			image.addEventListener('error', console.error);
+
+			const src = new URL(img.src);
+			src.searchParams.set('ts', Date.now());
+			image.src = src.href;
+		} else {
+			throw new Error('No lake cam image provided');
+		}
+	}
+
+	if (location.pathname.startsWith('/lakecam')) {
+		updateImage(document.getElementById('lake-cam-img'), 15);
+	}
+
 	$('[data-scroll-to]').click(event => {
 		const target = document.querySelector(event.target.closest('[data-scroll-to]').dataset.scrollTo);
 		target.scrollIntoView({

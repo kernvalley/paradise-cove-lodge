@@ -11,11 +11,15 @@
   "href": "/rooms/",
   "icon": "hotel"
 }, {
-  "label": "About",
+  "label": "About Us",
   "href": "/about/",
   "icon": "info"
 }, {
   "label": "Contact",
   "href": "/contact/",
   "icon": "contact-new"
+}, {
+  "label": "Lake Cam",
+  "icon": "camera-video",
+  "href": "/lakecam/"
 }]
