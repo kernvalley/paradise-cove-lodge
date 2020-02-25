@@ -19,6 +19,10 @@
   "href": "/contact/",
   "icon": "contact-new"
 }, {
+  "label": "Location",
+  "href": "/location/",
+  "icon": "mark-location"
+}, {
   "label": "Lake Cam",
   "icon": "camera-video",
   "href": "/lakecam/"
