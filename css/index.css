@@ -11,6 +11,7 @@
 @import url("https://cdn.kernvalley.us/css/core-css/scrollbar.css");
 @import url("./vars.css");
 @import url("./layout.css");
+@import url("./contact.css");
 
 input[hidden] + label[for].btn-toggle {
 	background-color: var(--button-disabled-background);

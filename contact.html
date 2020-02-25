@@ -5,7 +5,7 @@ pinned: true
 permalink: contact/
 referrer: no-referrer
 ---
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" class="card shadow" id="contact-form" data-netlify="true">
 	<div class="input-group">
 		<label for="contact-name" class="block">
 			{% include icon.html icon="avatar-default" %}
@@ -34,7 +34,10 @@ referrer: no-referrer
 		</label>
 		<textarea name="message" id="contact-message" placeholder="Enter your message here" required=""></textarea>
 	</div>
-	<button type="submit" class="btn btn-accept">Send</button>
+	<button type="submit" class="btn btn-accept">
+		{% include icon.html icon="go-next" %}
+		Send
+	</button>
 </form>
 
 <script type="module" src="https://cdn.kernvalley.us/components/leaflet/map.js" async=""></script>
