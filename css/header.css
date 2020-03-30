@@ -1,3 +1,15 @@
 #header {
-	background-image: url("/img/neon.svg");
+	background-image: url("/img/raster/background/snow-1440.jpg");
+}
+
+:root[data-background="dining"] #header {
+	background-image: url("/img/raster/background/dining.jpg");
+}
+
+:root[data-background="rooms"] #header {
+	background-image: url("/img/raster/background/rooms.jpg");
+}
+
+:root[data-background="lake"] #header {
+	background-image: url("/img/raster/background/lake.jpg");
 }

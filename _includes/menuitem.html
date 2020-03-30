@@ -2,7 +2,7 @@
 	{% if include.image %}
 		<!-- TODO: Convert to responsive images via `url` & `width` -->
 		{% for image in include.image %}
-			<img class="menuitem-image" src="{{ image.url }}" decoding="async" loading="lazy" itemprop="image" alt="{{ include.name }}" />
+			<img class="menuitem-image" src="{{ image.url }}" decoding="async" loading="lazy" itemprop="image" alt="{{ include.name }}" width="{{ image.width }}" height="{{ image.height }}" />
 		{% endfor %}
 	{% else %}
 		<svg class="current-color menuitem-image menuitem-image-default" width="48" height="48" viewBox="0 0 24 24">

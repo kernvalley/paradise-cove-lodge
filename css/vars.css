@@ -12,3 +12,10 @@
 		--scrollbar-width: auto;
 	}
 }
+
+:root {
+	--accent-color-dark: #661E2A;
+	--button-active-background-dark: #511721;
+	--accent-color-light: var(--accent-color-dark);
+	--button-active-background-light: var(--button-active-background-dark);
+}
