@@ -1,0 +1,10 @@
+<address itemprop="{{ include.itemprop | default: 'address' }}" itemtype="https://schema.org/PostalAddress" itemscope="">
+	{% if include.address.streetAddress %}<div itemprop="streetAddress">{{ inlclude.address.streetAddress }}</div>{% endif %}
+	{% if include.address.postOfficeBoxNumber %}<div itemprop="postOfficeBoxNumber">{{ inlclude.address.postOfficeBoxNumber }}</div>{% endif %}
+	<div>
+		<span itemprop="addressLocality">{{ inlude.address.addressLocality }}</span>,
+		<span itemprop="addressRegion">{{ inlude.address.addressRegion }}</span>
+		<span itemprop="postalCode">{{ inlude.address.postalCode }}</span>
+		<span itemprop="addressCountry" hidden="">{{ inlude.address.addressCountry }}</span>
+	</div>
+</address>

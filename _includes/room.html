@@ -1,4 +1,4 @@
-<div class="card grid shadow offer-container">
+<div class="card grid shadow offer-container" itemtype="https://schema.org/Offer" itemscope="" itemref="motel-container">
 	<figure id="image-{{ include.offer.identifier }}" class="room-image no-margins" itemtype="https://schema.org/ImageObject" itemprop="photo image" itemscope="">
 		<img class="fit-cover" itemprop="url" src="{{ include.offer.itemOffered.photo.url }}" decoding="async" loading="lazy" alt="Room Image" height="180" />
 	</figure>
@@ -25,7 +25,7 @@
 			<span class="room-details overflow-visible">
 				<details>
 					<summary>More Info</summary>
-					<!-- <pre class="card background-primary"><code>{{ include.offer | jsonify }}</code></pre> -->
+					<pre class="card background-primary"><code>{{ include.offer | jsonify }}</code></pre>
 				</details>
 			</span>
 		</div>
