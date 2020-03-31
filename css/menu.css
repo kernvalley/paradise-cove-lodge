@@ -17,15 +17,6 @@
 	margin-bottom: 0.4rem;
 }
 
-@media (max-width: 800px) {
-	.food-menuitem {
-		grid-template-areas: "name name" "image image" "description description" "offers diets";
-		grid-template-rows: auto;
-		grid-template-columns: 1fr 5em;
-		justify-content: center;
-	}
-}
-
 .menuitem-name {
 	margin: 0;
 	grid-area: name;
@@ -45,4 +36,13 @@
 
 .menuitem-diets {
 	grid-area: diets;
+}
+
+@media (max-width: 800px) {
+	.food-menuitem {
+		grid-template-areas: "name name" "image image" "description description" "offers diets";
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 5em;
+		justify-content: center;
+	}
 }
