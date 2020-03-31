@@ -5,9 +5,27 @@ permalink: menu/
 pinned: true
 background: dining
 ---
-<div>
+<div hidden="">
+	<!-- @TODO Convert to nav -->
 	{% for section in site.data.menu %}
 		<a href="/menu/#{{ section.identifier }}">{{ section.name }}</a>
 	{% endfor %}
 </div>
-{% include menu.html %}
+<div itemtype="https://schema.org/Restaurant" itemscope="">
+	<h3 itemprop="name" hidden="">Paradise Cove</h3>
+	<meta itemprop="image" content="/img/raster/background/snow.jpg" />
+	<meta itemprop="telephone" content="{{ site.data.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="priceRange" content="$$$" />
+	<meta itemprop="servesCuisine" content="American" />
+	<meta itemprop="acceptsReservations" content="Yes" />
+	<address itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope="" hidden="">
+		<div itemprop="streetAddress">{{ site.data.address.streetAddress }}</div>
+		<div>
+			<span itemprop="addressLocality">{{ site.data.address.addressLocality }}</span>,
+			<span itemprop="addressRegion">{{ site.data.address.addressRegion }}</span>
+			<span itemprop="postalCode">{{ site.data.address.postalCode }}</span>
+			<span itemprop="addressCountry" hidden="">{{ site.data.address.addressCountry }}</span>
+		</div>
+	</address>
+	{% include menu.html itemprop="hasMenu" %}
+</div>
