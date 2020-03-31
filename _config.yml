@@ -32,9 +32,9 @@ repository:
   project: jekyll-template
   title: Jekyll Template
 # twitter:
-feed:
-  url: /feed.rss
-  type: application/rss+xml
+# feed:
+#   url: /feed.rss
+#   type: application/rss+xml
 icons: '/img/icons.svg'
 theme-color: '#528ff9'
 background-color: '#242424'

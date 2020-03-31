@@ -1,0 +1,45 @@
+<div class="card grid shadow offer-container">
+	<figure id="image-{{ include.offer.identifier }}" class="room-image no-margins" itemtype="https://schema.org/ImageObject" itemprop="photo image" itemscope="">
+		<img class="fit-cover" itemprop="url" src="{{ include.offer.itemOffered.photo.url }}" decoding="async" loading="lazy" alt="Room Image" height="180" />
+	</figure>
+	<div id="{{ include.offer.identifier }}" class="offer" itemtype="https://schema.org/Offer" itemref="price-specification-{{ include.offer.identifier }}" itemscope="">
+		<div id="item-offered-{{ include.offer.identifier }}" class="room" itemprop="itemOffered" itemtype="https://schema.org/HotelRoom" itemref="image-{{ include.offer.identifier }}" itemscope="">
+			<h3 class="room-name clearfix" itemprop="name">
+				<span itemprop="name">{{ include.offer.name }}</span>
+				<span class="float-right">(Sleeps <span itemprop="occupancy">{{ include.offer.itemOffered.occupancy }}</span>)</span>
+			</h3>
+			<meta itemprop="petsAllowed" content="{{ include.offer.itemOffered.petsAllowed }}" />
+			<meta itemprop="smokingAllowed" content="{{ include.offer.itemOffered.smokingAllowed }}" />
+			<meta itemprop="numberOfRooms" content="{{ include.offer.itemOffered.numberOfRooms }}" />
+			<span itemprop="floorSize" itemtype="https://schema.org/QuantitativeValue" itemscope="">
+				<meta itemprop="value" content="{{ include.offer.itemOffered.floorSize.value }}" />
+				<meta itemprop="unitCode" content="{{ include.offer.itemOffered.floorSize.unitCode }}" />
+				{% if offer.itemOffered.floorSize.unitText %}<span itemprop="unitText">{{ include.offer.itemOffered.floorSize.unitText }}</span>{% endif %}
+			</span>
+			{% if offer.itemOffered.description %}<div itemprop="description" class="room-description">{{ include.offer.itemOffered.description }}</div>{% endif %}
+			<div itemprop="bed" itemtype="https://schema.org/BedDetails" itemscope="" hidden="">
+				<meta itemprop="numberOfBeds" content="{{ include.offer.itemOffered.bed.numberOfBeds }}" />
+				<meta itemprop="typeOfBed" content="{{ include.offer.itemOffered.bed.typeOfBed }}" />
+				{% if offer.itemOffered.bed.description %}<p itemprop="description">{{ include.offer.itemOffered.bed.description }}</p>{% endif %}
+			</div>
+			<span class="room-details overflow-visible">
+				<details>
+					<summary>More Info</summary>
+					<!-- <pre class="card background-primary"><code>{{ include.offer | jsonify }}</code></pre> -->
+				</details>
+			</span>
+		</div>
+		<div itemprop="inventoryLevel" itemtype="https://schema.org/QuantitativeValue" itemscope="" hidden="">
+			<meta itemprop="value" content="{{ include.offer.inventoryLevel.value }}" />
+		</div>
+	</div>
+	<div id="price-specification-{{ include.offer.identifier }}" class="room-price" itemprop="priceSpecification" itemtype="https://schema.org/PriceSpecification" itemscope="">
+		<meta itemprop="price" id="price-{{ include.offer.identifier }}" content="{{ include.offer.priceSpecification.price }}" />
+		<meta itemprop="priceCurrency" id="price-currency-{{ include.offer.identifier }}" content="{{ include.offer.priceSpecification.priceCurrency }}" />
+		<span itemprop="description" id="price-description-{{ include.offer.identifier }}">{{ include.offer.priceSpecification.description }}</span>
+	</div>
+	<a id="book-{{ include.offer.identifier }}" href="{{ include.offer.url }}" role="button" rel="noopener external" class="btn btn-primary btn-wide book-button">
+		{% include icon.html icon="link-external" %}
+		<span>Book Now</span>
+	</a>
+</div>
