@@ -2,6 +2,26 @@
 	background-image: url("/img/raster/background/snow-1440.jpg");
 }
 
+#org-info {
+	background-color: rgba(66, 1, 1, 0.55);
+	padding: 0.6em;
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+	right: 30vw;
+	left: 30vw;
+	border-radius: 8px;
+	border: 1px solid currentColor;
+	text-shadow: 2px 1px black;
+}
+
+@media (max-width: 600px) {
+	#org-info {
+		left: 5vw;
+		right: 5vw;
+	}
+}
+
 :root[data-background="dining"] #header {
 	background-image: url("/img/raster/background/dining.jpg");
 }
