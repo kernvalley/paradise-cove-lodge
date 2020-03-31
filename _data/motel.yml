@@ -1,7 +1,7 @@
 name: Paradise Cove Lodge
 image: /img/raster/backgound/snow-400.jpg
-checkinTime: 13:00
-checkoutTime: 12:00
+checkinTime: "13:00"
+checkoutTime: "12:00"
 petsAllowed: No
 numberOfRooms: 8
 starRating: 3
