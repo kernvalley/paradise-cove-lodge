@@ -5,4 +5,9 @@ permalink: menu/
 pinned: true
 background: dining
 ---
+<div>
+	{% for section in site.data.menu %}
+		<a href="/menu/#{{ section.identifier }}">{{ section.name }}</a>
+	{% endfor %}
+</div>
 {% include menu.html %}

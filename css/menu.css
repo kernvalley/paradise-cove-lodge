@@ -8,7 +8,7 @@
 .food-menuitem {
 	display: grid;
 	grid-template-areas: "image name name" "image description description" "image offers diets";
-	grid-template-rows: auto 1fr 1.2rem;
+	grid-template-rows: auto 1fr auto;
 	grid-template-columns: 320px 1fr 1fr;
 	grid-gap: 0.6em;
 	border: 1px solid currentColor;
@@ -21,7 +21,7 @@
 	.food-menuitem {
 		grid-template-areas: "name name" "image image" "description description" "offers diets";
 		grid-template-rows: auto;
-		grid-template-columns: auto;
+		grid-template-columns: 1fr 5em;
 		justify-content: center;
 	}
 }
@@ -39,7 +39,7 @@
 	grid-area: image;
 }
 
-.menuitem-offer {
+.menuitem-offers {
 	grid-area: offers;
 }
 

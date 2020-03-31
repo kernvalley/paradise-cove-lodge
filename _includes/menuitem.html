@@ -5,25 +5,32 @@
 			<img class="menuitem-image" src="{{ image.url }}" decoding="async" loading="lazy" itemprop="image" alt="{{ include.name }}" width="{{ image.width }}" height="{{ image.height }}" />
 		{% endfor %}
 	{% else %}
-		<svg class="current-color menuitem-image menuitem-image-default" width="48" height="48" viewBox="0 0 24 24">
+		<svg class="current-color menuitem-image menuitem-image-default" width="213" height="213" viewBox="0 0 24 24">
 			<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
 		</svg>
 	{% endif %}
 	<h2 class="menuitem-name center" itemprop="name">{{ include.name }}</h2>
 	<p class="menuitem-description" itemprop="description">{{ include.description }}</p>
-	{% for offer in include.offers %}
-		<div class="menuitem-offer" itemprop="offers" itemtype="https://schema.org/Offer" itemscope="">
-			$<span itemprop="price" class="menuitem-offer-price">{{ offer.price }}</span>
-			<meta itemprop="priceCurrency" content="{{ offer.priceCurrency | default: 'USD' }}" />
-		</div>
-	{% endfor %}
+	<div class="menuitem-offers">
+		{% for offer in include.offers %}
+			<div class="menuitem-offer" itemprop="offers" itemtype="https://schema.org/Offer" itemscope="">
+				{% if offer.name %}<b itemprop="name">{{ offer.name }}</b>{% endif %}
+				$<span itemprop="price" class="menuitem-offer-price">{{ offer.price }}</span>
+				{% if offer.description %}<i itemprop="description">{{ offer.description }}</i>{% endif %}
+				<meta itemprop="priceCurrency" content="{{ offer.priceCurrency | default: 'USD' }}" />
+			</div>
+		{% endfor %}
+	</div>
 	{% if include.suitableForDiet %}
-		<div class="menuitem-diets">
+		<div class="menuitem-diets clearfix">
 			{% for diet in include.suitableForDiet %}
-				<span class="menuitem-diet">
-					<span>{{ diet }}</span>
-					<link itemprop="suitableForDiet" href="https://schema.org/{{ diet }}" />
-				</span>
+				<link itemprop="suitableForDiet" href="https://schema.org/{{ diet }}" />
+				{% case diet %}
+					{% when 'VegetarianDiet' %}
+						<span title="Vegetarian" class="float-right">
+							{% include icon.html icon="vegetable" %}
+						</span>
+				{% endcase %}
 			{% endfor %}
 		</div>
 	{% endif %}
