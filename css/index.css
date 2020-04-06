@@ -12,6 +12,9 @@
 @import url("./vars.css");
 @import url("./layout.css");
 @import url("./contact.css");
+@import url("./menu.css");
+@import url("./rooms.css");
+@import url("./home.css");
 
 input[hidden] + label[for].btn-toggle {
 	background-color: var(--button-disabled-background);

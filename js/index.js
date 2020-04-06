@@ -6,7 +6,10 @@ import 'https://cdn.kernvalley.us/components/bacon-ipsum.js';
 import 'https://cdn.kernvalley.us/components/gravatar-img.js';
 import 'https://cdn.kernvalley.us/components/login-button.js';
 import 'https://cdn.kernvalley.us/components/logout-button.js';
-import {$, ready, registerServiceWorker} from 'https://cdn.kernvalley.us/js/std-js/functions.js';
+import 'https://cdn.kernvalley.us/components/slide-show/slide-show.js';
+import 'https://cdn.kernvalley.us/components/leaflet/map.js';
+import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
+import { $, ready, registerServiceWorker } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 
 if (document.documentElement.dataset.hasOwnProperty('serviceWorker')) {
 	registerServiceWorker(document.documentElement.dataset.serviceWorker).catch(console.error);
@@ -25,7 +28,7 @@ ready().then(async () => {
 			image.id = img.id;
 			image.className = img.className;
 
-			image.addEventListener('load', ({target}) => {
+			image.addEventListener('load', ({ target }) => {
 				requestAnimationFrame(() => {
 					image.width = image.naturalWidth;
 					image.height = image.naturalHeight;
