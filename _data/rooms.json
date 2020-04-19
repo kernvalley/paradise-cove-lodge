@@ -26,7 +26,7 @@
     "smokingAllowed": false,
     "photo": {
       "@type": "ImageObject",
-      "url": "https://static.wixstatic.com/media/76c3ea_b5fc2dee0fec4ee285f5002a9170ca0f.jpg"
+      "url": "/img/raster/rooms/king.jpg"
     },
     "floorSize": {
       "@type": "QuantitativeValue",
@@ -71,7 +71,7 @@
     "smokingAllowed": false,
     "photo": {
       "@type": "ImageObject",
-      "url": "https://static.wixstatic.com/media/76c3ea_4a51c193824a4655a97af8d030793ab7.jpg"
+      "url": "/img/raster/rooms/large.jpg"
     },
     "floorSize": {
       "@type": "QuantitativeValue",
