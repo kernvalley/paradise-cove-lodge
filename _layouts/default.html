@@ -14,6 +14,7 @@ pinned-posts: 5
 	class="no-js border-box smooth-scroll"
 	data-theme="{{ page.theme | default: layout.theme }}"
 	data-layout="{{ layout.name }}"
+	{% if page.background %}data-background="{{ page.background }}"{% endif %}
 	{% if site.service_worker %}data-service-worker="{{ site.service_worker }}"{% endif %}
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}

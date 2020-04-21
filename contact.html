@@ -1,0 +1,49 @@
+---
+layout: default
+title: Contact
+pinned: true
+permalink: contact/
+referrer: no-referrer
+---
+<form name="contact" method="POST" class="card shadow" id="contact-form" data-netlify="true">
+	<div class="input-group">
+		<label for="contact-name" class="block">
+			{% include icon.html icon="avatar-default" %}
+			<span>Name</span>
+		</label>
+		<input type="text" name="name" id="contact-name" autocomplete="name" placeholder="First Last" required="" />
+	</div>
+	<div class="input-group">
+		<label for="contact-email" class="block">
+			{% include icon.html icon="mail" %}
+			<span>Email</span>
+		</label>
+		<input type="email" name="email" id="contact-email" autocomplete="email" placeholder="user@example.com" required="" />
+	</div>
+	<div class="input-group">
+		<label for="contact-phone" class="block">
+			{% include icon.html icon="call-start" %}
+			<span>Phone</span>
+		</label>
+		<input type="tel" name="phone" id="contact-phone" autocomplete="telephone" placeholder="555-555-5555" />
+	</div>
+	<div class="input-group">
+		<label for="contact-message" class="block">
+			{% include icon.html icon="note" %}
+			<span>Message</span>
+		</label>
+		<textarea name="message" id="contact-message" placeholder="Enter your message here" required=""></textarea>
+	</div>
+	<button type="submit" class="btn btn-accept">
+		{% include icon.html icon="go-next" %}
+		Send
+	</button>
+</form>
+<script type="module" src="https://cdn.kernvalley.us/components/leaflet/map.js" async=""></script>
+<script type="module" src="https://cdn.kernvalley.us/components/leaflet/marker.js" async=""></script>
+<leaflet-map center="35.648349,-118.427896" zoom="13" minzoom="13" maxzoom="15" crossorigin="annonymous" zoomcontrol="" detectretina="">
+	<leaflet-marker latitude="35.648349" longitude="-118.427896" open="">
+		<div slot="popup">Paradise Cove Lodge</div>
+		<img slot="icon" src="/img/adwaita-icons/actions/mark-location.svg" width="32" height="32" decoding="async" loading="lazy" />
+	</leaflet-marker>
+</leaflet-map>

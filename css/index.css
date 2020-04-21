@@ -8,8 +8,13 @@
 @import url("https://cdn.kernvalley.us/css/core-css/fonts.css");
 @import url("https://cdn.kernvalley.us/css/animate.css/animate.css");
 @import url("https://cdn.kernvalley.us/css/core-css/animations.css");
+@import url("https://cdn.kernvalley.us/css/core-css/scrollbar.css");
 @import url("./vars.css");
 @import url("./layout.css");
+@import url("./contact.css");
+@import url("./menu.css");
+@import url("./rooms.css");
+@import url("./home.css");
 
 input[hidden] + label[for].btn-toggle {
 	background-color: var(--button-disabled-background);
@@ -32,4 +37,12 @@ input[hidden]:checked + label[for].btn-toggle .when-unchecked {
 img.avatar {
 	vertical-align: middle;
 	margin-left: 1.2em;
+}
+
+.input-group input, .input-group textarea, .input-group select {
+	background: transparent;
+	color: inherit;
+	border-style: none none solid none;
+	padding: 0.3em;
+	margin-bottom: 0.3em;
 }

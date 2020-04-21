@@ -1,0 +1,32 @@
+---
+layout: default
+title: Menu
+permalink: menu/
+pinned: true
+background: dining
+---
+<div hidden="">
+	<!-- @TODO Convert to nav -->
+	{% for section in site.data.menu %}
+		<a href="/menu/#{{ section.identifier }}">{{ section.name }}</a>
+	{% endfor %}
+</div>
+<div itemtype="https://schema.org/Restaurant" itemscope="">
+	<h3 itemprop="name" hidden="">{{ site.data.restaurant.name }}</h3>
+	<meta itemprop="image" content="{{ site.data.restaurant.image }}" />
+	<meta itemprop="telephone" content="{{ site.data.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="priceRange" content="{{ site.data.restaurant.priceRange | default: '$$$' }}" />
+	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
+	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
+	<div hidden="">{% include address.html address=site.data.address %}</div>
+	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
+		{% for menusection in site.data.menu %}
+			{% include menusection.html
+				name=menusection.name
+				hasMenuItem=menusection.hasMenuItem
+				identifier=menusection.identifier
+				itemprop="hasMenuSection"
+			%}
+		{% endfor %}
+	</div>
+</div>

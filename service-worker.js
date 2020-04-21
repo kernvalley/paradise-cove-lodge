@@ -1,6 +1,6 @@
 'use strict';
 /*eslint no-undef: 0*/
-/* {{ site.time | date: data_to_xmlschema }} */
+/* 2020-02-20T11:42 */
 self.importScripts('/sw.config.js');
 
 self.addEventListener('install', async event => {
@@ -51,17 +51,31 @@ self.addEventListener('fetch', event => {
 					: url.host === entry
 			))) {
 				const resp = await caches.match(event.request.url);
+
 				if (resp instanceof Response) {
 					return resp;
 				} else if (navigator.onLine) {
+					if (event.request.headers.has('Referer')) {
+						event.request.remove('Referer');
+					}
 					const resp = await fetch(event.request.url, {
-						mode: 'cors',
+						cache: event.request.cache,
+						credentials: event.request.credentials,
 						headers: event.request.headers,
+						integrity: event.request.integrity,
+						method: event.request.method,
+						mode: event.request.mode,
+						redirect: event.request.redirect,
+						referrer: event.request.referrer,
+						referrerPolicy: event.request.referrerPolicy,
+
 					});
 
 					if (resp instanceof Response) {
-						const cache = await caches.open(config.version);
-						cache.put(event.request.url, resp.clone());
+						if (resp.ok) {
+							const cache = await caches.open(config.version);
+							cache.put(event.request.url, resp.clone());
+						}
 						return resp;
 					} else {
 						console.error(`Failed in request for ${event.request.url}`);

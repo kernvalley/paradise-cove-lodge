@@ -1,5 +1,24 @@
 #nav {
-	padding: 0.6em;
 	font-size: 1.2em;
 	justify-content: space-around;
+}
+
+#nav-container {
+	display: inline-flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.nav-link {
+	padding: 0.4rem 0.8rem;
+	justify-content: center;
+}
+
+.nav-link:hover, .nav-link.current {
+	background-color: var(--button-active-background);
+	transition: background-color 600ms ease-in-out;
+}
+
+.nav-link.current {
+	border-bottom: 0.2em solid currentColor;
 }

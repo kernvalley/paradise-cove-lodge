@@ -1,0 +1,22 @@
+---
+layout: default
+title: Rooms & Rates
+pinned: true
+permalink: /rooms/
+background: rooms
+referrer: no-referrer
+---
+<h2 class="center font-title">{{ page.title }}</h2>
+<div id="motel-container" itemprop="offeredBy" itemtype="https://schema.org/Motel" itemscope="">
+	<h3 itemprop="name" hidden="">{{ site.data.motel.name }}</h3>
+	<meta itemprop="image" content="{{ site.data.motel.image | absolute_url }}" />
+	<meta itemprop="telephone" content="{{ site.data.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="petsAllowed" content="{{ site.data.motel.petsAllowed | default: 'No' }}" />
+	<meta itemprop="checkinTime" content="{{ site.data.motel.checkinTime }}" />
+	<meta itemprop="checkoutTime" content="{{ site.data.motel.checkoutTime }}" />
+	<meta itemprop="numberOfRooms" content="{{ site.data.motel.numberOfRooms }}" />
+	<div hidden="">{% include address.html address=site.data.address %}</div>
+	{% for offer in site.data.rooms %}
+		{% include room.html offer=offer %}
+	{% endfor %}
+</div>

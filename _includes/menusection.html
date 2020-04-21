@@ -1,0 +1,16 @@
+<section {% if include.identifier %}id="{{ include.identifier }}" {% endif %}class="menusection" itemprop="{{ include.itemprop | default: 'hasMenuSection' }}" itemtype="https://schema.org/MenuSection" itemprop="https://schema.org/{{ include.itemprop | default: 'hasMenuSection' }}" itemscope="">
+	<header class="menusection-header sticky top">
+		<h1 class="menusection-name center" itemprop="name">{{ include.name }}</h1>
+		{% if include.image %}<img src="{{ include.image }}" />{% endif %}
+	</header>
+	{% for menuitem in include.hasMenuItem %}
+		{% include menuitem.html
+			name=menuitem.name
+			image=menuitem.image
+			description=menuitem.description
+			offers=menuitem.offers
+			suitableForDiet=menuitem.suitableForDiet
+			identifier=menuitem.identifier
+		%}
+	{% endfor %}
+</section>

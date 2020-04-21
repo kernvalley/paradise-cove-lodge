@@ -1,0 +1,48 @@
+.menusection-header {
+	top: var(--nav-height, 3.5rem);
+	background: #710202;
+	color: #fafafa;
+	padding: 0.2rem;
+}
+
+.food-menuitem {
+	display: grid;
+	grid-template-areas: "image name name" "image description description" "image offers diets";
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 320px 1fr 1fr;
+	grid-gap: 0.6em;
+	border: 1px solid currentColor;
+	border-radius: 4px;
+	padding: 0.4em;
+	margin-bottom: 0.4rem;
+}
+
+.menuitem-name {
+	margin: 0;
+	grid-area: name;
+}
+
+.menuitem-description {
+	grid-area: description;
+}
+
+.menuitem-image {
+	grid-area: image;
+}
+
+.menuitem-offers {
+	grid-area: offers;
+}
+
+.menuitem-diets {
+	grid-area: diets;
+}
+
+@media (max-width: 800px) {
+	.food-menuitem {
+		grid-template-areas: "name name" "image image" "description description" "offers diets";
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 5em;
+		justify-content: center;
+	}
+}

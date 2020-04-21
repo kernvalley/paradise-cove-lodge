@@ -1,1 +1,15 @@
-<header id="header" class="background-cover background-fixed"></header>
+<header id="header" class="background-cover background-fixed">
+	<div id="org-info" class="center" itemtype="https://schema.org/LocalBusiness" itemscope="">
+		<h1 itemprop="name">{{ site.title }}</h1>
+		{% include address.html address=site.data.address %}
+		<a href="tel:{{ site.data.address.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="inline-block">
+			{% include icon.html icon="call-start" %}
+			<span>{{ site.data.address.telephone | replace: '+1-', '' }}</span>
+		</a>
+		<a href="{{ page.url }}#main" class="block" title="Skip to content">
+			<span class="mobile-hidden">Skip to Content</span>
+			<br class="mobile-hidden" />
+			{% include icon.html icon="chevron-down" class="current-color" height="48px" width="64px" %}
+		</a>
+	</div>
+</header>

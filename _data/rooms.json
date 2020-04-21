@@ -1,0 +1,91 @@
+[{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "identifier": "8727d723-ee14-4c9f-af26-e5c91c96f5b2",
+  "name": "King Room",
+  "description": "$85 (plus tax) per night",
+  "url": "https://reservation.worldweb.com/hotel/2062",
+  "priceSpecification": {
+    "@type": "PriceSpecification ",
+    "price": 85,
+    "priceCurrency": "USD",
+    "description": "$85 per night"
+   },
+  "itemOffered": {
+    "@type": "HotelRoom",
+    "name": "King Room",
+    "occupancy": 2,
+    "numberOfRooms": 1,
+    "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "King"
+    },
+    "description": "A room with a view and a king sized bed",
+    "petsAllowed": false,
+    "smokingAllowed": false,
+    "photo": {
+      "@type": "ImageObject",
+      "url": "/img/raster/rooms/king.jpg"
+    },
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 23,
+      "unitCode": "FTK",
+      "unitText": "23 Square Ft."
+    },
+    "amenityFeature": [{
+      "@type": "LocationFeatureSpecification",
+      "name": "Swimming Pool"
+    }]
+  },
+  "inventoryLevel": {
+    "@type": "QuantitativeValue",
+    "value": 4
+  }
+}, {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "identifier": "8df1ee12-d903-4492-aa35-38fe82f313ed",
+  "name": "Large Room",
+  "description": "$100 (plus tax) per night",
+  "url": "https://reservation.worldweb.com/hotel/2062",
+  "priceSpecification": {
+    "@type": "PriceSpecification ",
+    "price": 100,
+    "priceCurrency": "USD",
+    "description": "$100 per night",
+   },
+  "itemOffered": {
+    "@type": "HotelRoom",
+    "name": "Large Room",
+    "occupancy": 4,
+    "numberOfRooms": 1,
+    "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 2,
+      "typeOfBed": "Queen"
+    },
+    "description": "A room with a view and two queen sized bed",
+    "petsAllowed": false,
+    "smokingAllowed": false,
+    "photo": {
+      "@type": "ImageObject",
+      "url": "/img/raster/rooms/large.jpg"
+    },
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 23,
+      "unitCode": "FTK",
+      "unitText": "23 Square Ft."
+    },
+    "amenityFeature": [{
+      "@type": "LocationFeatureSpecification",
+      "name": "Swimming Pool"
+    }]
+  },
+  "inventoryLevel": {
+    "@type": "QuantitativeValue",
+    "value": 4
+  }
+}]
