@@ -1,11 +1,26 @@
 <header id="header" class="background-cover background-fixed">
 	<div id="org-info" class="center" itemtype="https://schema.org/LocalBusiness" itemscope="">
 		<h1 itemprop="name">{{ site.title }}</h1>
-		{% include address.html address=site.data.address %}
-		<a href="tel:{{ site.data.address.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="inline-block">
-			{% include icon.html icon="call-start" %}
-			<span>{{ site.data.address.telephone | replace: '+1-', '' }}</span>
-		</a>
+		{% if site.data.business.logo %}
+			<meta itemprop="logo" content="{{ site.data.business.logo | absolute_url }}" />
+		{% endif %}
+		{% if site.data.business.image %}
+			<meta itemprop="image" content="{{ site.data.business.image | absolute_url }}" />
+		{% endif %}
+		<meta itemprop="url" content="{{ site.data.url | absolute_url | default: site.url }}" />
+		{% include address.html address=site.data.business.address %}
+		{% if site.data.business.telephone %}
+			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="block">
+				{% include icon.html icon="call-start" %}
+				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
+			</a>
+		{% endif %}
+		{% if site.data.business.email %}
+			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
+				{% include icon.html icon="mail" %}
+				<span>{{ site.data.business.email }}</span>
+			</a>
+		{% endif %}
 		<a href="{{ page.url }}#main" class="block" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
