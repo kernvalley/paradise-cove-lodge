@@ -13,9 +13,9 @@
 			{% include icon.html icon="call-start" %}
 			<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 		</a>
-		<a href="tel:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
+		<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
 			{% include icon.html icon="mail" %}
-			<span>{{ site.data.business.mail }}</span>
+			<span>{{ site.data.business.email }}</span>
 		</a>
 		<a href="{{ page.url }}#main" class="block" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
