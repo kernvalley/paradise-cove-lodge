@@ -38,7 +38,7 @@
 	grid-area: diets;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1050px) {
 	.food-menuitem {
 		grid-template-areas: "name name" "image image" "description description" "offers diets";
 		grid-template-rows: auto;
