@@ -20,9 +20,4 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.</p>
 <p class="inline-block">Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.</p>
 <div class="clearfix"></div>
-<leaflet-map center="35.648349,-118.427896" zoom="13" minzoom="13" maxzoom="15" crossorigin="annonymous" zoomcontrol="" detectretina="">
-	<leaflet-marker latitude="35.648349" longitude="-118.427896" open="">
-		<div slot="popup">Paradise Cove Lodge</div>
-		<img slot="icon" src="/img/adwaita-icons/actions/mark-location.svg" width="32" height="32" decoding="async" loading="lazy" />
-	</leaflet-marker>
-</leaflet-map>
+{% include map.html address= site.data.address %}
