@@ -1,0 +1,7 @@
+- name: Rentals Available
+  image:
+    name: Placeholder
+    url: "/img/raster/rentals/sunroom.jpg"
+    width: 360
+    height: 213
+  description: This is a test of the ads-in-sidebar thingy

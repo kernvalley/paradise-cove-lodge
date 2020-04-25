@@ -59,7 +59,8 @@
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter",
     "netlify:deploy": "netlify deploy",
     "netlify:serve": "netlify dev",
-    "netlify:live": "netlify dev --live"
+    "netlify:live": "netlify dev --live",
+    "netlify:link": "netlify link"
   },
   "dependencies": {
     "svg-sprite-generator": "0.0.7"
