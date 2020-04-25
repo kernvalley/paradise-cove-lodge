@@ -1,0 +1,19 @@
+type: LocalBusiness
+name: Paradise Cove Lodge
+logo: /img/icon-192.png
+image: /img/raster/backgound/snow-400.jpg
+url: "https://www.paradisecove.com"
+telephone: "+1-760-379-2719"
+email: paradisecovelodge@gmail.com
+address:
+  streetAddress: 10700 Highway 178
+  addressLocality: Lake Isabella
+  addressRegion: CA
+  postalCode: 93240
+  addressCountry: USA
+  url: "https://goo.gl/maps/HVrsM1jr7cbRykck9"
+geo:
+  name: Paradise Cove Lodge
+  latitude: 35.648349
+  longitude: -118.427896
+  url: "https://goo.gl/maps/HVrsM1jr7cbRykck9"

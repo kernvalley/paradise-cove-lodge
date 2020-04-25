@@ -14,11 +14,11 @@ background: dining
 <div itemtype="https://schema.org/Restaurant" itemscope="">
 	<h3 itemprop="name" hidden="">{{ site.data.restaurant.name }}</h3>
 	<meta itemprop="image" content="{{ site.data.restaurant.image }}" />
-	<meta itemprop="telephone" content="{{ site.data.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="telephone" content="{{ site.data.business.address.telephone | replace: '+1-', '' }}" />
 	<meta itemprop="priceRange" content="{{ site.data.restaurant.priceRange | default: '$$$' }}" />
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
-	<div hidden="">{% include address.html address=site.data.address %}</div>
+	<div hidden="">{% include address.html address=site.data.business.address %}</div>
 	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
 		{% for menusection in site.data.menu %}
 			{% include menusection.html
