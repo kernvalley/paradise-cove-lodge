@@ -25,4 +25,4 @@ All of our rooms  share a community front porch and have great lake views.
 There is a community lounge area.  The rooms have new flat screen TV's with
 sattelite TV and HBO.  Coffee makers and mini-refrigerators are in every room.
 New Heating & air-conditioning units and free Wi-Fi. 
-{% include map.html geo=site.data.geo.address %}
+{% include map.html geo=site.data.business.geo %}
