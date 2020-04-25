@@ -9,14 +9,18 @@
 		{% endif %}
 		<meta itemprop="url" content="{{ site.data.url | absolute_url | default: site.url }}" />
 		{% include address.html address=site.data.business.address %}
-		<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="block">
-			{% include icon.html icon="call-start" %}
-			<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
-		</a>
-		<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
-			{% include icon.html icon="mail" %}
-			<span>{{ site.data.business.email }}</span>
-		</a>
+		{% if site.data.business.telephone %}
+			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="block">
+				{% include icon.html icon="call-start" %}
+				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
+			</a>
+		{% endif %}
+		{% if site.data.business.email %}
+			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
+				{% include icon.html icon="mail" %}
+				<span>{{ site.data.business.email }}</span>
+			</a>
+		{% endif %}
 		<a href="{{ page.url }}#main" class="block" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
