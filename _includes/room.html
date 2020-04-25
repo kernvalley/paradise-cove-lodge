@@ -1,6 +1,6 @@
 <div class="card grid shadow offer-container" itemtype="https://schema.org/Offer" itemscope="" itemref="motel-container">
 	<figure id="image-{{ include.offer.identifier }}" class="room-image no-margins" itemtype="https://schema.org/ImageObject" itemprop="photo image" itemscope="">
-		<img class="fit-cover" itemprop="url" src="{{ include.offer.itemOffered.photo.url }}" decoding="async" loading="lazy" alt="Room Image" height="180" />
+		<img class="fit-cover" itemprop="url" src="{{ include.offer.itemOffered.photo.url }}" alt="Room image" decoding="async" loading="lazy" alt="Room Image" height="180" />
 	</figure>
 	<div id="{{ include.offer.identifier }}" class="offer" itemtype="https://schema.org/Offer" itemref="price-specification-{{ include.offer.identifier }}" itemscope="">
 		<div id="item-offered-{{ include.offer.identifier }}" class="room" itemprop="itemOffered" itemtype="https://schema.org/HotelRoom" itemref="image-{{ include.offer.identifier }}" itemscope="">

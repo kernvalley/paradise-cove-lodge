@@ -4,8 +4,18 @@
 	color: #fafafa;
 }
 
-.social-links {
+.social-links, .footer-link {
 	font-size: 1.3rem;
+	padding: 0.4em;
+}
+
+.social-link {
+	padding: 0.4em;
+}
+
+.social-link .social-icon {
+	width: 48px;
+	vertical-align: middle;
 }
 
 .social-links .cols {
