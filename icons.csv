@@ -12,8 +12,11 @@ mark-location,img/adwaita-icons/actions/mark-location.svg
 document-send,img/adwaita-icons/actions/document-send.svg
 mail,img/octicons/mail.svg
 info,img/octicons/info.svg
+map,img/icon/map.svg
 note,img/octicons/note.svg
-facebook,img/logos/mono/facebook.svg
+facebook,img/logos/facebook.svg
+yelp,img/logos/yelp.svg
+tripadvisor,img/logos/tripadvisor.svg
 twitter,img/logos/mono/twitter.svg
 linkedin,img/logos/mono/linkedin.svg
 mark-github,img/octicons/mark-github.svg

@@ -1,47 +1,36 @@
 <footer id="footer">
-	<div class="social-links cols-2">
-		{% if site.repository %}
-			<div class="cols inline-block">
-				<a class="block" href="https://github.com/{{ site.repository.username }}/" target="_blank" rel="external noopener">
-					<svg class="current-color icon social-icon">
-						<use xlink:href="{{ site.icons }}#mark-github" />
-					</svg>
-					<span>GitHub Profile</span>
-				</a>
-				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}" target="_blank" rel="external noopener">
-					<svg class="current-color icon social-icon" aria-hidden="true">
-						<use xlink:href="{{ site.icons }}#repo"></use>
-					</svg>
-					<span>GitHub Repo</span>
-				</a>
-				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}/issues" target="_blank" rel="external noopener">
-					<svg class="current-color icon social-icon" aria-hidden="true">
-						<use xlink:href="{{ site.icons }}#issue-opened"></use>
-					</svg>
-					<span>Report a Problem</span>
-				</a>
+	<div class="social-links" data-cols="auto">
+		{% if site.data.footer.social %}
+			<h3>Find us on&hellip;</h3>
+			<div class="social-links">
+				{% for link in site.data.footer.social %}
+					<a href="{{ link.url }}" class="social-link inline-block center" rel="noopener external">
+						{% include icon.html icon=link.icon class="social-icon" height="48" %}
+						<br />
+						<span class="social-label link-text">{{ link.label }}</span>
+					</a>
+				{% endfor %}
 			</div>
+			<hr />
 		{% endif %}
-		<div class="cols inline-block">
-			<a class="block" href="https://shgysk8zer0.github.io" target="_blank" rel="external noopener" itemprop="sameAs">
-				<svg class="current-color icon social-icon" aria-hidden="true">
-					<use xlink:href="{{ site.icons }}#link-external"></use>
-				</svg>
-				<span>My Website</span>
+		{% if site.data.address.telephone %}
+			<a class="footer-link inline-block" href="tel:{{ site.data.address.telephone }}">
+				{% include icon.html icon="call-start" %}
+				<span class="link-text underline">{{ site.data.address.telephone | replace: '+1-', ''}}</span>
 			</a>
-			<a class="block" href="https://twitter.com/shgysk8zer0" target="_blank" rel="external noopener" itemprop="sameAs">
-				<svg class="current-color icon social-icon" aria-hidden="true">
-					<use xlink:href="{{ site.icons }}#twitter"></use>
-				</svg>
-				<span>On Twitter</span>
+		{% endif %}
+		{% if site.data.address.url %}
+			<a class="footer-link inline-block" href="{{ site.data.address.url }}" rel="noopener external">
+				{% include icon.html icon="map" %}
+				<span class="link-text underline">Directions</span>
 			</a>
-			<a class="block" href="https://www.linkedin.com/in/chris-zuber-455346141/" target="_blank" rel="external noopener" itemprop="sameAs">
-				<svg class="current-color icon social-icon" aria-hidden="true">
-					<use xlink:href="{{ site.icons }}#linkedin"></use>
-				</svg>
-				<span>LinkedIn</span>
+		{% endif %}
+		{% if site.repository %}
+			<a class="footer-link inline-block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}/issues" target="_blank" rel="external noopener">
+				{% include icon.html icon="issue-opened" %}
+				<span class="link-text underline">Report a Problem</span>
 			</a>
-		</div>
+		{% endif %}
 	</div>
 	<hr />
 	<div class="copyright">
