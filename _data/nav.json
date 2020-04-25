@@ -1,7 +1,7 @@
 [{
   "label": "Home",
   "href": "/",
-  "icon": "home"
+  "icon": "icon-mono"
 }, {
   "label": "Restaurant",
   "href": "/menu/",
