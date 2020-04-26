@@ -11,6 +11,14 @@ go-next,img/adwaita-icons/actions/go-next.svg
 go-prev,img/adwaita-icons/actions/go-prev.svg
 mark-location,img/adwaita-icons/actions/mark-location.svg
 document-send,img/adwaita-icons/actions/document-send.svg
+network-wireless-hotspot,img/adwaita-icons/status/network-wireless-hotspot.svg
+network-wireless-signal-excellenet,img/adwaita-icons/status/network-wireless-signal-excellent.svg
+network-wireless-signal-good,img/adwaita-icons/status/network-wireless-signal-good.svg
+network-wireless-offline,img/adwaita-icons/status/network-wireless-offline.svg
+smoking,img/icon/smoking.svg
+no-smoking,img/icon/no-smoking.svg
+pets,img/icon/pets.svg
+no-pets,img/icon/no-pets.svg
 mail,img/octicons/mail.svg
 info,img/octicons/info.svg
 map,img/icon/map.svg

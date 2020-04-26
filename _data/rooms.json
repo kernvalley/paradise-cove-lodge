@@ -22,8 +22,22 @@
       "typeOfBed": "King"
     },
     "description": "A room with a view and a king sized bed",
-    "petsAllowed": false,
-    "smokingAllowed": false,
+    "petsAllowed": "No",
+    "smokingAllowed": "Yes",
+    "amenityFeature": [{
+      "@type": "LocationFeatureSpecification",
+      "name": "Swimming Pool",
+      "value": "Yes"
+    }, {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi",
+      "value": "Yes",
+      "image": "network-wireless-signal-good"
+    }, {
+      "@type": "LocationFeatureSpecification",
+      "name": "A/C",
+      "value": "Yes"
+    }],
     "photo": {
       "@type": "ImageObject",
       "url": "/img/raster/rooms/king.jpg"
@@ -33,11 +47,7 @@
       "value": 23,
       "unitCode": "FTK",
       "unitText": "23 Square Ft."
-    },
-    "amenityFeature": [{
-      "@type": "LocationFeatureSpecification",
-      "name": "Swimming Pool"
-    }]
+    }
   },
   "inventoryLevel": {
     "@type": "QuantitativeValue",
@@ -67,8 +77,22 @@
       "typeOfBed": "Queen"
     },
     "description": "A room with a view and two queen sized bed",
-    "petsAllowed": false,
-    "smokingAllowed": false,
+    "petsAllowed": "No",
+    "smokingAllowed": "No",
+    "amenityFeature": [{
+      "@type": "LocationFeatureSpecification",
+      "name": "Swimming Pool",
+      "value": "Yes"
+    }, {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi",
+      "value": "Yes",
+      "image": "network-wireless-signal-good"
+    }, {
+      "@type": "LocationFeatureSpecification",
+      "name": "A/C",
+      "value": "Yes"
+    }],
     "photo": {
       "@type": "ImageObject",
       "url": "/img/raster/rooms/large.jpg"
@@ -78,11 +102,7 @@
       "value": 23,
       "unitCode": "FTK",
       "unitText": "23 Square Ft."
-    },
-    "amenityFeature": [{
-      "@type": "LocationFeatureSpecification",
-      "name": "Swimming Pool"
-    }]
+    }
   },
   "inventoryLevel": {
     "@type": "QuantitativeValue",
