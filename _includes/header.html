@@ -7,10 +7,10 @@
 		{% if site.data.business.image %}
 			<meta itemprop="image" content="{{ site.data.business.image | absolute_url }}" />
 		{% endif %}
-		<meta itemprop="url" content="{{ site.data.url | absolute_url | default: site.url }}" />
+		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
 		{% include address.html address=site.data.business.address %}
 		{% if site.data.business.telephone %}
-			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.telephone }}" class="block">
+			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block">
 				{% include icon.html icon="call-start" %}
 				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
