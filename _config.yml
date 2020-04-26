@@ -1,6 +1,6 @@
 author: Chris Zuber
 title: Paradise Cove Lodge
-# url: ''
+url: 'https://cocky-northcutt-d88654.netlify.app/'
 markdown: kramdown
 version: 1.0.0
 timezone: America/Los_Angeles
@@ -16,10 +16,12 @@ manifest: /manifest.json
 tiles-config: /browserconfig.xml
 # service_worker:
 og-type: website
-description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
+description: "Steakhouse & Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 mobile-web-app-capable: true
 # canonical: ''
 keywords:
+- Paradise Cove
+- Paradise Cove Lodge
 - lake isabella
 - kern valley
 - kern river valley
@@ -27,6 +29,9 @@ keywords:
 - lodging
 - steak
 - lobster
+thumbnail:
+  url: "/img/raster/background/snow-400.jpg"
+facebook-site-name: paradise-cove
 repository:
   username: kernvalley
   project: paradise-cove-lodge

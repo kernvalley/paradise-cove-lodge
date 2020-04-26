@@ -4,6 +4,13 @@ title: About
 permalink: about/
 pinned: true
 referrer: no-referrer
+description: History and info for Paradise Cove Lodge
+thumbnail:
+  url: /img/raster/background/snow-400.jpg
+tags:
+  - Paradise Cove Lodge
+  - about
+  - history
 ---
 # About Us
 In the 1950's Bo & Margaret Williams bought a piece of property in Lake Isabella

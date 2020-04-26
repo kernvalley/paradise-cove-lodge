@@ -4,7 +4,18 @@ title: Menu
 permalink: menu/
 pinned: true
 background: dining
+description: Menu for Paradise Cove Lodge
+thumbnail:
+  url: "/img/raster/background/dining-400.jpg"
+tags:
+  - menu
+  - paradise cove lodge
+  - restaurant
+  - lake isabella
+  - isabella lake
+  - dining
 ---
+<div id="data" hidden="">{{ page | jsonify }}</div>
 <div hidden="">
 	<!-- @TODO Convert to nav -->
 	{% for section in site.data.menu %}
@@ -16,7 +27,7 @@ background: dining
 	<meta itemprop="image" content="{{ site.data.restaurant.image | default: site.data.business.image | absolute_url }}" />
 	<meta itemprop="logo" content="{{ site.data.restaurant.logo | default: site.data.business.logo | absolute_url }}" />
 	<meta itemprop="url" content="{{ page.url | absolute_url }}">
-	<meta itemprop="telephone" content="{{ site.data.restaurant.telephone | default: site.data.business.telephon }}" />
+	<meta itemprop="telephone" content="{{ site.data.restaurant.telephone | default: site.data.business.telephone }}" />
 	<meta itemprop="priceRange" content="{{ site.data.restaurant.priceRange | default: '$$$' }}" />
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
