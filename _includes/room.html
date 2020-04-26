@@ -8,7 +8,7 @@
 				<span itemprop="name">{{ include.offer.name }}</span>
 				<span class="float-right inline-block center room-amenities-container">
 					{% for amenity in include.offer.itemOffered.amenityFeature %}
-						<span class="room-amenity float-right" title="{{ amenity.name }}: {{ amenity.value }}" itemprop="amenityFeature" itemtype="https://schema.org/LocationFeatureSpecification" itemscope="">
+						<span class="room-amenity" title="{{ amenity.name }}: {{ amenity.value }}" itemprop="amenityFeature" itemtype="https://schema.org/LocationFeatureSpecification" itemscope="">
 							<meta itemprop="name" content="{{ amenity.name }}" />
 							<meta itemprop="value" content="{{ amenity.value }}"/>
 							{% if amenity.image %}{% include icon.html icon=amenity.image %}{% endif %}
@@ -16,7 +16,7 @@
 					{% endfor %}
 					{% if include.offer.itemOffered.smokingAllowed %}
 						<meta itemprop="smokingAllowed" content="{{ include.offer.itemOffered.smokingAllowed }}" />
-						<span class="float-right smoking-{{ include.offer.itemOffered.smokingAllowed | downcase }}" title="Smoking: {{ include.offer.itemOffered.smokingAllowed }}">
+						<span class="smoking-{{ include.offer.itemOffered.smokingAllowed | downcase }}" title="Smoking: {{ include.offer.itemOffered.smokingAllowed }}">
 							{% if include.offer.itemOffered.smokingAllowed == 'Yes' %}
 								{% include icon.html icon="smoking" %}
 							{% else %}
@@ -26,7 +26,7 @@
 					{% endif %}
 					{% if include.offer.itemOffered.petsAllowed %}
 						<meta itemprop="petsAllowed" content="{{ include.offer.itemOffered.petsAllowed }}" />
-						<span class="float-right smoking-{{ include.offer.itemOffered.petsAllowed | downcase }}" title="Pets Allowed: {{ include.offer.itemOffered.petsAllowed }}">
+						<span class="pets-{{ include.offer.itemOffered.petsAllowed | downcase }}" title="Pets Allowed: {{ include.offer.itemOffered.petsAllowed }}">
 							{% if include.offer.itemOffered.petsAllowed == 'Yes' %}
 								{% include icon.html icon="pets" %}
 							{% else %}
@@ -50,12 +50,6 @@
 				<meta itemprop="typeOfBed" content="{{ include.offer.itemOffered.bed.typeOfBed }}" />
 				{% if offer.itemOffered.bed.description %}<p itemprop="description">{{ include.offer.itemOffered.bed.description }}</p>{% endif %}
 			</div>
-			<span class="room-details overflow-visible">
-				<details>
-					<summary>More Info</summary>
-					<pre class="card background-primary"><code>{{ include.offer | jsonify }}</code></pre>
-				</details>
-			</span>
 		</div>
 		<div itemprop="inventoryLevel" itemtype="https://schema.org/QuantitativeValue" itemscope="" hidden="">
 			<meta itemprop="value" content="{{ include.offer.inventoryLevel.value }}" />
