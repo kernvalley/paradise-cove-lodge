@@ -3,6 +3,7 @@
 		<h1 class="menusection-name center" itemprop="name">{{ include.name }}</h1>
 		{% if include.image %}<img src="{{ include.image }}" />{% endif %}
 	</header>
+	{% if include.description %}<div class="menusection-description" itemprop="description">{{ include.description }}</div>{% endif %}
 	{% for menuitem in include.hasMenuItem %}
 		{% include menuitem.html
 			name=menuitem.name

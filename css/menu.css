@@ -5,6 +5,17 @@
 	padding: 0.2rem;
 }
 
+.menusection-description {
+	padding: 0.8em;
+	border-bottom: 1px dashed var(--accent-color);
+	margin-bottom: 0.6em;
+	font-family: "Alice";
+	font-style: italic;
+	text-align: center;
+	background-color: #ddcbb2;
+	color: #393939;
+}
+
 .food-menuitem {
 	display: grid;
 	grid-template-areas: "image name name" "image description description" "image offers diets";
@@ -44,5 +55,9 @@
 		grid-template-rows: auto;
 		grid-template-columns: 1fr 5em;
 		justify-content: center;
+	}
+	
+	.menusection .menusection-header.sticky {
+		position: static;
 	}
 }
