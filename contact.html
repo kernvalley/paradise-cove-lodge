@@ -10,6 +10,11 @@ thumbnail:
 tags:
   - Paradise Cove Lodge
   - contact
+scripts:
+  - src: https://cdn.kernvalley.us/components/leaflet/map.js
+    type: module
+  - src: https://cdn.kernvalley.us/components/leaflet/marker.js
+    type: module
 ---
 <form name="contact" method="POST" class="card shadow" id="contact-form" data-netlify="true">
 	<div class="input-group">
@@ -45,4 +50,4 @@ tags:
 		Send
 	</button>
 </form>
-{% include map.html geo=site.data.business.geo %}
+{% include map.html geo=site.data.business.geo hidden=true %}
