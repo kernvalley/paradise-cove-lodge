@@ -21,6 +21,9 @@
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
+	{% if site.facebook-site-name %}
+		<meta name="og:site_name" content="{{ site.facebook-site-name }}" />
+	{% endif %}
 	<!-- /Facebook | OpenGraph -->
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary" />
