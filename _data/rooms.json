@@ -23,7 +23,7 @@
     },
     "description": "A room with a view and a king sized bed",
     "petsAllowed": "No",
-    "smokingAllowed": "Yes",
+    "smokingAllowed": "No",
     "amenityFeature": [{
       "@type": "LocationFeatureSpecification",
       "name": "Swimming Pool",
