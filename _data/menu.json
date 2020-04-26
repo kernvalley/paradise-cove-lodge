@@ -76,7 +76,7 @@
 }, {
   "name": "Our House Specialty",
   "identifier": "21504294-026d-408f-a69a-9492bbee8d96",
-  "description": "<b>Served Fri., Sat., and Sun.<b><br />(<i>other nights with advance order of 8 or more servings</i>)",
+  "description": "<b>Served Fri., Sat., and Sun.</b><br />(<i>other nights with advance order of 8 or more servings</i>)<hr /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>",
   "hasMenuItem": [{
     "name": "Prime Rib",
     "identifier": "1ccd70e9-4b96-425b-82b3-72d0de9eae9c",
@@ -97,6 +97,7 @@
 }, {
   "name": "To the Sea",
   "identifier": "73ce7553-72bd-473b-8989-502060aee28b",
+  "description": "All dinners served with House Salad, Cheese Bread, & Choice of Potato & Dessert",
   "hasMenuItem": [{
     "name": "Shrimp",
     "identifier": "eaa3ba6b-581f-4c1f-85b3-539c68cb525a",
@@ -224,6 +225,7 @@
 }, {
   "name": "The Ranch & Garden",
   "identifier": "ae03d617-083c-499c-a9c2-dc318d29ae6d",
+  "description": "All dinners served with House Salad, Cheese Bread, & Choice of Potato & Dessert",
   "hasMenuItem": [{
     "name": "Teriyaki Chicken",
     "identifier": "0ffc11ab-8fc0-40ba-9ce3-b11a667f9686",
