@@ -2,6 +2,72 @@
 	background-image: url("/img/raster/background/snow-1440.jpg");
 }
 
+:root[data-background="dining"] #header {
+	background-image: url("/img/raster/background/dining-1440.jpg");
+}
+
+:root[data-background="rooms"] #header {
+	background-image: url("/img/raster/background/rooms-1440.jpg");
+}
+
+:root[data-background="lake"] #header {
+	background-image: url("/img/raster/background/lake-1440.jpg");
+}
+
+@media (max-width: 400px) {
+	#header {
+		background-image: url("/img/raster/background/snow-400.jpg");
+	}
+
+	:root[data-background="dining"] #header {
+		background-image: url("/img/raster/background/dining-400.jpg");
+	}
+
+	:root[data-background="rooms"] #header {
+		background-image: url("/img/raster/background/rooms-400.jpg");
+	}
+
+	:root[data-background="lake"] #header {
+		background-image: url("/img/raster/background/lake-400.jpg");
+	}
+}
+
+@media ((min-width: 401px) and (max-width: 800px)) {
+	#header {
+		background-image: url("/img/raster/background/snow-800.jpg");
+	}
+
+	:root[data-background="dining"] #header {
+		background-image: url("/img/raster/background/dining-800.jpg");
+	}
+
+	:root[data-background="rooms"] #header {
+		background-image: url("/img/raster/background/rooms-800.jpg");
+	}
+
+	:root[data-background="lake"] #header {
+		background-image: url("/img/raster/background/lake-800.jpg");
+	}
+}
+
+@media ((min-width: 801px) and (max-width: 1280px)) {
+	#header {
+		background-image: url("/img/raster/background/snow-1280.jpg");
+	}
+
+	:root[data-background="dining"] #header {
+		background-image: url("/img/raster/background/dining-1280.jpg");
+	}
+
+	:root[data-background="rooms"] #header {
+		background-image: url("/img/raster/background/rooms-1280.jpg");
+	}
+
+	:root[data-background="lake"] #header {
+		background-image: url("/img/raster/background/lake-1280.jpg");
+	}
+}
+
 #org-info {
 	background-color: rgba(66, 1, 1, 0.55);
 	color: #e1e1e1;
@@ -21,16 +87,4 @@
 		left: 5vw;
 		right: 5vw;
 	}
-}
-
-:root[data-background="dining"] #header {
-	background-image: url("/img/raster/background/dining.jpg");
-}
-
-:root[data-background="rooms"] #header {
-	background-image: url("/img/raster/background/rooms.jpg");
-}
-
-:root[data-background="lake"] #header {
-	background-image: url("/img/raster/background/lake.jpg");
 }
