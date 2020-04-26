@@ -4,7 +4,18 @@ title: Menu
 permalink: menu/
 pinned: true
 background: dining
+description: Menu for Paradise Cove Lodge
+thumbnail:
+  url: "/img/raster/background/dining-400.jpg"
+tags:
+  - menu
+  - paradise cove lodge
+  - restaurant
+  - lake isabella
+  - isabella lake
+  - dining
 ---
+<div id="data" hidden="">{{ page | jsonify }}</div>
 <div hidden="">
 	<!-- @TODO Convert to nav -->
 	{% for section in site.data.menu %}
@@ -13,18 +24,21 @@ background: dining
 </div>
 <div itemtype="https://schema.org/Restaurant" itemscope="">
 	<h3 itemprop="name" hidden="">{{ site.data.restaurant.name }}</h3>
-	<meta itemprop="image" content="{{ site.data.restaurant.image }}" />
-	<meta itemprop="telephone" content="{{ site.data.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="image" content="{{ site.data.restaurant.image | default: site.data.business.image | absolute_url }}" />
+	<meta itemprop="logo" content="{{ site.data.restaurant.logo | default: site.data.business.logo | absolute_url }}" />
+	<meta itemprop="url" content="{{ page.url | absolute_url }}">
+	<meta itemprop="telephone" content="{{ site.data.restaurant.telephone | default: site.data.business.telephone }}" />
 	<meta itemprop="priceRange" content="{{ site.data.restaurant.priceRange | default: '$$$' }}" />
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
-	<div hidden="">{% include address.html address=site.data.address %}</div>
+	<div hidden="">{% include address.html address=site.data.business.address %}</div>
 	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
 		{% for menusection in site.data.menu %}
 			{% include menusection.html
 				name=menusection.name
 				hasMenuItem=menusection.hasMenuItem
 				identifier=menusection.identifier
+				description=menusection.description
 				itemprop="hasMenuSection"
 			%}
 		{% endfor %}

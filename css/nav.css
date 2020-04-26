@@ -1,6 +1,7 @@
 #nav {
 	font-size: 1.2em;
 	justify-content: space-around;
+	padding: 0;
 }
 
 #nav-container {
@@ -21,4 +22,9 @@
 
 .nav-link.current {
 	border-bottom: 0.2em solid currentColor;
+}
+
+a.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
 }

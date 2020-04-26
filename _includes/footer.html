@@ -13,14 +13,20 @@
 			</div>
 			<hr />
 		{% endif %}
-		{% if site.data.address.telephone %}
-			<a class="footer-link inline-block" href="tel:{{ site.data.address.telephone }}">
+		{% if site.data.business.telephone %}
+			<a class="footer-link inline-block" href="tel:{{ site.data.business.telephone }}">
 				{% include icon.html icon="call-start" %}
-				<span class="link-text underline">{{ site.data.address.telephone | replace: '+1-', ''}}</span>
+				<span class="link-text underline">{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
 		{% endif %}
-		{% if site.data.address.url %}
-			<a class="footer-link inline-block" href="{{ site.data.address.url }}" rel="noopener external">
+		{% if site.data.business.email %}
+			<a class="footer-link inline-block" href="mailto:{{ site.data.business.email }}">
+				{% include icon.html icon="mail" %}
+				<span class="link-text underline">{{ site.data.business.email }}</span>
+			</a>
+		{% endif %}
+		{% if site.data.business.address.url %}
+			<a class="footer-link inline-block" href="{{ site.data.business.address.url }}" rel="noopener external">
 				{% include icon.html icon="map" %}
 				<span class="link-text underline">Directions</span>
 			</a>
@@ -36,9 +42,11 @@
 	<div class="copyright">
 		<span>&copy;</span>
 		<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
-		<span itemprop="copyrightHolder" itemtype="https://schema.org/LocalBusiness" itemscope="">
-			<a href="https://www.paradisecovelodge.com" target="_blank" rel="external noopener" itemprop="url">
-				<span itemprop="name">Paradise Cove Lodge</span>
+		<span itemprop="copyrightHolder" itemtype="https://schema.org/{{ site.data.business.type | default: 'LocalBusiness' }}" itemscope="">
+			<a href="{{ site.data.business.url | default: site.url | absolute_url }}" target="_blank" rel="external noopener" itemprop="url">
+				<span itemprop="name">{{ site.data.business.name }}</span>
+				<meta itemprop="image" content="{{ site.data.business.image }}" />
+				<meta itemprop="logo" content="{{ site.data.business.logo }}" />
 			</a>
 		</span>
 	</div>

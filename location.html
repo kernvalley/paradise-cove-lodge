@@ -4,6 +4,13 @@ title: Home
 pinned: true
 referrer: no-referrer
 permalink: /location/
+description: Stay in one of our comfortable rooms and have dinner with great views of the lake and mountains.
+tags:
+  - Paradise Cove Lodge
+  - location
+  - overnight stop
+thumbnail:
+  url: /img/raster/backgorund/lake-400.jpg
 ---
 <h2>Location</h2>
 <p>We are located on Highway 178 on the south side of Lake Isabella, just 3 miles
@@ -11,7 +18,7 @@ east of the dam.  Only one hour from Bakersfield or Ridgecrest, and 3 hours
 from Los Angeles; a perfect place for a weekend get away.​</p>
 <h4>Have dinner and stay for the night.​</h4>
 <div class="clearfix"></div>
-<img class="float-left" src="https://static.wixstatic.com/media/76c3ea_95df689a9d67499eb5a5d5c61cd8f953.jpg/v1/fill/w_288,h_188,al_c,q_80,usm_0.66_1.00_0.01/76c3ea_95df689a9d67499eb5a5d5c61cd8f953.jpg" width="288" height="188" alt="Paradise Cove Street View" decoding="async" loading="lazy" crossorigin="annonymous" />
+<img class="float-left" src="/img/raster/background/location-350.jpg" width="350" height="263" alt="Paradise Cove Street View" decoding="async" loading="lazy" crossorigin="annonymous" />
 <p class="inline-block">Come and stay for the weekend, or longer. There is so much to do in Lake Isabella:
 fishing and water sports including waterskiing or wakeboarding and jet skis,
 biking and hiking the many trails in our area.</p>
@@ -20,9 +27,4 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.</p>
 <p class="inline-block">Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.</p>
 <div class="clearfix"></div>
-<leaflet-map center="35.648349,-118.427896" zoom="13" minzoom="13" maxzoom="15" crossorigin="annonymous" zoomcontrol="" detectretina="">
-	<leaflet-marker latitude="35.648349" longitude="-118.427896" open="">
-		<div slot="popup">Paradise Cove Lodge</div>
-		<img slot="icon" src="/img/adwaita-icons/actions/mark-location.svg" width="32" height="32" decoding="async" loading="lazy" />
-	</leaflet-marker>
-</leaflet-map>
+{% include map.html geo=site.data.business.geo %}
