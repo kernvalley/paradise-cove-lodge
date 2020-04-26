@@ -9,7 +9,7 @@
 	<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	<meta name="referrer" content="{{ page.referrer | default: site.referrer }}"/>
 	<meta name="mobile-web-app-capable" content="yes" />
-	<meta itemprop="thumbnailUrl" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url | default: site.thumbnail.url | absolute_url }}" />
 	<!-- Social data -->
 	<!-- Facebook | OpenGraph -->
 	<meta property="og:type" content="{{ page.og-type | default: layout.og-type }}" />
@@ -17,7 +17,7 @@
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:description" content="{{ page.description }}" />
 	<meta property="og:keywords" content="{{ page.tags | join: ', ' }}" />
-	<meta property="og:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta property="og:image" content="{{ page.thumbnail.url | default: site.thumbnail.url | absolute_url }}" />
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
@@ -26,7 +26,7 @@
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="" />
 	<meta name="twitter:description" content="{{ page.description }}" />
-	<meta name="twitter:image" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta name="twitter:image" content="{{ page.thumbnail.url | default: site.thumbnail.url | absolute_url }}" />
 	<!-- /Twitter -->
 	<!-- /Social data -->
 	<meta name="msapplication-TileColor" content="{{ site.theme-color | default: '#528ff9' }}" />
