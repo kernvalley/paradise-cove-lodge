@@ -16,14 +16,28 @@
 	<h2 class="menuitem-name center" itemprop="name">{{ include.name }}</h2>
 	<p class="menuitem-description" itemprop="description">{{ include.description }}</p>
 	<div class="menuitem-offers">
-		{% for offer in include.offers %}
-			<div class="menuitem-offer" itemprop="offers" itemtype="https://schema.org/Offer" itemscope="">
-				{% if offer.name %}<b itemprop="name">{{ offer.name }}</b>{% endif %}
-				$<span itemprop="price" class="menuitem-offer-price">{{ offer.price }}</span>
-				{% if offer.description %}<i itemprop="description">{{ offer.description }}</i>{% endif %}
-				<meta itemprop="priceCurrency" content="{{ offer.priceCurrency | default: 'USD' }}" />
-			</div>
-		{% endfor %}
+		{% if include.offers %}
+			{% for offer in include.offers %}
+				<div class="menuitem-offer" itemprop="offers" itemtype="https://schema.org/Offer" itemscope="">
+					{% if offer.name %}<b itemprop="name">{{ offer.name }}</b>{% endif %}
+					{% if offer.priceSpecification %}
+						{% for spec in offer.priceSpecification %}
+							<div class="offer-price-spec" itemprop="priceSpecification" itemtype="https://schema.org/PriceSpecification" itemscope="">
+								{% if spec.name %}<b itemprop="name">{{ spec.name }}</b>{% endif %}
+								$<span itemprop="minPrice" class="menuitem-offer-price min-price">{{ spec.minPrice }}</span>
+								<span>&mdash;</span>
+								$<span itemprop="maxPrice" class="menuitem-offer-price max-price">{{ spec.maxPrice }}</span>
+								{% if spec.description %}<i itemprop="description">{{ spec.description }}</i>{% endif %}
+								<meta itemprop="priceCurrency" content="{{ offer.priceCurrency | default: 'USD' }}" />
+							</div>
+						{% endfor %}
+					{% endif %}
+					{% if offer.price %}$<span itemprop="price" class="menuitem-offer-price">{{ offer.price }}</span>{% endif %}
+					{% if offer.description %}<i itemprop="description">{{ offer.description }}</i>{% endif %}
+					<meta itemprop="priceCurrency" content="{{ offer.priceCurrency | default: 'USD' }}" />
+				</div>
+			{% endfor %}
+		{% endif %}
 	</div>
 	{% if include.suitableForDiet %}
 		<div class="menuitem-diets clearfix">
