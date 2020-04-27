@@ -5,9 +5,14 @@
     width: 320
     height: 213
   description: |-
-    <h5>4 bedroom homes at Paradise Cove, Lake Isabella<h5><br />
-    Available for 2 night or longer stays Call Pam for Price and Availability at
-    <a class="underline" href="tel:+1-760 379-7149">760 379-7149</a><br />
+    <h5>4 bedroom homes at Paradise Cove, Lake Isabella<h5>
+    Available for 2 night or longer stays Call Pam for price and availability at
+    <a class="underline" href="tel:+1-760 379-7149">
+      <svg class="current-color icon" aria-hidden="true">
+        <use xlink:href="/img/icons.svg#call-start"></use>
+      </svg>
+      <span>760 379-7149</span>
+    </a><br />
     <ol>
       <li><b>Bedrooms</b>: 4</li>
       <li><b>Bathroom</b>: 3 & &frac12;</li>
@@ -20,9 +25,14 @@
     width: 320
     height: 213
   description: |-
-    <h5>2 bedroom homes at Paradise Cove, Lake Isabella<h5><br />
-    Available for 2 night or longer stays Call Pam for Price and Availability at
-    <a class="underline" href="tel:+1-760 379-7149">760 379-7149</a><br />
+    <h5>2 bedroom homes at Paradise Cove, Lake Isabella<h5>
+    Available for 2 night or longer stays Call Pam for price and availability at
+    <a class="underline" href="tel:+1-760 379-7149">
+      <svg class="current-color icon" aria-hidden="true">
+        <use xlink:href="/img/icons.svg#call-start"></use>
+      </svg>
+      <span>760 379-7149</span>
+    </a><br />
      <ol>
       <li><b>Bedrooms</b>: 2</li>
       <li><b>Bathroom</b>: 1</li>
