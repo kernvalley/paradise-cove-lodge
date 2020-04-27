@@ -166,13 +166,12 @@
       "url": "/img/raster/menu/lob.jpg"
     }],
     "offers": [{
-      "price": 58.95,
+      "priceSpecification": [{
+        "maxPrice": 58.95,
+        "minPrice": 48.95,
+        "description": "Varies with market."
+      }]
     }],
-    "priceSpecification": [{
-      "maxPrice": 58.95,
-      "minPrice": 48.95,
-      "description": "Varies with market."
-    }]
   }, {
     "name": "Trout",
     "identifier": "4b32a697-c622-4173-832e-44c740135144",
