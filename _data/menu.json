@@ -5,7 +5,7 @@
   "hasMenuItem": [{
     "name": "Rib Eye",
     "identifier": "e78d719e-f38c-4fd5-996e-efc79a34f1c4",
-    "description": "14-16 oz.",
+    "description": "14-16 oz. Pretty darn good",
     "image": [{
       "url": "/img/raster/menu/ribeye.jpg",
     }],
@@ -15,7 +15,7 @@
   }, {
     "name": "New York",
     "identifier": "6ce3c8c0-83cc-4420-8839-368f0f7737e4",
-    "description": "14-16 oz.",
+    "description": "14-16 oz Just a <em>great</em> steak.",
     "image": [{
       "url": "/img/raster/menu/new-york.jpg",
     }],
@@ -35,7 +35,7 @@
   }, {
     "name": "Paul Bunyan",
     "identifier": "8776f25e-7174-4b08-8cda-ad3626db119b",
-    "description": "28-32 oz. Top Sirloin",
+    "description": "28-32 oz. Top Sirloin&hellip; That's big!",
     "image": [{
       "url": "/img/raster/menu/paul-bunyan.jpg"
     }],
@@ -45,7 +45,7 @@
   }, {
     "name": "Top Sirloin",
     "identifier": "45547d91-d4b2-4708-9fbc-6727a8b432af",
-    "description": "14-16 oz.",
+    "description": "14-16 oz. Half the size of the Paul Bunyan",
     "image": [{
       "url": "/img/raster/menu/top.jpg",
     }],
@@ -65,7 +65,7 @@
   }, {
     "name": "Ground Sirloin",
     "identifier": "d3c347c1-618b-4db9-9212-d8402ebbbb8e",
-    "description": "With or without sauteed onions.",
+    "description": "Choice beef ground in-house served with or without grilled onions.",
     "image": [{
       "url": "/img/raster/menu/ground-sirloin.jpg"
     }],
@@ -80,7 +80,7 @@
   "hasMenuItem": [{
     "name": "Prime Rib",
     "identifier": "1ccd70e9-4b96-425b-82b3-72d0de9eae9c",
-    "description": "<mark>Need description</mark>",
+    "description": "A slow-roasted house speciality",
     "image": [{
       "url": "/img/raster/menu/prime-rib.jpg"
     }],
@@ -97,7 +97,7 @@
 }, {
   "name": "To the Sea",
   "identifier": "73ce7553-72bd-473b-8989-502060aee28b",
-  "description": "All dinners served with House Salad, Cheese Bread, & Choice of Potato & Dessert",
+  "description": "All dinners served with House Salad, Cheese Bread, &amp; Choice of Potato and Dessert",
   "hasMenuItem": [{
     "name": "Shrimp",
     "identifier": "eaa3ba6b-581f-4c1f-85b3-539c68cb525a",
@@ -161,12 +161,17 @@
   }, {
     "name": "Lobster",
     "identifier": "63d2f68a-c43e-440f-9c57-53007bd99d20",
-    "description": "Premiun Cold Water 8-10oz  tail - Special house recipe",
+    "description": "Premiun Cold Water 8-10oz tail - Some of the best in the world prepared with special house recipe.",
     "image": [{
       "url": "/img/raster/menu/lob.jpg"
     }],
     "offers": [{
       "price": 58.95,
+    }],
+    "priceSpecification": [{
+      "maxPrice": 58.95,
+      "minPrice": 48.95,
+      "description": "Varies with market."
     }]
   }, {
     "name": "Trout",
@@ -182,19 +187,19 @@
   }, {
     "name": "Catfish",
     "identifier": "57a20c7d-a148-487c-96d6-c5b35d303b87",
-    "description": "Breaded and deep fried with our house tartar sauce",
+    "description": "Breaded and deep fried with plenty of our house tartar sauce",
     "offers": [{
       "price": 58.95,
     }]
   }]
 }, {
-  "name": "The Range & Sea",
+  "name": "The Range &amp; Sea",
   "identifier": "1e5b57ef-2f92-430e-8054-5150abd8a960",
   "description": "Create your own combination with any of our Steaks, Prime Rib or Seaffod. Just ask your served.",
   "hasMenuItem": [{
-    "name": "Shrimp & Steak",
+    "name": "Shrimp &amp; Steak",
     "identifier": "b14eb5eb-96ab-4e77-be53-4b7625cc2419",
-    "description": "2 Shrimp or Sacampi & 8oz Top Sirloin",
+    "description": "Two Shrimp or Sacampi &amp; 8oz Top Sirloin",
     "image": [{
       "url": "/img/raster/menu/steak-and-shrimp.jpg"
     }],
@@ -202,9 +207,9 @@
       "price": 25.95,
     }]
   }, {
-    "name": "Surf & Turf",
+    "name": "Surf &amp; Turf",
     "identifier": "b23c29ee-3d49-43b9-87ce-74f03aec70dc",
-    "description": "Premium Cold Water Lobster Tail & 8oz Top Sirloin",
+    "description": "Premium Cold Water Lobster Tail &amp; 8oz Top Sirloin",
     "image": [{
       "url": "/img/raster/menu/surf-and-turf.jpg"
     }],
@@ -212,9 +217,9 @@
       "price": 66.95,
     }]
   }, {
-    "name": "Crab & Steak",
+    "name": "Crab &amp; Steak",
     "identifier": "b7fa9c2c-061c-47df-a7b6-36d3c73c28b8",
-    "description": "&frac34; lb King Crab 8 8oz Top Sirloin",
+    "description": "&frac34; lb King Crab &amp; 8 8oz Top Sirloin",
     "image": [{
       "url": "/img/raster/menu/crab-and-steak.jpg"
     }],
@@ -223,13 +228,13 @@
     }]
   }]
 }, {
-  "name": "The Ranch & Garden",
+  "name": "The Ranch &amp; Garden",
   "identifier": "ae03d617-083c-499c-a9c2-dc318d29ae6d",
-  "description": "All dinners served with House Salad, Cheese Bread, & Choice of Potato & Dessert",
+  "description": "All dinners served with House Salad, Cheese Bread, &amp; Choice of Potato and Dessert",
   "hasMenuItem": [{
     "name": "Teriyaki Chicken",
     "identifier": "0ffc11ab-8fc0-40ba-9ce3-b11a667f9686",
-    "description": "With teriyaki sauce & pineapple",
+    "description": "Charbroiled &amp; served with teriyaki sauce &amp; pineapple",
     "image": [{
       "url": "/img/raster/menu/teryiakichicken.jpg",
     }],
@@ -239,7 +244,7 @@
   }, {
     "name": "Artichoke Chicken",
     "identifier": "480e5138-5c54-4108-bffb-952d298001b8",
-    "description": "With our housemade artichoke sauce",
+    "description": "Charbroiled chicken served with our housemade artichoke sauce",
     "image": [{
       "url": "/img/raster/menu/artichoke-chicken.jpg",
     }],
@@ -303,9 +308,13 @@
     "image": [{
       "url": "/img/raster/menu/children/prime-rib.jpg"
     }],
-    "description": "(<i>Fri., Sat. & Sun.</i>)",
+    "description": "(<i>Fri., Sat. &amp; Sun.</i>)",
     "offers": [{
       "price": 7.95
     }]
   }]
+}, {
+  "name": "Wine &amp; Beer",
+  "identifier": "cb36b644-6f3b-4b71-b193-2b689ee3523f",
+  "description": " Excellent house wines, good selection of bottled wines; Beers: domestic, import and craft; also have a full bar-house specials are our pomegranate margarita and our Long Island Ice Tea.",
 }]

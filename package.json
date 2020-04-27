@@ -47,8 +47,6 @@
     "build": "npm run build:icons && npm run build:js && npm run build:css",
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
-    "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
-    "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "preinstall": "git submodule update --init --recursive",
     "postinstall": "npm run build",
     "build:all": "npm run build:js && npm run build:css && npm run build:icons",
