@@ -11,13 +11,6 @@ tags:
   - Paradise Cove Lodge
   - about
   - history
-scripts:
-  - src: https://cdn.kernvalley.us/components/leaflet/map.js
-    type: module
-    async: true
-  - src: https://cdn.kernvalley.us/components/leaflet/marker.js
-    type: module
-    async: true
 ---
 # About Us
 In the 1950's Bo & Margaret Williams bought a piece of property in Lake Isabella
