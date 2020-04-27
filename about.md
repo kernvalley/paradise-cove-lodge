@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: about/
-pinned: true
+index: true
 referrer: no-referrer
 description: History and info for Paradise Cove Lodge
 thumbnail:
