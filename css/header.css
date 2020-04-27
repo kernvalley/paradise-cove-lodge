@@ -1,5 +1,6 @@
 #header {
 	background-image: url("/img/raster/background/snow-1440.jpg");
+	min-height: 74vh;
 }
 
 :root[data-background="dining"] #header {

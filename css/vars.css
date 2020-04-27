@@ -1,12 +1,5 @@
 ---
 ---
-:root {
-	--scrollbar-track: var(--primary-color);
-	--scrollbar-color: var(--accent-color);
-	--scrollbar-width: thin;
-	--map-width: 100%;
-}
-
 @media (max-width: 800px) {
 	:root {
 		--scrollbar-width: auto;
@@ -18,4 +11,12 @@
 	--button-active-background-dark: #511721;
 	--accent-color-light: var(--accent-color-dark);
 	--button-active-background-light: var(--button-active-background-dark);
+	--scrollbar-track: var(--primary-color);
+	--scrollbar-color: var(--accent-color);
+	--scrollbar-width: thin;
+	--map-width: 100%;
+}
+
+body {
+	--map-width: 100%;
 }

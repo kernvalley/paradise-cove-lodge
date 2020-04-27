@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: about/
-pinned: true
+index: true
 referrer: no-referrer
 description: History and info for Paradise Cove Lodge
 thumbnail:
@@ -11,6 +11,13 @@ tags:
   - Paradise Cove Lodge
   - about
   - history
+scripts:
+  - src: https://cdn.kernvalley.us/components/leaflet/map.js
+    type: module
+    async: true
+  - src: https://cdn.kernvalley.us/components/leaflet/marker.js
+    type: module
+    async: true
 ---
 # About Us
 In the 1950's Bo & Margaret Williams bought a piece of property in Lake Isabella
@@ -32,4 +39,4 @@ All of our rooms  share a community front porch and have great lake views.
 There is a community lounge area.  The rooms have new flat screen TV's with
 sattelite TV and HBO.  Coffee makers and mini-refrigerators are in every room.
 New Heating & air-conditioning units and free Wi-Fi. 
-{% include map.html geo=site.data.business.geo %}
+{% include map.html geo=site.data.business.geo hidden=true %}

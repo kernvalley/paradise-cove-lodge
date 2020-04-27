@@ -2,7 +2,7 @@
 layout: default
 title: Menu
 permalink: menu/
-pinned: true
+index: true
 background: dining
 description: Menu for Paradise Cove Lodge
 thumbnail:
@@ -15,7 +15,6 @@ tags:
   - isabella lake
   - dining
 ---
-<div id="data" hidden="">{{ page | jsonify }}</div>
 <div hidden="">
 	<!-- @TODO Convert to nav -->
 	{% for section in site.data.menu %}

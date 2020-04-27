@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-pinned: true
+index: false
 referrer: no-referrer
 description: "Steakhouse & Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 thumbnail:
@@ -16,6 +16,13 @@ tags:
 - lodging
 - steak
 - lobster
+scripts:
+  - src: https://cdn.kernvalley.us/components/leaflet/map.js
+    type: module
+    async: true
+  - src: https://cdn.kernvalley.us/components/leaflet/marker.js
+    type: module
+    async: true
 ---
 <section id="cards" class="grid">
 	<a href="/rooms/" class="section-link card color-default center">
@@ -36,5 +43,5 @@ tags:
 </section>
 <section>
 	<br />
-	{% include map.html geo=site.data.business.geo %}
+	{% include map.html geo=site.data.business.geo hidden=true %}
 </section>

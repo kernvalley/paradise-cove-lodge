@@ -44,7 +44,9 @@
     "lint:css": "stylelint ${npm_package_config_dir_css}",
     "test": "npm run lint",
     "start": "npm run netlify:live",
-    "build": "npm run build:icons",
+    "build": "npm run build:icons && npm run build:js && npm run build:css",
+    "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
+    "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "preinstall": "git submodule update --init --recursive",
@@ -59,7 +61,8 @@
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter",
     "netlify:deploy": "netlify deploy",
     "netlify:serve": "netlify dev",
-    "netlify:live": "netlify dev --live"
+    "netlify:live": "netlify dev --live",
+    "netlify:link": "netlify link"
   },
   "dependencies": {
     "svg-sprite-generator": "0.0.7"

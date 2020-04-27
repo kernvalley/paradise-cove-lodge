@@ -1,6 +1,7 @@
 #nav {
 	font-size: 1.2em;
 	justify-content: space-around;
+	height: var(--nav-height, 4rem);
 	padding: 0;
 }
 

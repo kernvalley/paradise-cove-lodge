@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-pinned: true
+index: true
 referrer: no-referrer
 permalink: /location/
 description: Stay in one of our comfortable rooms and have dinner with great views of the lake and mountains.
@@ -11,6 +11,13 @@ tags:
   - overnight stop
 thumbnail:
   url: /img/raster/backgorund/lake-400.jpg
+scripts:
+  - src: https://cdn.kernvalley.us/components/leaflet/map.js
+    type: module
+    async: true
+  - src: https://cdn.kernvalley.us/components/leaflet/marker.js
+    type: module
+    async: true
 ---
 <h2>Location</h2>
 <p>We are located on Highway 178 on the south side of Lake Isabella, just 3 miles
@@ -27,4 +34,4 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.</p>
 <p class="inline-block">Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.</p>
 <div class="clearfix"></div>
-{% include map.html geo=site.data.business.geo %}
+{% include map.html geo=site.data.business.geo hidden=true %}

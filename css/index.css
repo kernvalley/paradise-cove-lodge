@@ -16,6 +16,10 @@
 @import url("./rooms.css");
 @import url("./home.css");
 
+#sidebar .ad-block:not(:last-of-type) {
+	margin-bottom: 0.4em;
+}
+
 input[hidden] + label[for].btn-toggle {
 	background-color: var(--button-disabled-background);
 	margin: 0.3rem;
