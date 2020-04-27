@@ -1,6 +1,10 @@
 import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
 import 'https://cdn.kernvalley.us/js/std-js/shims.js';
+import 'https://unpkg.com/@webcomponents/custom-elements@1.4.1/custom-elements.min.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
+import 'https://cdn.kernvalley.us/components/leaflet/map.js';
+import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
+import 'https://cdn.kernvalley.us/components/share-button.js';
 import { ready, registerServiceWorker } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { updateImage } from './functions.js';
 
