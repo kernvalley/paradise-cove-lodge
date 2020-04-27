@@ -1,7 +1,30 @@
-- name: Rentals Available
+- name: Vacation Rentals Available
   image:
-    name: Placeholder
+    name: View from sunroom
     url: "/img/raster/rentals/sunroom.jpg"
-    width: 360
+    width: 320
     height: 213
-  description: This is a test of the ads-in-sidebar thingy
+  description: |-
+    <h5>4 bedroom homes at Paradise Cove, Lake Isabella<h5><br />
+    Available for 2 night or longer stays Call Pam for Price and Availability at
+    <a class="underline" href="tel:+1-760 379-7149">760 379-7149</a><br />
+    <ol>
+      <li><b>Bedrooms</b>: 4</li>
+      <li><b>Bathroom</b>: 3 & &frac12;</li>
+      <li><b>Accomidates</b>:Up to 10</li>
+    </ol>
+- name: Vacation Rentals Available
+  image:
+    name: View from sunroom
+    url: "/img/raster/rentals/balcony.jpg"
+    width: 320
+    height: 213
+  description: |-
+    <h5>2 bedroom homes at Paradise Cove, Lake Isabella<h5><br />
+    Available for 2 night or longer stays Call Pam for Price and Availability at
+    <a class="underline" href="tel:+1-760 379-7149">760 379-7149</a><br />
+     <ol>
+      <li><b>Bedrooms</b>: 2</li>
+      <li><b>Bathroom</b>: 1</li>
+      <li><b>Accomidates</b>: 1 &mdash; 3</li>
+    </ol>

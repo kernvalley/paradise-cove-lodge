@@ -1,6 +1,6 @@
 <aside id="sidebar" class="card shadow">
 	{% for item in site.data.sidebar %}
-		<div class="ad-block" itemtype="https://schema.org/AdBlock" itemscope="">
+		<div class="ad-block card shadow" itemtype="https://schema.org/AdBlock" itemscope="">
 			<div class="center ad-image-container" itemprop="image" itemtype="https://schema.org/ImageObject" itemscope="">
 				<img class="ad-image" src="{{ item.image.url }}" height="{{ item.image.height }}" width="{{ item.image.width }}" alt="{{ item.image.name }}" decoding="async" loading="lazy" itemprop="url" />
 			</div>
