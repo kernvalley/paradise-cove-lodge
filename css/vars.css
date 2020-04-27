@@ -16,3 +16,7 @@
 	--scrollbar-width: thin;
 	--map-width: 100%;
 }
+
+body {
+	--map-width: 100%;
+}
