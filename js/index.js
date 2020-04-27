@@ -1,6 +1,5 @@
 import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
 import 'https://cdn.kernvalley.us/js/std-js/shims.js';
-import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
 import { ready, registerServiceWorker } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { updateImage } from './functions.js';

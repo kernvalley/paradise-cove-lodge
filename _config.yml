@@ -54,6 +54,10 @@ scripts:
   - src: /js/index.js
     type: module
     async: true
+  - src: "https://cdn.kernvalley.us/components/share-button.js"
+    async: true
+    type: module
+    crossorigin: anonymous
   production:
   - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
     type: text/javascript
@@ -63,6 +67,10 @@ scripts:
     crossorigin: "anonymous"
   - src: /js/index.min.js
     async: true
+  - src: "https://cdn.kernvalley.us/components/share-button.js"
+    async: true
+    type: module
+    crossorigin: anonymous
 stylesheets:
   development:
   - href: /css/index.css
