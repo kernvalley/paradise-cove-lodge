@@ -10,8 +10,8 @@ if (document.documentElement.dataset.hasOwnProperty('serviceWorker')) {
 }
 
 document.documentElement.classList.replace('no-js', 'js');
-document.body.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
-document.body.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
+document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
+document.documentElement.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
 ready().then(async () => {
 	if (location.pathname.startsWith('/lakecam')) {
