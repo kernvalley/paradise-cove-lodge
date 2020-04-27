@@ -20,7 +20,7 @@
 	display: grid;
 	grid-template-areas: "image name name" "image description description" "image offers diets";
 	grid-template-rows: auto 1fr auto;
-	grid-template-columns: 320px 1fr 4em;
+	grid-template-columns: 320px 1fr auto;
 	grid-gap: 0.6em;
 	border: 1px solid currentColor;
 	border-radius: 4px;
@@ -53,7 +53,7 @@
 	.food-menuitem {
 		grid-template-areas: "name name" "image image" "description description" "offers diets";
 		grid-template-rows: auto;
-		grid-template-columns: 1fr 5em;
+		grid-template-columns: 1fr auto;
 		justify-content: center;
 	}
 	
