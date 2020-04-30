@@ -16,12 +16,12 @@
 			</a>
 		{% endif %}
 		{% if site.data.business.email %}
-			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="block">
+			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="color-inherit block">
 				{% include icon.html icon="mail" %}
 				<span>{{ site.data.business.email }}</span>
 			</a>
 		{% endif %}
-		<a href="{{ page.url }}#main" class="block" title="Skip to content">
+		<a href="{{ page.url }}#main" class="block color-inherit" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
 			{% include icon.html icon="chevron-down" class="current-color" height="48px" width="64px" %}
