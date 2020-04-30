@@ -1,7 +1,7 @@
 <nav id="nav" class="sticky top shadow background-accent color-alt z-3 clearfix">
 	<div id="nav-container" class="nav-links">
 		{% for link in site.data.nav %}
-			<a href="{{ link.href }}" class="nav-link flex column{% if page.url == link.href %} current disabled{% endif %}" title="{{ link.label }}">
+			<a href="{{ link.href }}" class="nav-link color-inherit flex column{% if page.url == link.href %} current disabled{% endif %}" title="{{ link.label }}">
 				<span>
 					{% include icon.html icon=link.icon %}
 					<span class="mobile-hidden">{{ link.label }}</span>
