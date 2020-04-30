@@ -10,7 +10,7 @@
 		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
 		{% include address.html address=site.data.business.address %}
 		{% if site.data.business.telephone %}
-			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block">
+			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block color-inherit">
 				{% include icon.html icon="call-start" %}
 				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
