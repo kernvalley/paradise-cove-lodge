@@ -39,11 +39,13 @@
 				</span>
 			</h3>
 			<meta itemprop="numberOfRooms" content="{{ include.offer.itemOffered.numberOfRooms }}" />
-			<span itemprop="floorSize" itemtype="https://schema.org/QuantitativeValue" itemscope="">
-				<meta itemprop="value" content="{{ include.offer.itemOffered.floorSize.value }}" />
-				<meta itemprop="unitCode" content="{{ include.offer.itemOffered.floorSize.unitCode }}" />
-				{% if offer.itemOffered.floorSize.unitText %}<span itemprop="unitText">{{ include.offer.itemOffered.floorSize.unitText }}</span>{% endif %}
-			</span>
+			{% if offer.itemOffered.floorSize %}
+				<span itemprop="floorSize" itemtype="https://schema.org/QuantitativeValue" itemscope="">
+					<meta itemprop="value" content="{{ include.offer.itemOffered.floorSize.value }}" />
+					<meta itemprop="unitCode" content="{{ include.offer.itemOffered.floorSize.unitCode }}" />
+					{% if offer.itemOffered.floorSize.unitText %}<span itemprop="unitText">{{ include.offer.itemOffered.floorSize.unitText }}</span>{% endif %}
+				</span>
+			{% endif %}
 			{% if offer.itemOffered.description %}<div itemprop="description" class="room-description">{{ include.offer.itemOffered.description }}</div>{% endif %}
 			<div itemprop="bed" itemtype="https://schema.org/BedDetails" itemscope="" hidden="">
 				<meta itemprop="numberOfBeds" content="{{ include.offer.itemOffered.bed.numberOfBeds }}" />
