@@ -41,12 +41,6 @@
     "photo": {
       "@type": "ImageObject",
       "url": "/img/raster/rooms/king.jpg"
-    },
-    "floorSize": {
-      "@type": "QuantitativeValue",
-      "value": 23,
-      "unitCode": "FTK",
-      "unitText": "23 Square Ft."
     }
   },
   "inventoryLevel": {
@@ -96,12 +90,6 @@
     "photo": {
       "@type": "ImageObject",
       "url": "/img/raster/rooms/large.jpg"
-    },
-    "floorSize": {
-      "@type": "QuantitativeValue",
-      "value": 23,
-      "unitCode": "FTK",
-      "unitText": "23 Square Ft."
     }
   },
   "inventoryLevel": {

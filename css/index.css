@@ -20,6 +20,20 @@
 	margin-bottom: 0.4em;
 }
 
+@media (min-width: 600px) {
+	.img-container {
+		float: left;
+		margin: 0 0.7em 1.2em 0;
+	}
+}
+
+@media (max-width: 599px) {
+	.img-container {
+		display: block;
+		text-align: center;
+	}
+}
+
 input[hidden] + label[for].btn-toggle {
 	background-color: var(--button-disabled-background);
 	margin: 0.3rem;
@@ -49,4 +63,18 @@ img.avatar {
 	border-style: none none solid none;
 	padding: 0.3em;
 	margin-bottom: 0.3em;
+}
+
+.skip-to-content-icon {
+	animation: pointing 600ms alternate ease-in-out infinite;
+}
+
+@keyframes pointing {
+	from {
+		transform: none;
+	}
+
+	to {
+		transform: translateY(0.6em);
+	}
 }

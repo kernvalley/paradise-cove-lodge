@@ -161,7 +161,7 @@
   }, {
     "name": "Lobster",
     "identifier": "63d2f68a-c43e-440f-9c57-53007bd99d20",
-    "description": "Premiun Cold Water 8-10oz tail - Some of the best in the world prepared with special house recipe.",
+    "description": "Some of the best in the world prepared with special house recipe.",
     "image": [{
       "url": "/img/raster/menu/lob.jpg"
     }],
@@ -175,7 +175,7 @@
   }, {
     "name": "Trout",
     "identifier": "4b32a697-c622-4173-832e-44c740135144",
-    "description": "Broiled Idaho filet",
+    "description": "Boneless Broiled Idaho",
     "offers": [{
       "name": "One Filet",
       "price": 17.95
