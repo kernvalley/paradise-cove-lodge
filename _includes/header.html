@@ -10,7 +10,7 @@
 		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
 		{% include address.html address=site.data.business.address %}
 		{% if site.data.business.telephone %}
-			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block color-inherit">
+			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block underline color-inherit">
 				{% include icon.html icon="call-start" %}
 				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
@@ -21,7 +21,7 @@
 				<span>{{ site.data.business.email }}</span>
 			</a>
 		{% endif %}
-		<a href="{{ page.url }}#main" class="block color-inherit" title="Skip to content">
+		<a href="{{ page.url }}#nav" class="block color-inherit" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
 			{% include icon.html icon="chevron-down" class="current-color skip-to-content-icon" height="48px" width="64px" %}
