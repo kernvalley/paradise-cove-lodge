@@ -22,7 +22,7 @@
       "typeOfBed": "King"
     },
     "description": "A room with a view and a king sized bed",
-    "petsAllowed": "No",
+    "petsAllowed": "Yes",
     "smokingAllowed": "No",
     "amenityFeature": [{
       "@type": "LocationFeatureSpecification",
@@ -71,7 +71,7 @@
       "typeOfBed": "Queen"
     },
     "description": "A room with a view and two queen sized bed",
-    "petsAllowed": "No",
+    "petsAllowed": "Yes",
     "smokingAllowed": "No",
     "amenityFeature": [{
       "@type": "LocationFeatureSpecification",
