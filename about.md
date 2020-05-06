@@ -39,8 +39,8 @@ Dining room is available for banquets and events on Mondays and Tuesdays.
 
 ## Our Rooms
 All of our rooms  share a community front porch and have great lake views. There
-is a community lounge area.  The rooms have new flat screen TV's with satellite
-TV and HBO.  Coffee makers and mini-refrigerators are in every room. New Heating
+is a community lounge area.  The rooms have flat screen TV's with satellite
+TV and HBO.  Coffee makers and mini-refrigerators are in every room. Heating
 & air-conditioning units and free Wi-Fi. 
 
 Gift cards are available for purchase to use with motel or dining room.
