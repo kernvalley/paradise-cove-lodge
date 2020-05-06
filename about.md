@@ -13,25 +13,37 @@ tags:
   - history
 ---
 # About Us
-In the 1950's Bo & Margaret Williams bought a piece of property in Lake Isabella
-that had a cabin after many weekend trips with the kids they built a coffee shop
-and named it Paradise Cove (before the area was called Paradise Cove).
+In the 1950's Bo & Margaret Williams bought a cabin with about 30 acres.  Here
+they raised their 3 children in an atmosphere of work and hospitality.  Today
+there is a simple 10 room motel and a dinner house serving  some of the best steaks
+and dinners in Kern County. 
 
-In the mid 60's they built a 12 unit motel and made the permanent move to the valley.
+1950's: After many weekend trips with the kids they built a coffee shop and named
+it Paradise Cove (before the area was called Paradise Cove). And they all worked.
 
-On April Fool's Day 1969 the cafe caught fire and burned to the ground.  In 1971,
-they converted the upstairs game room of the motel into a new steak house style
-restaurant and built a kitchen in back.  Later they added a bar downstairs and
-expanded the dining room.
+1960's through 2020's  Life had ups and downs, births and deaths, business had
+ups and downs.  And we lived and loved and worked.
 
-Today you will still find family working and managing the business - with the
-desire to pass along a work ethic, and the joy of simplicty and hospitality.
+
+Today you will still find family working - with the desire to pass along a work
+ethic, and the joy of simplicity and hospitality.
+
+## Our Dining Room
+We consider ourselves  a traditional steakhouse.  We use local Harris Ranch Choice
+Angus beef. We also have premium seafood and other dishes.   All of our dinners
+are served with family style house salad with cheesebread (our recipe on Kern
+County's Pyreenes Bakery's sourdough, choice of potatoe and house cheesecake.
+ A full bar is available along with a decent list of wines and beers.
+
+Dining room is available for banquets and events on Mondays and Tuesdays.
 
 ## Our Rooms
-All of our rooms  share a community front porch and have great lake views.
-There is a community lounge area.  The rooms have new flat screen TV's with
-sattelite TV and HBO.  Coffee makers and mini-refrigerators are in every room.
-New Heating & air-conditioning units and free Wi-Fi.
+All of our rooms  share a community front porch and have great lake views. There
+is a community lounge area.  The rooms have new flat screen TV's with satellite
+TV and HBO.  Coffee makers and mini-refrigerators are in every room. New Heating
+& air-conditioning units and free Wi-Fi. 
+
+Gift cards are available for purchase to use with motel or dining room.
 
 ## Location
 We are located on Highway 178 on the south side of Lake Isabella, just 3 miles
