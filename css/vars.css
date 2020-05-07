@@ -1,5 +1,3 @@
----
----
 @media (max-width: 800px) {
 	:root {
 		--scrollbar-width: auto;
@@ -10,11 +8,13 @@
 	--accent-color-dark: #661E2A;
 	--button-active-background-dark: #511721;
 	--accent-color-light: var(--accent-color-dark);
+	--sidebar-max-width: 320px;
 	--button-active-background-light: var(--button-active-background-dark);
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
 	--scrollbar-width: thin;
 	--map-width: 100%;
+	--hero-grad: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%);
 }
 
 body {

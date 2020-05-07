@@ -26,8 +26,10 @@
 	{% endif %}
 	<!-- /Facebook | OpenGraph -->
 	<!-- Twitter -->
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:creator" content="" />
+	<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' }}" />
+	{% if page.twitter_creator %}
+		<meta name="twitter:creator" content="{{ page.twitter_creator}}" />
+	{% endif %}
 	<meta name="twitter:description" content="{{ page.description }}" />
 	<meta name="twitter:image" content="{{ page.thumbnail.url | absolute_url | default: site.thumbnail.url | absolute_url }}" />
 	<!-- /Twitter -->
@@ -75,7 +77,6 @@
 	{% if page.preload %}{% for preload in page.preload %}
 		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
 	{% endfor %}{% endif %}
-	<link rel="preload" href="{{ site.icons }}" as="image" type="image/svg+xml" />
 	{% if site.stylesheets %}{% for stylesheet in site.stylesheets[jekyll.environment] %}
 		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
 	{% endfor %}{% endif %}

@@ -1,8 +1,8 @@
 {
-  "name": "jekyll-template",
+  "name": "paradise-cove-lodge",
   "version": "1.0.0",
   "private": true,
-  "description": "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.",
+  "description": "Steakhouse & Motel in Lake Isabella California",
   "config": {
     "serve": {
       "domain": "localhost",
@@ -21,13 +21,13 @@
     "url": "git+https://github.com/shgysk8zer0/jekyll-template.git"
   },
   "keywords": [
-    "jekyll",
-    "template",
-    "ecmascript",
-    "javascript",
-    "css",
-    "svg",
-    "icons"
+    "paradise cove lodge",
+    "paradise cove",
+    "restaurant",
+    "steakhouse",
+    "lodge",
+    "motel",
+    "hotel"
   ],
   "author": "Chris Zuber <shgysk8zer0@gmail.com>",
   "license": "MIT",
