@@ -22,8 +22,6 @@
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: 320px 1fr auto;
 	grid-gap: 0.6em;
-	border: 1px solid currentColor;
-	border-radius: 4px;
 	padding: 0.4em;
 	margin-bottom: 0.4rem;
 }

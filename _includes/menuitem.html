@@ -1,4 +1,4 @@
-<div {% if include.identifier %}id="{{ include.identifier }}" {% endif %}class="food-menuitem" itemtype="https://schema.org/MenuItem" itemprop="{{ include.itemprop | default: 'hasMenuItem' }}" itemscope="">
+<div {% if include.identifier %}id="{{ include.identifier }}" {% endif %}class="food-menuitem card shadow" itemtype="https://schema.org/MenuItem" itemprop="{{ include.itemprop | default: 'hasMenuItem' }}" itemscope="">
 	{% if include.image %}
 		<!-- TODO: Convert to responsive images via `url` & `width` -->
 		{% for image in include.image %}
