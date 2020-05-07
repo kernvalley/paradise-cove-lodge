@@ -8,7 +8,6 @@
 			<meta itemprop="image" content="{{ site.data.business.image | absolute_url }}" />
 		{% endif %}
 		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
-		{% include address.html address=site.data.business.address %}
 		{% if site.data.business.telephone %}
 			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block underline color-inherit">
 				{% include icon.html icon="call-start" %}
@@ -21,6 +20,7 @@
 				<span>{{ site.data.business.email }}</span>
 			</a>
 		{% endif %}
+		{% include address.html address=site.data.business.address %}
 		<a href="{{ page.url }}#nav" class="block color-inherit" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />

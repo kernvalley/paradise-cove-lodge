@@ -3,6 +3,15 @@
 	min-height: 74vh;
 }
 
+:root[data-background="front"] #header {
+	background-image: var(--hero-grad), url("/img/raster/background/front-1440.jpg");
+}
+
+:root[data-background="motel"] #header {
+	background-image: var(--hero-grad), url("/img/raster/background/motel-1440.jpg");
+	background-position: bottom center;
+}
+
 :root[data-background="dining"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/dining-1440.jpg");
 }
@@ -18,6 +27,14 @@
 @media (max-width: 400px) {
 	#header {
 		background-image: var(--hero-grad), url("/img/raster/background/snow-400.jpg");
+	}
+
+	:root[data-background="front"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/front-400.jpg");
+	}
+
+	:root[data-background="motel"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/motel-400.jpg");
 	}
 
 	:root[data-background="dining"] #header {
@@ -38,6 +55,14 @@
 		background-image: var(--hero-grad), url("/img/raster/background/snow-800.jpg");
 	}
 
+	:root[data-background="front"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/front-800.jpg");
+	}
+
+	:root[data-background="motel"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/motel-800.jpg");
+	}
+
 	:root[data-background="dining"] #header {
 		background-image: var(--hero-grad), url("/img/raster/background/dining-800.jpg");
 	}
@@ -54,6 +79,14 @@
 @media ((min-width: 801px) and (max-width: 1280px)) {
 	#header {
 		background-image: var(--hero-grad), url("/img/raster/background/snow-1280.jpg");
+	}
+
+	:root[data-background="front"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/front-1280.jpg");
+	}
+
+	:root[data-background="motel"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/motel-12800.jpg");
 	}
 
 	:root[data-background="dining"] #header {
