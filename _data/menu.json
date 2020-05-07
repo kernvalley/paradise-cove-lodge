@@ -9,7 +9,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/ribeye.jpg",
+      "url": "/img/raster/menu/ribeye.jpg"
     }],
     "offers": [{
       "price": 30.95
@@ -21,7 +21,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/new-york.jpg",
+      "url": "/img/raster/menu/new-york.jpg"
     }],
     "offers": [{
       "price": 27.95
@@ -42,7 +42,7 @@
     "name": "Paul Bunyan",
     "identifier": "8776f25e-7174-4b08-8cda-ad3626db119b",
     "description": "28-32 oz. Top Sirloin&hellip; That's big!",
-    "image": [{"image": [{
+    "image": [{
       "width": 320,
       "height": 200,
       "url": "/img/raster/menu/paul-bunyan.jpg"
@@ -57,7 +57,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/top.jpg",
+      "url": "/img/raster/menu/top.jpg"
     }],
     "offers": [{
       "price": 23.95
@@ -283,7 +283,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/teryiakichicken.jpg",
+      "url": "/img/raster/menu/teryiakichicken.jpg"
     }],
     "offers": [{
       "price": 18.95
@@ -295,7 +295,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/artichoke-chicken.jpg",
+      "url": "/img/raster/menu/artichoke-chicken.jpg"
     }],
     "offers": [{
       "price": 19.95
@@ -307,7 +307,7 @@
     "image": [{
       "width": 320,
       "height": 200,
-      "url": "/img/raster/menu/ravoli.jpg",
+      "url": "/img/raster/menu/ravoli.jpg"
     }],
     "offers": [{
       "price": 18.95
