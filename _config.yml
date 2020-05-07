@@ -16,7 +16,7 @@ manifest: /manifest.json
 tiles-config: /browserconfig.xml
 # service_worker:
 og-type: website
-description: "Steakhouse & Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
+description: "Steakhouse &amp; Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 mobile-web-app-capable: true
 # canonical: ''
 keywords:
@@ -28,7 +28,10 @@ keywords:
 - dining
 - lodging
 - steak
+- steakhouse
 - lobster
+- motel
+- hotel
 thumbnail:
   url: "/img/raster/logo.png"
 facebook-site-name: paradise-cove
@@ -121,7 +124,7 @@ defaults:
       name: 'KernValley.US'
       url: 'https://kernvalley.us'
       logo:
-              url: 'https://kernvalley.us/img/icon-256.png'
+        url: 'https://kernvalley.us/img/icon-256.png'
     permalink: /posts/:categories/:year/:month/:day/:title/
     comments: false
     ads: false

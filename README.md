@@ -1,5 +1,5 @@
 # Paradise Cove Lodge
-Website for Paradise Cove Lodge & Restaurant
+Steakhouse & Motel in Lake Isabella California
 
 [![GitHub Actions Status](https://github.com/kernvalley/paradise-cove-lodge/workflows/Node%20CI/badge.svg)](https://github.com/kernvalley/paradise-cove-lodge/actions)
 ![GitHub release](https://img.shields.io/github/release/kernvalley/paradise-cove-lodge.svg)
@@ -8,7 +8,7 @@ Website for Paradise Cove Lodge & Restaurant
 
 ![GitHub forks](https://img.shields.io/github/forks/kernvalley/paradise-cove-lodge.svg?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/kernvalley/paradise-cove-lodge.svg?style=social)
-- - - 
+- - -
 
 - [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
 - [Contributing](./.github/CONTRIBUTING.md)
