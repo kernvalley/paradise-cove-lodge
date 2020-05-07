@@ -10,6 +10,7 @@
 	--accent-color-dark: #661E2A;
 	--button-active-background-dark: #511721;
 	--accent-color-light: var(--accent-color-dark);
+	--sidebar-max-width: 320px;
 	--button-active-background-light: var(--button-active-background-dark);
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
