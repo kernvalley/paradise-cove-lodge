@@ -30,7 +30,7 @@ keywords:
 - steak
 - lobster
 thumbnail:
-  url: "/img/raster/background/snow-400.jpg"
+  url: "/img/raster/logo.png"
 facebook-site-name: paradise-cove
 repository:
   username: kernvalley
@@ -55,7 +55,7 @@ scripts:
     type: module
     async: true
   production:
-  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
+  - src: 'https://polyfill.io/v3/polyfill.min.js'
     type: text/javascript
   - src: /js/index.min.js
     async: true
