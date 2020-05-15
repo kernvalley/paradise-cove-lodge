@@ -16,6 +16,7 @@
 
 :root[data-background="fountain"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/fountain-1440.jpg");
+	background-position-y: top;
 }
 
 :root[data-background="sunrise"] #header {
@@ -25,12 +26,12 @@
 
 :root[data-background="motel"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/motel-1440.jpg");
-	background-position: bottom center;
+	background-position-y: 40%;
 }
 
 :root[data-background="restaurant"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/restaurant-1440.jpg");
-	background-position-y: bottom;
+	background-position-y: 40%;
 }
 
 :root[data-background="rooms"] #header {

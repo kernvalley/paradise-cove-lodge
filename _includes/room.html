@@ -62,7 +62,7 @@
 		<meta itemprop="priceCurrency" id="price-currency-{{ include.offer.identifier }}" content="{{ include.offer.priceSpecification.priceCurrency }}" />
 		<span itemprop="description" id="price-description-{{ include.offer.identifier }}">{{ include.offer.priceSpecification.description }}</span>
 	</div>
-	<a id="book-{{ include.offer.identifier }}" href="{{ include.offer.url }}" role="button" rel="noopener external" class="btn btn-primary btn-wide book-button">
+	<a id="book-{{ include.offer.identifier }}" href="{{ include.offer.url }}" role="button" rel="noopener external" class="btn btn-primary btn-wide book-button center">
 		{% include icon.html icon="link-external" %}
 		<span>Book Now</span>
 	</a>

@@ -9,7 +9,7 @@
 	margin-bottom: 1.3em;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 992px) {
 	.offer-container {
 		grid-template-areas: "image image image image" ". offer offer ." ". price price ." ". . book .";
 		grid-template-columns: 1em 1fr 1fr 1em;
