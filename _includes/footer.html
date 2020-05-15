@@ -43,6 +43,8 @@
 		<span>&copy;</span>
 		<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
 		<span itemprop="copyrightHolder" itemtype="https://schema.org/{{ site.data.business.type | default: 'LocalBusiness' }}" itemscope="">
+			<meta itemprop="telephone" content="{{ site.data.business.telephone }}" />
+			<meta itemprop="priceRange" content="{{ site.data.business.priceRange }}" />
 			<a href="{{ site.data.business.url | default: site.url | absolute_url }}" target="_blank" rel="external noopener"class="color-inherit" itemprop="url">
 				<span itemprop="name">{{ site.data.business.name }}</span>
 				<meta itemprop="image" content="{{ site.data.business.image }}" />

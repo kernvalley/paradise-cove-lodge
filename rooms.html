@@ -18,11 +18,12 @@ tags:
 <div id="motel-container" itemprop="offeredBy" itemtype="https://schema.org/Motel" itemscope="">
 	<h3 itemprop="name" hidden="">{{ site.data.motel.name }}</h3>
 	<meta itemprop="image" content="{{ site.data.motel.image | absolute_url }}" />
-	<meta itemprop="telephone" content="{{ site.data.business.address.telephone | replace: '+1-', '' }}" />
+	<meta itemprop="telephone" content="{{ site.data.motel.telephone | default: site.data.business.telephone | replace: '+1-', '' }}" />
 	<meta itemprop="petsAllowed" content="{{ site.data.motel.petsAllowed | default: 'No' }}" />
 	<meta itemprop="checkinTime" content="{{ site.data.motel.checkinTime }}" />
 	<meta itemprop="checkoutTime" content="{{ site.data.motel.checkoutTime }}" />
 	<meta itemprop="numberOfRooms" content="{{ site.data.motel.numberOfRooms }}" />
+	<meta itemprop="telephone" content="{{ site.data.motel.priceRange | default: site.data.business.pricRange }}" />
 	<p class="rooms-desc status-box info" itemprop="description">
 		All of our rooms  share a community front porch and have great lake views. There
 		is a community lounge area.  The rooms have flat screen TV's with satellite
