@@ -1,10 +1,26 @@
 #header {
 	background-image: var(--hero-grad), url("/img/raster/background/snow-1440.jpg");
 	min-height: 74vh;
+	width: 100%;
+	contain: strict;
+	background-position-x: center;
+}
+
+:root:not([data-background]) #header, :root[data-background="snow"] {
+	background-position-y: bottom;
 }
 
 :root[data-background="front"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/front-1440.jpg");
+}
+
+:root[data-background="fountain"] #header {
+	background-image: var(--hero-grad), url("/img/raster/background/fountain-1440.jpg");
+}
+
+:root[data-background="sunrise"] #header {
+	background-image: var(--hero-grad), url("/img/raster/background/sunrise-1280.jpg");
+	background-position-y: bottom;
 }
 
 :root[data-background="motel"] #header {
@@ -12,8 +28,9 @@
 	background-position: bottom center;
 }
 
-:root[data-background="dining"] #header {
-	background-image: var(--hero-grad), url("/img/raster/background/dining-1440.jpg");
+:root[data-background="restaurant"] #header {
+	background-image: var(--hero-grad), url("/img/raster/background/restaurant-1440.jpg");
+	background-position-y: bottom;
 }
 
 :root[data-background="rooms"] #header {
@@ -21,7 +38,7 @@
 }
 
 :root[data-background="lake"] #header {
-	background-image: var(--hero-grad), url("/img/raster/background/lake-1440.jpg");
+	background-image: var(--hero-grad), url("/img/raster/background/lake-1280.jpg");
 }
 
 @media (max-width: 400px) {
@@ -33,12 +50,20 @@
 		background-image: var(--hero-grad), url("/img/raster/background/front-400.jpg");
 	}
 
+	:root[data-background="fountain"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/fountain-400.jpg");
+	}
+
+	:root[data-background="sunrise"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/sunrise-400.jpg");
+	}
+
 	:root[data-background="motel"] #header {
 		background-image: var(--hero-grad), url("/img/raster/background/motel-400.jpg");
 	}
 
-	:root[data-background="dining"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/dining-400.jpg");
+	:root[data-background="restaurant"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/restaurant-400.jpg");
 	}
 
 	:root[data-background="rooms"] #header {
@@ -59,12 +84,20 @@
 		background-image: var(--hero-grad), url("/img/raster/background/front-800.jpg");
 	}
 
+	:root[data-background="fountain"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/fountain-800.jpg");
+	}
+
+	:root[data-background="sunrise"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/sunrise-800.jpg");
+	}
+
 	:root[data-background="motel"] #header {
 		background-image: var(--hero-grad), url("/img/raster/background/motel-800.jpg");
 	}
 
-	:root[data-background="dining"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/dining-800.jpg");
+	:root[data-background="restaurant"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/restaurant-800.jpg");
 	}
 
 	:root[data-background="rooms"] #header {
@@ -85,20 +118,20 @@
 		background-image: var(--hero-grad), url("/img/raster/background/front-1280.jpg");
 	}
 
-	:root[data-background="motel"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/motel-12800.jpg");
+	:root[data-background="fountain"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/fountain-1280.jpg");
 	}
 
-	:root[data-background="dining"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/dining-1280.jpg");
+	:root[data-background="motel"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/motel-1280.jpg");
+	}
+
+	:root[data-background="restaurant"] #header {
+		background-image: var(--hero-grad), url("/img/raster/background/restaurant-1280.jpg");
 	}
 
 	:root[data-background="rooms"] #header {
 		background-image: var(--hero-grad), url("/img/raster/background/rooms-1280.jpg");
-	}
-
-	:root[data-background="lake"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/lake-1280.jpg");
 	}
 }
 

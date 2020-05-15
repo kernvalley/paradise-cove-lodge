@@ -1,6 +1,8 @@
 name: Paradise Cove Lodge
-image: /img/raster/dining.jpg
+image: /img/raster/background/restaurant-400.jpg
 offersCuisine:
 - American
+- Seafood
+- Steak
 priceRange: $$$
 acceptsReservations: Yes
