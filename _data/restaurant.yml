@@ -1,6 +1,6 @@
 name: Paradise Cove Lodge
 image: /img/raster/background/restaurant-400.jpg
-offersCuisine:
+servesCuisine:
 - American
 - Seafood
 - Steak
