@@ -65,6 +65,16 @@ img.avatar {
 	margin-bottom: 0.3em;
 }
 
+@media (prefers-color-scheme: light) {
+	body.background-primary {
+		background-color: #dfded9;
+	}
+}
+
+:root[data-theme="light"] body.background-primary {
+	background-color: #dfded9;
+}
+
 .skip-to-content-icon {
 	animation: pointing 600ms alternate ease-in-out infinite;
 }

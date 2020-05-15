@@ -27,7 +27,7 @@ pinned-posts: 5
 	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
 		{% include header.html %}
 		{% include nav.html %}
-		<main id="main" class="card shadow">
+		<main id="main" class="card">
 			{{ content }}
 		</main>
 		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
