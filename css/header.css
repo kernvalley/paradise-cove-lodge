@@ -119,7 +119,7 @@
 	}
 
 	:root[data-background="motel"] #header {
-		background-image: var(--hero-grad), url("/img/raster/background/motel-12800.jpg");
+		background-image: var(--hero-grad), url("/img/raster/background/motel-1280.jpg");
 	}
 
 	:root[data-background="restaurant"] #header {
