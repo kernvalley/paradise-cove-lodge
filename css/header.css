@@ -6,6 +6,10 @@
 	background-position-x: center;
 }
 
+:root:not([data-background]) #header, :root[data-background="snow"] {
+	background-position-y: bottom;
+}
+
 :root[data-background="front"] #header {
 	background-image: var(--hero-grad), url("/img/raster/background/front-1440.jpg");
 }
