@@ -103,7 +103,7 @@
 		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
 	{% endfor %}{% endif %}
 	{% if page.preconnect %}{% for link in page.preconnect %}
-		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
 	{% endfor %}{% endif %}
 	{% if page.prerender %}{% for link in page.prerender %}
 			<link rel="prerender" href="{{ link.href }}" />

@@ -17,13 +17,13 @@ preload:
 - href: 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css'
   as: style
   type: text/css
-  crossorigin: no-referrer
-  referrerPolicy: origin-when-cross-origin
+  crossorigin: anonymous
+  referrerPolicy: no-referrer
   integrity: sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
 preconnect:
-- href: 'https://maps.wikimedia.org'
-	crossorigin: anonymous
-	referrerPolicy: no-referrer
+- href: 'https://maps.wikimedia.com'
+  crossorigin: anonymous
+  referrerPolicy: no-referrer
 tags:
   - Paradise Cove Lodge
   - about
