@@ -1,4 +1,5 @@
-<address itemprop="{{ include.itemprop | default: 'address' }}" itemtype="https://schema.org/PostalAddress" itemscope="">
+<address itemprop="{{ include.itemprop | default: 'address' }}" itemtype="https://schema.org/PostalAddress" itemscope=""{% if include.hidden %} hidden=""{% endif %}>
+	{% if include.name %}<div itemprop="name">{{ include.name }}</div>{% endif %}
 	{% if include.address.streetAddress %}<div itemprop="streetAddress">{{ include.address.streetAddress }}</div>{% endif %}
 	{% if include.address.postOfficeBoxNumber %}<div itemprop="postOfficeBoxNumber">{{ inlclude.address.postOfficeBoxNumber }}</div>{% endif %}
 	<div>

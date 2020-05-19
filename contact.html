@@ -7,6 +7,18 @@ referrer: no-referrer
 description: Contact form for Paradise Cove Lodge
 thumbnail:
   url: /img/raster/background/snow-400.jpg
+preload:
+- href: 'https://cdn.kernvalley.us/components/leaflet/map.html'
+  as: fetch
+  type: text/html
+  crossorigin: anonymous
+  referrerPolicy: no-referrer
+- href: 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css'
+  as: style
+  type: text/css
+  crossorigin: no-referrer
+  referrerPolicy: origin-when-cross-origin
+  integrity: sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
 tags:
   - Paradise Cove Lodge
   - contact

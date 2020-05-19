@@ -7,6 +7,18 @@ referrer: no-referrer
 thumbnail:
   url: /img/raster/background/sunrise-400.jpg
 description: "Steakhouse &amp; Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
+preload:
+- href: 'https://cdn.kernvalley.us/components/leaflet/map.html'
+  as: fetch
+  type: text/html
+  crossorigin: anonymous
+  referrerPolicy: no-referrer
+- href: 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css'
+  as: style
+  type: text/css
+  crossorigin: no-referrer
+  referrerPolicy: origin-when-cross-origin
+  integrity: sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
 tags:
 - Paradise Cove
 - Paradise Cove Lodge
