@@ -52,7 +52,7 @@
     "postinstall": "npm run build",
     "build:css": "if [ -f 'postcss.config.js' ]; then postcss ${npm_package_config_dir_css}index.css -o ${npm_package_config_dir_css}index.min.css; fi",
     "build:js": "if [ -f 'rollup.config.js' ]; then rollup --config; fi",
-    "build:icons": "if [ -f '${npm_package_config_icons}' ]; then $(svg-sprite-generate -c '${npm_package_config_icons}' -o 'img/icons.svg'); fi",
+    "build:icons": "if [ -f ${npm_package_config_icons} ]; then $(svg-sprite-generate -c ${npm_package_config_icons} -o 'img/icons.svg'); fi",
     "fix:css": "stylelint ${npm_package_config_dir_css} --fix",
     "fix:js": "eslint ${npm_package_config_dir_js} --fix",
     "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve",
