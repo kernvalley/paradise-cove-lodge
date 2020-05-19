@@ -9,7 +9,7 @@
 	<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	<meta name="referrer" content="{{ page.referrer | default: site.referrer }}"/>
 	<meta name="mobile-web-app-capable" content="yes" />
-	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url | absolute_url | default: site.thumbnail.url | absolute_url }}" />
+	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- Social data -->
 	<!-- Facebook | OpenGraph -->
 	<meta property="og:type" content="{{ page.og-type | default: layout.og-type }}" />
@@ -17,7 +17,7 @@
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:description" content="{{ page.description }}" />
 	<meta property="og:keywords" content="{{ page.tags | join: ', ' }}" />
-	<meta property="og:image" content="{{ page.thumbnail.url | absolute_url | default: site.thumbnail.url | absolute_url }}" />
+	<meta property="og:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
@@ -31,12 +31,12 @@
 		<meta name="twitter:creator" content="{{ page.twitter_creator}}" />
 	{% endif %}
 	<meta name="twitter:description" content="{{ page.description }}" />
-	<meta name="twitter:image" content="{{ page.thumbnail.url | absolute_url | default: site.thumbnail.url | absolute_url }}" />
+	<meta name="twitter:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- /Twitter -->
 	<!-- /Social data -->
-	<meta name="msapplication-TileColor" content="{{ site.theme-color | default: '#528ff9' }}" />
+	<meta name="msapplication-TileColor" content="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	<meta name="msapplication-config" content="{{ site.tiles-config }}" />
-	<meta name="theme-color" content="{{ site.theme-color | default: '#528ff9' }}" />
+	<meta name="theme-color" content="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	{% if site.webmaster-verifications.google %}
 		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
 	{% endif %}
@@ -50,34 +50,65 @@
 		{% include adsense.html %}
 	{% endif %}
 	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
-	{% if site.scripts %}{% for script in site.scripts[jekyll.environment] %}
-		{% include script.html src=script.src async=script.async defer=script.defer type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+	{% if site.data.scripts %}{% for script in site.data.scripts[jekyll.environment] %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
 	<!-- <script type="module" src="/js/index.js" async=""></script> -->
 	{% if layout.scripts %}{% for script in layout.scripts %}
-		{% include script.html src=script.src async=script.async defer=script.defer type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
 	{% if page.scripts %}{% for script in page.scripts %}
-		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
-	<link rel="manifest" href="{{ site.manifest }}" />
+	{% if site.manifest %}
+		<link rel="manifest" href="{{ site.manifest }}" />
+	{% endif %}
 	<link rel="license" href="/LICENSE" />
-	<link rel="icon" href="/img/favicon.svg" type="image/svg+xml" sizes="any" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png" />
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.theme-color | default: '#528ff9' }}" />
+	{% for icon in site.data.app.icons %}
+		<link rel="{{ icon.rel | default: 'icon' }}" href="{{ icon.href }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}">
+	{% endfor %}
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	<link rel="shortcut icon" href="/favicon.ico" />
-	{% if site.preload %}{% for preload in site.preload %}
-		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% if site.data.preload %}{% for link in site.data.preload %}
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
-	{% if layout.preload %}{% for preload in layout.preload %}
-		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% if layout.preload %}{% for link in layout.preload %}
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
-	{% if page.preload %}{% for preload in page.preload %}
-		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% if page.preload %}{% for link in page.preload %}
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
-	{% if site.stylesheets %}{% for stylesheet in site.stylesheets[jekyll.environment] %}
+	{% if site.data.prefetch %}{% for link in site.data.prefetch %}
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+	{% endfor %}{% endif %}
+	{% if layout.prefetch %}{% for link in layout.prefetch %}
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
+	{% endfor %}{% endif %}
+	{% if page.prefetch %}{% for link in page.prefetch %}
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+	{% endfor %}{% endif %}
+	{% if site.data.dns-prefetch %}{% for link in site.data.dns-prefetch %}
+		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if layout.dns-prefetch %}{% for link in layout.dns-prefetch %}
+		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if page.dns-prefetch %}{% for link in page.dns-prefetch %}
+		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if site.data.preconnect %}{% for link in site.data.preconnect %}
+		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if layout.preconnect %}{% for link in layout.dns-prefetch %}
+		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if page.preconnect %}{% for link in page.preconnect %}
+		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+	{% endfor %}{% endif %}
+	{% if page.prerender %}{% for link in page.prerender %}
+			<link rel="prerender" href="{{ link.href }}" />
+	{% endfor %}{% endif %}
+	{% if site.data.stylesheets %}{% for stylesheet in site.data.stylesheets[jekyll.environment] %}
 		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
 	{% endfor %}{% endif %}
 	{% if layout.stylesheets %}{% for stylesheet in layout.stylesheets %}
