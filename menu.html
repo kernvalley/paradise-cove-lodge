@@ -17,7 +17,7 @@ tags:
   - steakhouse
   - steak house
 ---
-<div itemtype="https://schema.org/Restaurant" itemscope="">
+<div class="menu-container" itemtype="https://schema.org/Restaurant" itemscope="">
 	<h3 itemprop="name" hidden="">{{ site.data.restaurant.name }}</h3>
 	<meta itemprop="image" content="{{ site.data.restaurant.image | default: site.data.business.image | absolute_url }}" />
 	<meta itemprop="logo" content="{{ site.data.restaurant.logo | default: site.data.business.logo | absolute_url }}" />
@@ -27,6 +27,7 @@ tags:
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
 	<div hidden="">{% include address.html address=site.data.business.address %}</div>
+	<div class="status-box info pricing-notice">Prices subject to change.</div>
 	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
 		{% for menusection in site.data.menu %}
 			{% include menusection.html

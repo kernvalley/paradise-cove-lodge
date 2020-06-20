@@ -47,6 +47,10 @@
 	grid-area: diets;
 }
 
+.menu-container .pricing-notice {
+	margin: 1.2em 0;
+}
+
 @media (max-width: 1050px) {
 	.food-menuitem {
 		grid-template-areas: "name name" "image image" "description description" "offers diets";

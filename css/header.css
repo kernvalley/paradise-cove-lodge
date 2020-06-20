@@ -3,6 +3,7 @@
 	min-height: 74vh;
 	width: 100%;
 	contain: strict;
+	overflow: hidden;
 	background-position-x: center;
 }
 
