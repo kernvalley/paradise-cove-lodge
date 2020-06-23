@@ -1,6 +1,6 @@
 author: Chris Zuber
 title: Paradise Cove Lodge
-url: 'https://cocky-northcutt-d88654.netlify.app'
+url: 'https://www.paradisecovelodge.com/'
 markdown: kramdown
 version: 1.0.0
 timezone: America/Los_Angeles
@@ -18,7 +18,7 @@ tiles-config: /browserconfig.xml
 og-type: website
 description: "Steakhouse &amp; Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 mobile-web-app-capable: true
-# canonical: ''
+canonical: 'https://www.paradisecovelodge.com/'
 keywords:
 - Paradise Cove
 - Paradise Cove Lodge
