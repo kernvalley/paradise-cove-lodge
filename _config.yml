@@ -97,6 +97,8 @@ plugins:
 - jekyll-admin
 - jekyll-watch
 - jekyll-paginate
+include:
+- _redirects
 exclude:
 - ".gitkeep"
 - "*.rb"
