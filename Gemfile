@@ -45,4 +45,4 @@ gem "jekyll-avatar", "~> 0.5.0"
 # Added at 2018-01-25 13:37:57 -0800 by shgysk8zer0:
 gem "jekyll-watch", "~> 1.5"
 
-gem "backports", "~> 3.15"
+gem "backports", "~> 3.18"
