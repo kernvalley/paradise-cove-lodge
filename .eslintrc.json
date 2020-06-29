@@ -26,6 +26,7 @@
         "no-console": 0,
         "async-await/space-after-async": 2,
         "async-await/space-after-await": 2,
+	"no-prototype-builtins": 0,
         "generator-star-spacing": ["error", {
             "before": false,
             "after": true,
