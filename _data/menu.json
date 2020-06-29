@@ -103,11 +103,11 @@
     "offers": [{
       "name": "Petite Cut",
       "description": "10-12 oz",
-      "price": 27.95,
+      "price": 27.95
     }, {
       "name": "Full Cut",
       "description": "14-16 oz",
-      "price": 30.95,
+      "price": 30.95
     }]
   }]
 }, {
@@ -124,7 +124,7 @@
       "url": "/img/raster/menu/shrimp.jpg"
     }],
     "offers": [{
-      "price": 21.95,
+      "price": 21.95
     }]
   }, {
     "name": "Scampi",
@@ -136,7 +136,7 @@
       "url": "/img/raster/menu/scampi.jpg"
     }],
     "offers": [{
-      "price": 22.95,
+      "price": 22.95
     }]
   }, {
     "name": "Scallops",
@@ -148,7 +148,7 @@
       "url": "/img/raster/menu/scallop.jpg"
     }],
     "offers": [{
-      "price": 24.95,
+      "price": 24.95
     }]
   }, {
     "name": "Halibut",
@@ -160,7 +160,7 @@
       "url": "/img/raster/menu/halibut.jpg"
     }],
     "offers": [{
-      "price": 27.95,
+      "price": 27.95
     }]
   }, {
     "name": "Salmon",
@@ -172,7 +172,7 @@
       "url": "/img/raster/menu/salmon.jpg"
     }],
     "offers": [{
-      "price": 22.95,
+      "price": 22.95
     }]
   }, {
     "name": "Crab",
@@ -184,7 +184,7 @@
       "url": "/img/raster/menu/crab.jpg"
     }],
     "offers": [{
-      "price": 48.95,
+      "price": 48.95
     }]
   }, {
     "name": "Lobster",
@@ -201,7 +201,7 @@
         "minPrice": 48.95,
         "description": "Varies with market."
       }]
-    }],
+    }]
   }, {
     "name": "Trout",
     "identifier": "4b32a697-c622-4173-832e-44c740135144",
@@ -228,7 +228,7 @@
       "url": "/img/raster/menu/catfish.jpg"
     }],
     "offers": [{
-      "price": 58.95,
+      "price": 58.95
     }]
   }]
 }, {
@@ -245,7 +245,7 @@
       "url": "/img/raster/menu/steak-and-shrimp.jpg"
     }],
     "offers": [{
-      "price": 25.95,
+      "price": 25.95
     }]
   }, {
     "name": "Surf &amp; Turf",
@@ -257,7 +257,7 @@
       "url": "/img/raster/menu/surf-and-turf.jpg"
     }],
     "offers": [{
-      "price": 66.95,
+      "price": 66.95
     }]
   }, {
     "name": "Crab &amp; Steak",
@@ -269,7 +269,7 @@
       "url": "/img/raster/menu/crab-and-steak.jpg"
     }],
     "offers": [{
-      "price": 48.95,
+      "price": 48.95
     }]
   }]
 }, {
@@ -380,5 +380,5 @@
 }, {
   "name": "Wine &amp; Beer",
   "identifier": "cb36b644-6f3b-4b71-b193-2b689ee3523f",
-  "description": " Excellent house wines, good selection of bottled wines; Beers: domestic, import and craft; also have a full bar-house specials are our pomegranate margarita and our Long Island Ice Tea.",
+  "description": " Excellent house wines, good selection of bottled wines; Beers: domestic, import and craft; also have a full bar-house specials are our pomegranate margarita and our Long Island Ice Tea."
 }]

@@ -58,7 +58,7 @@
     "@type": "PriceSpecification ",
     "price": 100,
     "priceCurrency": "USD",
-    "description": "$100 per night",
+    "description": "$100 per night"
    },
   "itemOffered": {
     "@type": "HotelRoom",

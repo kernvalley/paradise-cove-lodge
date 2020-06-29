@@ -24,15 +24,11 @@ updates:
   - shgysk8zer0
   labels:
   - dependencies
-- package-ecosystem: gitsubmodule
+- package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: weekly
+    interval: daily
     time: "13:00"
   open-pull-requests-limit: 10
   reviewers:
   - shgysk8zer0
-  assignees:
-  - shgysk8zer0
-  labels:
-  - dependencies
