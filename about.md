@@ -29,11 +29,11 @@ tags:
   - about
   - history
 ---
-# About Us
+## About Us
 In the 1950's Bo & Margaret Williams bought a cabin with about 30 acres.  Here
 they raised their 3 children in an atmosphere of work and hospitality.  Today
 there is a simple 10 room motel and a dinner house serving  some of the best steaks
-and dinners in Kern County. 
+and dinners in Kern County.
 
 1950's: After many weekend trips with the kids they built a coffee shop and named
 it Paradise Cove (before the area was called Paradise Cove). And they all worked.
@@ -45,7 +45,7 @@ ups and downs.  And we lived and loved and worked.
 Today you will still find family working - with the desire to pass along a work
 ethic, and the joy of simplicity and hospitality.
 
-## Our Dining Room
+### Our Dining Room
 We consider ourselves  a traditional steakhouse.  We use local Harris Ranch Choice
 Angus beef. We also have premium seafood and other dishes.   All of our dinners
 are served with family style house salad with cheesebread (our recipe on Kern
@@ -54,15 +54,15 @@ County's Pyreenes Bakery's sourdough, choice of potatoe and house cheesecake.
 
 Dining room is available for banquets and events on Mondays and Tuesdays.
 
-## Our Rooms
+### Our Rooms
 All of our rooms  share a community front porch and have great lake views. There
 is a community lounge area.  The rooms have flat screen TV's with satellite
 TV and HBO.  Coffee makers and mini-refrigerators are in every room. Heating
-& air-conditioning units and free Wi-Fi. 
+& air-conditioning units and free Wi-Fi.
 
 Gift cards are available for purchase to use with motel or dining room.
 
-## Location
+### Location
 We are located on Highway 178 on the south side of Lake Isabella, just 3 miles
 east of the dam.  Only one hour from Bakersfield or Ridgecrest, and 3 hours
 from Los Angeles; a perfect place for a weekend get away.​
