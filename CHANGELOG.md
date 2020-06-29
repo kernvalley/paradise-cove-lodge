@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Numerous dependency updates
 - Update README with more status badges
 - Use non-json file for webapp manifest (JSON lint issues when mixed with Liquid)
+- Use `<github-user>` for dev credits
 
 ## [v1.0.1] - 2020-06-25
 
