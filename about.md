@@ -68,6 +68,7 @@ east of the dam.  Only one hour from Bakersfield or Ridgecrest, and 3 hours
 from Los Angeles; a perfect place for a weekend get away.​
 
 ### Have dinner and stay for the night.​
+<!-- markdownlint-disable -->
 <div class="clearfix">
 <span class="img-container">
 <img class="loc-img" src="/img/raster/background/location-350.jpg" width="350" height="263" alt="Paradise Cove Street View" decoding="async" loading="lazy" crossorigin="annonymous" />
@@ -83,3 +84,4 @@ Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
 {% include map.html geo=site.data.business.geo hidden=true %}
+<!-- markdownlint-restore -->
