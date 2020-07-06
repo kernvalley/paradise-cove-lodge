@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shgysk8zer0/jekyll-template.git"
+    "url": "git+https://github.com/kernvalley/paradise-cove-lodge.git"
   },
   "keywords": [
     "paradise cove lodge",
@@ -30,12 +30,12 @@
     "motel",
     "hotel"
   ],
-  "author": "Chris Zuber <shgysk8zer0@gmail.com>",
+  "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shgysk8zer0/jekyll-template/issues"
+    "url": "https://github.com/kernvalley/paradise-cove-lodge/issues"
   },
-  "homepage": "https://github.com/shgysk8zer0/jekyll-template",
+  "homepage": "https://github.com/kernvalley/paradise-cove-lodge",
   "scripts": {
     "test": "npm run lint",
     "start": "npm run netlify",
