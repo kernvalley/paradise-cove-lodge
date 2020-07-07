@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shgysk8zer0/jekyll-template.git"
+    "url": "git+https://github.com/kernvalley/paradise-cove-lodge.git"
   },
   "keywords": [
     "paradise cove lodge",
@@ -30,12 +30,12 @@
     "motel",
     "hotel"
   ],
-  "author": "Chris Zuber <shgysk8zer0@gmail.com>",
+  "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shgysk8zer0/jekyll-template/issues"
+    "url": "https://github.com/kernvalley/paradise-cove-lodge/issues"
   },
-  "homepage": "https://github.com/shgysk8zer0/jekyll-template",
+  "homepage": "https://github.com/kernvalley/paradise-cove-lodge",
   "scripts": {
     "test": "npm run lint",
     "start": "npm run netlify",
@@ -72,13 +72,16 @@
     "eslint": "^7.3.1",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-frontmatter": "0.0.8",
     "netlify-cli": "^2.54.0",
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
-    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-properties": "^9.1.1",
     "postcss-discard-comments": "^4.0.2",
     "postcss-import": "^12.0.1",
     "postcss-import-url": "^5.1.0",
+    "postcss-media-minmax": "^4.0.0",
+    "postcss-preset-env": "^6.7.0",
     "postcss-url": "^8.0.0",
     "rollup": "^2.18.1",
     "rollup-plugin-terser": "^6.1.0",
