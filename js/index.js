@@ -6,12 +6,8 @@ import 'https://cdn.kernvalley.us/components/leaflet/map.js';
 import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
-import { ready, registerServiceWorker } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
+import { ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { updateImage } from './functions.js';
-
-if (document.documentElement.dataset.hasOwnProperty('serviceWorker')) {
-	registerServiceWorker(document.documentElement.dataset.serviceWorker).catch(console.error);
-}
 
 document.documentElement.classList.replace('no-js', 'js');
 document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);

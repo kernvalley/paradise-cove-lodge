@@ -6,6 +6,7 @@ index: true
 referrer: no-referrer
 background: fountain
 description: History and info for Paradise Cove Lodge
+pinned: true
 thumbnail:
   url: /img/raster/background/snow-400.jpg
 preload:
