@@ -1,31 +1,151 @@
-name: Paradise Coe Lodge
+name: Paradise Cove Lodge
 shortName: Paradise Cove
-version: 1.0.0
+version: 1.0.1
+lang: en
+dir: ltr
+orientation: any
+description: Steakhouse & Motel in Lake Isabella California
 icons-file: /img/icons.svg
 theme:
   color: '#661E2A'
   background: '#242424'
+categories:
+- food
+- travel
+- lifestyle
+features:
+- Get full menu with images, prices, and more
+- Offline availability
+- Shortcuts to menu, motel rates, and more
+- Share to contact form
 icons:
-- href: /img/favicon.svg
+- src: /img/favicon.svg
   type: image/svg+xml
-  sizes: any
-- href: /img/apple-touch-icon.png
+  sizes: 192x192
+  purpose: any
+- src: /img/apple-touch-icon.png
   rel: apple-touch-icon
   type: image/png
   sizes: 180x180
-- href: /img/icon-512.png
+- src: /img/icon-512.png
   type: image/png
   sizes: 512x512
-- href: /img/icon-192.png
+  purpose: any
+- src: /img/icon-192.png
   type: image/png
   sizes: 192x192
-- href: /img/icon-32.png
+  purpose: any
+- src: /img/icon-32.png
   type: image/png
   sizes: 32x32
-- href: /img/icon-16.png
+- src: /img/icon-16.png
   type: image/png
   sizes: 16x16
 screenshots:
-- src: 'https://i.imgur.com/uRKaQQQl.png'
-  sizes: 640x354
+- src: 'https://i.imgur.com/1SUdnXyl.png'
+  sizes: 640x312
   type: image/png
+- src: 'https://i.imgur.com/1SUdnXym.png'
+  sizes: 320x156
+  type: image/png
+shortcuts:
+- name: Menu
+  description: Menu for Paradise Cove Lodge
+  url: /menu/
+  icons:
+  - src: /img/shortcuts/restaurant.svg
+    sizes: 192x192
+    type: image/svg+xml
+  - src: /img/shortcuts/restaurant-192.png
+    sizes: 192x192
+    type: image/png
+  - src: /img/shortcuts/restaurant-144.png
+    sizes: 144x144
+    type: image/png
+  - src: /img/shortcuts/restaurant-96.png
+    sizes: 96x96
+    type: image/png
+  - src: /img/shortcuts/restaurant-72.png
+    sizes: 72x72
+    type: image/png
+  - src: /img/shortcuts/restaurant-48.png
+    sizes: 48x48
+    type: image/png
+  - src: /img/shortcuts/restaurant-32.png
+    sizes: 32x32
+    type: image/png
+- name: Motel
+  description: Room info and rates for Paradise Cove Lodge
+  url: /rooms/
+  icons:
+  - src: /img/shortcuts/hotel.svg
+    sizes: 192x192
+    type: image/svg+xml
+  - src: /img/shortcuts/hotel-192.png
+    sizes: 192x192
+    type: image/png
+  - src: /img/shortcuts/hotel-144.png
+    sizes: 144x144
+    type: image/png
+  - src: /img/shortcuts/hotel-96.png
+    sizes: 96x96
+    type: image/png
+  - src: /img/shortcuts/hotel-72.png
+    sizes: 72x72
+    type: image/png
+  - src: /img/shortcuts/hotel-48.png
+    sizes: 48x48
+    type: image/png
+  - src: /img/shortcuts/hotel-32.png
+    sizes: 32x32
+    type: image/png
+- name: About
+  description: History and info about Paradise Cove Lodge
+  url: /about/
+  icons:
+  - src: /img/shortcuts/about.svg
+    sizes: 192x192
+    type: image/svg+xml
+  - src: /img/shortcuts/about-192.png
+    sizes: 192x192
+    type: image/png
+  - src: /img/shortcuts/about-144.png
+    sizes: 144x144
+    type: image/png
+  - src: /img/shortcuts/about-96.png
+    sizes: 96x96
+    type: image/png
+  - src: /img/shortcuts/about-72.png
+    sizes: 72x72
+    type: image/png
+  - src: /img/shortcuts/about-48.png
+    sizes: 48x48
+    type: image/png
+  - src: /img/shortcuts/about-32.png
+    sizes: 32x32
+    type: image/png
+- name: Lake Cam
+  description: Lake view from Paradise Cove Lodge
+  url: /lake-cam/
+  icons:
+  - src: /img/shortcuts/lake-cam.svg
+    sizes: 192x192
+    type: image/svg+xml
+  - src: /img/shortcuts/lake-cam-192.png
+    sizes: 192x192
+    type: image/png
+  - src: /img/shortcuts/lake-cam-144.png
+    sizes: 144x144
+    type: image/png
+  - src: /img/shortcuts/lake-cam-96.png
+    sizes: 96x96
+    type: image/png
+  - src: /img/shortcuts/lake-cam-72.png
+    sizes: 72x72
+    type: image/png
+  - src: /img/shortcuts/lake-cam-48.png
+    sizes: 48x48
+    type: image/png
+  - src: /img/shortcuts/lake-cam-32.png
+    sizes: 32x32
+    type: image/png

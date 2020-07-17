@@ -14,7 +14,7 @@ robots: 'follow, index'
 referrer: origin-when-cross-origin
 manifest: /manifest.json
 tiles-config: /browserconfig.xml
-# service_worker:
+# service_worker: /service-worker.js
 og-type: website
 description: "Steakhouse &amp; Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 mobile-web-app-capable: true
@@ -115,6 +115,7 @@ exclude:
 - "*.log"
 - "*.config.js"
 - ".gitkeep"
+- "tags.*"
 - docs/
 - "/.github/"
 - Gemfile

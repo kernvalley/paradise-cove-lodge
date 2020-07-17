@@ -65,7 +65,7 @@
 	{% endif %}
 	<link rel="license" href="/LICENSE" />
 	{% for icon in site.data.app.icons %}
-		<link rel="{{ icon.rel | default: 'icon' }}" href="{{ icon.href }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}">
+		<link rel="{{ icon.rel | default: 'icon' }}" href="{{ icon.src }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}">
 	{% endfor %}
 	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	<link rel="shortcut icon" href="/favicon.ico" />

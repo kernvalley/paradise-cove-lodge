@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -5,7 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-<!-- markdownlint-disable -->
+
+## [v1.0.4] - 2020-07-17
+
+### Added
+- Add preconnect link hints
+
+### Changed
+- Update editor config with indent style and width
+- Update eslint to indent on `switch`
+- Updates to webapp manifest
+- Make icons compatible with new maskable icons spec
+- Remov service worker registration function
+- Update CSP
+- Use eslint on entire project instead of just `js/`
+
 ## [v1.0.3] - 2020-06-29
 
 ### Added
