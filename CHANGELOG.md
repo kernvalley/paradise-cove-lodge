@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Update dependencies
+- Make buttons and CSS compatible with new button styles
+- Improve load times by loading polyfills dynamically
+
+### Removed
+- Tel number from rentals in sidebar
+
 ## [v1.0.4] - 2020-07-17
 
 ### Added
