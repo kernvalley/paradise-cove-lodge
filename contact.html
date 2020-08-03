@@ -48,7 +48,13 @@ tags:
 			{% include icon.html icon="call-start" %}
 			<span>Phone</span>
 		</label>
-		<input type="tel" name="phone" id="contact-phone" class="input" autocomplete="telephone" placeholder="555-555-5555" />
+		<input type="tel" name="phone" id="contact-phone" class="input" autocomplete="tel" placeholder="555-555-5555" />
+	</div>
+	<div class="form-group">
+		<label for="contact-subject" class="input-label required">
+			<span>Subject</span>
+		</label>
+		<input type="text" name="subject" id="contact-subject" class="input" placeholder="Message Subject" />
 	</div>
 	<div class="form-group">
 		<label for="contact-message" class="input-label required">

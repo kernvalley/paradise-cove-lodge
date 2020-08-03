@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Ensure `<nav>` remains visible on page load [shgysk8zer0/core-css#97](https://github.com/shgysk8zer0/core-css/pull/97)
 - Add missing page layout
+- Use correction `autocomplete` for phone on contact page
 
 ### Removed
 - Tel number from rentals in sidebar
