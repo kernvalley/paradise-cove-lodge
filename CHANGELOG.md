@@ -19,6 +19,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependencies
 - Make buttons and CSS compatible with new button styles
 - Improve load times by loading polyfills dynamically
+- Remove optional Google Analytics script and move to dynamic import if tracking id set
+
+### Updated
+- Use CDN styles for contact page
+
+### Fixed
+- Ensure `<nav>` remains visible on page load [shgysk8zer0/core-css#97](https://github.com/shgysk8zer0/core-css/pull/97)
+- Add missing page layout
 
 ### Removed
 - Tel number from rentals in sidebar
