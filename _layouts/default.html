@@ -32,6 +32,6 @@ pinned-posts: 5
 		</main>
 		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
 		{% include footer.html %}
-		{% include share-button.html %}
+		{% include share-button.html text=page.description %}
 	</body>
 </html>
