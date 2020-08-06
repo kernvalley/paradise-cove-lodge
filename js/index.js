@@ -20,7 +20,7 @@ $doc.toggleClass('no-dialog', document.createElement('dialog') instanceof HTMLUn
 $doc.toggleClass('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
 if (typeof ga === 'string' && ga !== '') {
-	importGa(ga);
+	importGa(ga).then(console.log, console.error);
 }
 
 $doc.css({'--viewport-height': `${window.innerHeight}px`});
