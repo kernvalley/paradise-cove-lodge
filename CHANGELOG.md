@@ -15,13 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.0.5] 2020-08-01
 
+### Added
+- Google Analytics script
+
 ### Changed
 - Update dependencies
 - Make buttons and CSS compatible with new button styles
 - Improve load times by loading polyfills dynamically
 - Remove optional Google Analytics script and move to dynamic import if tracking id set
-
-### Updated
 - Use CDN styles for contact page
 
 ### Fixed
