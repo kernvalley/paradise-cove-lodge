@@ -22,7 +22,7 @@
       default-src 'self';
       script-src 'self' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js;
       style-src 'self' https://cdn.kernvalley.us/components/github/ https://cdn.kernvalley.us/components/ https://unpkg.com/leaflet@1.6.0/dist/
-      img-src 'self' https://*.githubusercontent.com https://maps.wikimedia.org https://www.google-analytics.com https://www.tazdij.com;
+      img-src *;
       font-src https://cdn.kernvalley.us;
       connect-src https://cdn.kernvalley.us/components/ https://api.github.com;
       media-src 'none';
