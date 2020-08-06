@@ -15,8 +15,6 @@ pinned-posts: 5
 	data-theme="{{ page.theme | default: layout.theme }}"
 	data-layout="{{ layout.name }}"
 	{% if page.background %}data-background="{{ page.background }}"{% endif %}
-	{% if site.service_worker %}data-service-worker="{{ site.service_worker }}"{% endif %}
-	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 	itemtype="{{ layout.itemtype }}"
@@ -32,6 +30,6 @@ pinned-posts: 5
 		</main>
 		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
 		{% include footer.html %}
-		{% include share-button.html %}
+		{% include share-button.html text=page.description %}
 	</body>
 </html>

@@ -58,6 +58,8 @@ const config = {
 		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
 		/https:\/\/i\.imgur\.com\/*/,
 		/https:\/\/maps\.wikimedia\.org\/osm-intl\/*/,
+		/https:\/\/*\.githubusercontent\.com\/u\/*/,
+		/https:\/\/api\.github\.com\/users\/*/,
 		new URL('/img/', location.origin).href,
 		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',
 	],

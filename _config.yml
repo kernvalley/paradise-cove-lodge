@@ -2,7 +2,7 @@ author: Chris Zuber
 title: Paradise Cove Lodge
 url: 'https://www.paradisecovelodge.com/'
 markdown: kramdown
-version: 1.0.0
+version: 1.0.3
 timezone: America/Los_Angeles
 lang: en
 dir: ltr
@@ -16,7 +16,7 @@ manifest: /manifest.json
 tiles-config: /browserconfig.xml
 # service_worker: /service-worker.js
 og-type: website
-description: "Steakhouse &amp; Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
+description: "Steakhouse & Motel in Lake Isabella California. Paradise Cove serves choice angus beef and quality seafood. Renovated motel rooms all have view of the lake."
 mobile-web-app-capable: true
 canonical: 'https://www.paradisecovelodge.com/'
 keywords:
@@ -45,7 +45,6 @@ repository:
 #   type: application/rss+xml
 icons: '/img/icons.svg'
 # discus-identifier:
-# google-analytics:
 # ad-sense:
 # webmaster-verifications:
 #   google:

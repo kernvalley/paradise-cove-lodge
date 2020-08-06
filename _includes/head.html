@@ -9,7 +9,27 @@
 	<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	<meta name="referrer" content="{{ page.referrer | default: site.referrer }}"/>
 	<meta name="mobile-web-app-capable" content="yes" />
-	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	{% if page.thumbnail.url $}
+		<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url }}" />
+		<meta property="og:image" content="{{ page.thumbnail.url }}" />
+		<meta name="twitter:image" content="{{ page.thumbnail.url }}" />
+	{% elsif page.imgur %}
+		{% capture hash %}{{ page.imgur | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
+		<meta itemprop="thumbnailUrl" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta property="og:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+		<meta name="twitter:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
+	{% elsif page.image %}
+		<meta itemprop="thumbnailUrl" content="{{ page.image }}" />
+		<meta property="og:image" content="{{ page.image }}" />
+		<meta name="twitter:image" content="{{ page.image }}" />
+	{% elsif site.data.app.screenshots %}
+		{% for screenshot in site.data.app.screenshots %}
+			<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
+			<meta property="og:image" content="{{ screenshot.src }}" />
+			<meta name="twitter:image" content="{{ screenshot.src }}" />
+		{% endfor %}
+	{% endif %}
 	<!-- Social data -->
 	<!-- Facebook | OpenGraph -->
 	<meta property="og:type" content="{{ page.og-type | default: layout.og-type }}" />
@@ -17,7 +37,6 @@
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:description" content="{{ page.description }}" />
 	<meta property="og:keywords" content="{{ page.tags | join: ', ' }}" />
-	<meta property="og:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
@@ -28,32 +47,29 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' }}" />
 	{% if page.twitter_creator %}
-		<meta name="twitter:creator" content="{{ page.twitter_creator}}" />
+		<meta name="twitter:creator" content="{{ page.twitter_creator }}" />
 	{% endif %}
 	<meta name="twitter:description" content="{{ page.description }}" />
-	<meta name="twitter:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- /Twitter -->
 	<!-- /Social data -->
 	<meta name="msapplication-TileColor" content="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	<meta name="msapplication-config" content="{{ site.tiles-config }}" />
-	<meta name="theme-color" content="{{ site.data.app.theme.color | default: '#528ff9' }}" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="{{ page.theme-color | default: site.data.app.theme.color }}" />
+	<meta name="theme-color" content="{{ page.theme-color | default: site.data.app.theme.color }}" />
 	{% if site.webmaster-verifications.google %}
 		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
 	{% endif %}
 	{% if site.webmaster-verifications.bing %}
 		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
 	{% endif %}
-	{% if site.google-analytics %}
-		{% include google-analytics.html %}
-	{% endif %}
 	{% if page.ads and site.ad-sense %}
 		{% include adsense.html %}
 	{% endif %}
+	<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
 	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
 	{% if site.data.scripts %}{% for script in site.data.scripts[jekyll.environment] %}
 		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
-	<!-- <script type="module" src="/js/index.js" async=""></script> -->
 	{% if layout.scripts %}{% for script in layout.scripts %}
 		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
@@ -109,13 +125,13 @@
 			<link rel="prerender" href="{{ link.href }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.stylesheets %}{% for stylesheet in site.data.stylesheets[jekyll.environment] %}
-		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if layout.stylesheets %}{% for stylesheet in layout.stylesheets %}
-		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
-		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ site.feed.title | default: 'Feed' }}" />{% endif %}
 	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}

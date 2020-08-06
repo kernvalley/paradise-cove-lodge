@@ -27,35 +27,49 @@ preconnect:
 tags:
   - Paradise Cove Lodge
   - contact
+subjects:
+- Room Inquiry
+- General Community Info
+- Special Occasion Reservation
+- Vacation Rentals
 ---
 <form name="contact" method="POST" class="card shadow" id="contact-form" data-netlify="true">
-	<div class="input-group">
-		<label for="contact-name" class="block">
+	<div class="form-group">
+		<label for="contact-name" class="input-label required">
 			{% include icon.html icon="avatar-default" %}
 			<span>Name</span>
 		</label>
-		<input type="text" name="name" id="contact-name" autocomplete="name" placeholder="First Last" required="" />
+		<input type="text" name="name" id="contact-name" class="input" autocomplete="name" placeholder="First Last" required="" />
 	</div>
-	<div class="input-group">
-		<label for="contact-email" class="block">
+	<div class="form-group">
+		<label for="contact-email" class="input-label required">
 			{% include icon.html icon="mail" %}
 			<span>Email</span>
 		</label>
-		<input type="email" name="email" id="contact-email" autocomplete="email" placeholder="user@example.com" required="" />
+		<input type="email" name="email" id="contact-email" class="input" autocomplete="email" placeholder="user@example.com" required="" />
 	</div>
-	<div class="input-group">
-		<label for="contact-phone" class="block">
+	<div class="form-group">
+		<label for="contact-phone" class="input-label">
 			{% include icon.html icon="call-start" %}
 			<span>Phone</span>
 		</label>
-		<input type="tel" name="phone" id="contact-phone" autocomplete="telephone" placeholder="555-555-5555" />
+		<input type="tel" name="phone" id="contact-phone" class="input" autocomplete="tel" placeholder="555-555-5555" />
 	</div>
-	<div class="input-group">
-		<label for="contact-message" class="block">
+	<div class="form-group">
+		<label for="contact-subject" class="input-label required">
+			<span>Subject</span>
+		</label>
+		<input type="text" name="subject" id="contact-subject" class="input" placeholder="Message Subject" autocomplete="off" list="suggestions-list" />
+		<datalist id="suggestions-list">
+			{% for subject in page.subjects %}<option value="{{ subject }}"/>{% endfor %}
+		</datalist>
+	</div>
+	<div class="form-group">
+		<label for="contact-message" class="input-label required">
 			{% include icon.html icon="note" %}
 			<span>Message</span>
 		</label>
-		<textarea name="message" id="contact-message" placeholder="Enter your message here" required=""></textarea>
+		<textarea name="message" id="contact-message" class="input" placeholder="Enter your message here" required=""></textarea>
 	</div>
 	<button type="submit" class="btn btn-accept">
 		{% include icon.html icon="go-next" %}

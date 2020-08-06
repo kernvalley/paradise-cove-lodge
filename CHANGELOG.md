@@ -1,3 +1,9 @@
+---
+layout: page
+title: CHANGELOG
+permalink: /changelog/
+robots: noindex
+---
 <!-- markdownlint-disable -->
 # Changelog
 All notable changes to this project will be documented in this file.
@@ -6,6 +12,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [v1.0.5] 2020-08-01
+
+### Added
+- Google Analytics script
+
+### Changed
+- Update dependencies
+- Make buttons and CSS compatible with new button styles
+- Improve load times by loading polyfills dynamically
+- Remove optional Google Analytics script and move to dynamic import if tracking id set
+- Use CDN styles for contact page
+
+### Fixed
+- Ensure `<nav>` remains visible on page load [shgysk8zer0/core-css#97](https://github.com/shgysk8zer0/core-css/pull/97)
+- Add missing page layout
+- Use correction `autocomplete` for phone on contact page
+
+### Removed
+- Tel number from rentals in sidebar
 
 ## [v1.0.4] - 2020-07-17
 
