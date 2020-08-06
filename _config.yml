@@ -46,8 +46,8 @@ repository:
 icons: '/img/icons.svg'
 # discus-identifier:
 # ad-sense:
-# webmaster-verifications:
-#   google:
+webmaster-verifications:
+  google: 4_GXTdS25bqc4x3QvWtuftfD-X2z8rlHoUyAtFPVOzo
 #   bing:
 defaults:
 - scope:
