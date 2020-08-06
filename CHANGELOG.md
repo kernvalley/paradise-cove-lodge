@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `contact-form.html` template for contact page
 - Add "honeypot" to contact form
 
+### Fixed
+- `enctype` for contact form
 ## [v1.0.5] 2020-08-01
 
 ### Added
