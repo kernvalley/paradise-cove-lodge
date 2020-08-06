@@ -1,4 +1,4 @@
-<form name="{{ include.name | default: 'contact' }}" method="{{ include.method | default: 'GET' }}" action="{{ include.action | default: page.url }}" enctype="{{ include.enctype | default: 'application/x-www-form-urlencode' }}" is="share-target" id="{{ include.id | default: 'contact-form' }}" class="card shadow align-left">
+<form name="{{ include.name | default: 'contact' }}" method="{{ include.method | default: 'GET' }}" action="{{ include.action | default: page.url }}" enctype="{{ include.enctype | default: 'application/x-www-form-urlencode' }}" is="share-target" id="{{ include.id | default: 'contact-form' }}" class="card shadow align-left" data-netlify="true">
 	<fieldset class="no-border align-left">
 		{% if include.legend %}<legend>{{ include.legend }}</legend>{% endif %}
 		<div class="form-group">
@@ -35,6 +35,7 @@
 			</label>
 			<textarea name="body" id="body" class="input" data-share-field="text" placeholder="Message body" autocomplete="off" cols="8" spellcheck="true" autocapitalize="sentences" required=""></textarea>
 		</div>
+		{% if include.reCaptcha %}<div data-netlify-recaptcha="true"></div>{% endif %}
 	</fieldset>
 	<br />
 	<div class="align-left">
