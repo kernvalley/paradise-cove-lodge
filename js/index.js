@@ -11,7 +11,7 @@ import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { updateImage } from './functions.js';
-import { ga } from './consts.js';
+import { GA } from './consts.js';
 
 const $doc = $(document.documentElement);
 
@@ -19,8 +19,31 @@ $doc.replaceClass('no-js', 'js');
 $doc.toggleClass('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
 $doc.toggleClass('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
-if (typeof ga === 'string' && ga !== '') {
-	importGa(ga).catch(console.error);
+if (typeof GA === 'string' && GA !== '') {
+	importGa(GA).then(async () => {
+		/* global ga */
+		ga('create', GA, 'auto');
+		ga('set', 'transport', 'beacon');
+		ga('send', 'pageview');
+
+
+		function outbound() {
+			ga('send', {
+				hitType: 'event',
+				eventCategory: 'outbound',
+				eventAction: 'click',
+				eventLabel: this.href,
+				transport: 'beacon',
+			});
+		}
+
+		await ready();
+
+		$('a[rel~="external"]').click(outbound, {
+			passive: true,
+			capture: true,
+		});
+	}).catch(console.error);
 }
 
 $doc.css({'--viewport-height': `${window.innerHeight}px`});
