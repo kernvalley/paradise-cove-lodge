@@ -3,39 +3,3 @@
   base = "./"
   publish = "./_site/"
   command = "npm run build && npm run build:site"
-  [build.environment]
-    GIT_LFS_ENABLED = "1"
-[[headers]]
-  for="/*"
-  [headers.values]
-    Link = '''
-      </css/index.min.css>; rel=preload; as=style, \
-      </js/index.min.js>; rel=preload; as=script, \
-      </img/icons.svg>; rel=preload; as=image
-    '''
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "origin-when-cross-origin"
-    Strict-Transport-Security = "max-age=31536000"
-    Content-Security-Policy = '''
-      default-src 'self';
-      script-src 'self' https://cdn.polyfill.io/v3/polyfill.min.js https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js;
-      style-src 'self' https://cdn.kernvalley.us/components/github/ https://cdn.kernvalley.us/components/ https://unpkg.com/leaflet@1.6.0/dist/;
-      img-src 'self' https://*.githubusercontent.com https://maps.wikimedia.org https://www.google-analytics.com https://www.tazdij.com https://cdn.kernvalley.us/img/*;
-      font-src https://cdn.kernvalley.us;
-      connect-src https://cdn.kernvalley.us/components/ https://api.github.com;
-      media-src 'none';
-      frame-src https://www.youtube.com https://www.youtube-nocookie.com https://disqus.com;
-      object-src: 'none';
-      prefetch-src: 'self' https://unpkg.com/ https://cdn.kernvalley.us https://api.github.com/users/
-      worker-src: 'self';
-      manifest-src 'self';
-      form-action 'self';
-      reflected-xss block;
-      block-all-mixed-content;
-      upgrade-insecure-requests;
-      disown-opener;'''
-# [[redirects]]
-  # from = ""
-  # to = ""
