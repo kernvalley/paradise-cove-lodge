@@ -28,6 +28,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Super Linter and various config
 - Update menu section names, prices, etc.
 - Update room prices
+- Add FAQ to contact page
+- Add contact links (`tel:` & Maps link with address) to contact page
 
 ### Fixed
 - `enctype` for contact form
