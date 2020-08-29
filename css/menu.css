@@ -63,3 +63,11 @@
 		position: static;
 	}
 }
+
+#order-call-btn {
+	border-radius: 2rem;
+	bottom: 1rem;
+	left: 1rem;
+	padding: .8rem 2rem;
+	font-size: 1.5rem;
+}
