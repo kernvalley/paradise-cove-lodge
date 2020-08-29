@@ -13,8 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0]
+
 ### Added
-- #KeepKernClean badge
+- [#KeepKernClean](https://www.kernriverconservancy.org/) badge
 - Call to place order button/link on menu page
 - Add `<weather-current>` to sidebar
 - Preload or preconnect to various required assets to improve load times
