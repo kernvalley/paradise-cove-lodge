@@ -38,12 +38,19 @@ if (typeof GA === 'string' && GA !== '') {
 			});
 		}
 
+		function madeCall() {
+			ga('send', {
+				hitType: 'event',
+				eventCategory: 'call',
+				eventLabel: 'Called',
+				transport: 'beacon',
+			});
+		}
+
 		await ready();
 
-		$('a[rel~="external"]').click(outbound, {
-			passive: true,
-			capture: true,
-		});
+		$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
+		$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
 	}).catch(console.error);
 }
 
