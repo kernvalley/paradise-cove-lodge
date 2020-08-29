@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add "honeypot" to contact form
 - Update Super Linter and various config
 - Update menu section names, prices, etc.
+- Update room prices
 
 ### Fixed
 - `enctype` for contact form
