@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Preload or preconnect to various required assets to improve load times
 
 ### Changed
+- Add margins for sidebar on mobile
 - Use `contact-form.html` template for contact page
 - Add "honeypot" to contact form
 - Update Super Linter and various config
