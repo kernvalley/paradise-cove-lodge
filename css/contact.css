@@ -1,11 +1,11 @@
 @media (min-width: 600px) {
-	#contact-form {
+	#contact-form, #faq {
 		width: 60%;
 		margin-left: 20%;
 		margin-bottom: 1.3em;
 	}
 }
 
-#contact-form {
+#contact-form, #faq {
 	margin-bottom: 1.3em;
 }
