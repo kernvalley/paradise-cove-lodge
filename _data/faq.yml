@@ -1,2 +1,12 @@
-- question: Are there any rooms available?
+- question: Where are you located
+  answer: 10700 Highway 178<br />Lake Isabella, CA 93240
+- question: Are there any rooms available
   answer: 'Please see our booking page on <a href="https://reservation.worldweb.com/hotel/2062" rel="noopener external">WebRezPro</a>'
+- question: What time is Check-In
+  answer: Check-in time is between 2 PM and 10 PM
+- question: Can I make my order online
+  answer: Unfortunately, we do not currenty support online orders, but you may <a href="tel:+1-760-379-2719" class="underline">call us</a> during business hours
+- question: Will your parking fit my trailer or boat
+  answer: We have ample parking and can accomodate oversized vehicles and trailers
+- question: What is the best way to contact you
+  answer: 'For prompt answers, please <a href="tel:+1-760-379-2719" class="underline">call us</a> during business hours'

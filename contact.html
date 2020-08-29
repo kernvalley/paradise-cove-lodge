@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Contact
+title: Contact and FAQ
 index: true
 permalink: contact/
 referrer: no-referrer
 pinned: true
 description: Contact form for Paradise Cove Lodge
+itemtype: "https://schema.org/FAQPage"
 thumbnail:
   url: /img/raster/background/snow-400.jpg
 preload:
@@ -34,7 +35,7 @@ subjects:
 - Vacation Rentals
 ---
 <div class="center">
-	<div class="card inline-block">
+	<div class="card inline-block" hidden="">
 		<h2>{{ site.data.business.name }}</h2>
 		<a href="{{ site.data.business.address.url }}" rel="external">
 			{% include address.html address=site.data.business.address %}
@@ -46,17 +47,9 @@ subjects:
 		</a>
 	</div>
 	<br />
-	<div id="faq" class="status-box info inline-block">
-		<h3>FAQ</h3>
-		<ul>
-			{% for qa in site.data.faq %}
-				<li>
-					<b class="question">{{ qa.question }}</b><br />
-					<span class="answer">{{ qa.answer }}</span>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
+	<section id="faq" class="card shadow">
+		{% include faq.html faq=site.data.faq %}
+	</section>
 </div>
 <br />
 {% include contact-form.html phone=true subject=true method="POST" suggestedSubjects=page.subjects %}
