@@ -1,7 +1,7 @@
 [{
-  "name": "From the Range",
+  "name": "Steak &amp; Beef",
   "identifier": "c6a0afec-013d-4edb-865e-6b0d03a66bc7",
-  "description": "Serving Harris Ranch Choice all natural Angus beef",
+  "description": "Serving All Natural Choice Angus beef",
   "hasMenuItem": [{
     "name": "Rib Eye",
     "identifier": "e78d719e-f38c-4fd5-996e-efc79a34f1c4",
@@ -12,7 +12,7 @@
       "url": "/img/raster/menu/ribeye.jpg"
     }],
     "offers": [{
-      "price": 30.95
+      "price": 33.95
     }]
   }, {
     "name": "New York",
@@ -24,10 +24,10 @@
       "url": "/img/raster/menu/new-york.jpg"
     }],
     "offers": [{
-      "price": 27.95
+      "price": 28.95
     }]
   }, {
-    "name": "Filet",
+    "name": "Filet Mignon",
     "identifier": "a667a3fd-4601-4ee9-95e9-9e7d9a492b26",
     "description": "The most tender cut. 8-10 oz.",
     "image": [{
@@ -36,7 +36,7 @@
       "url": "/img/raster/menu/filet-mignon.jpg"
     }],
     "offers": [{
-      "price": 30.95
+      "price": 34.95
     }]
   }, {
     "name": "Paul Bunyan",
@@ -48,7 +48,7 @@
       "url": "/img/raster/menu/paul-bunyan.jpg"
     }],
     "offers": [{
-      "price": 31.95
+      "price": 32.95
     }]
   }, {
     "name": "Top Sirloin",
@@ -86,15 +86,10 @@
     "offers": [{
       "price": 17.95
     }]
-  }]
-}, {
-  "name": "Our House Specialty",
-  "identifier": "21504294-026d-408f-a69a-9492bbee8d96",
-  "description": "<b>Served Fri., Sat., and Sun.</b><br />(<i>other nights with advance order of 8 or more servings</i>)<hr /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>",
-  "hasMenuItem": [{
-    "name": "Prime Rib",
+  }, {
+    "name": "&#9733; Prime Rib &#9733;",
     "identifier": "1ccd70e9-4b96-425b-82b3-72d0de9eae9c",
-    "description": "A slow-roasted house speciality",
+    "description": "A slow-roasted House Speciality. <br /><b>Served Fri., Sat., and Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>",
     "image": [{
       "width": 320,
       "height": 200,
@@ -103,15 +98,15 @@
     "offers": [{
       "name": "Petite Cut",
       "description": "10-12 oz",
-      "price": 27.95
+      "price": 29.95
     }, {
       "name": "Full Cut",
       "description": "14-16 oz",
-      "price": 30.95
+      "price": 32.95
     }]
   }]
 }, {
-  "name": "To the Sea",
+  "name": "Seafood",
   "identifier": "73ce7553-72bd-473b-8989-502060aee28b",
   "description": "All dinners served with House Salad, Cheese Bread, &amp; Choice of Potato and Dessert",
   "hasMenuItem": [{
@@ -148,7 +143,7 @@
       "url": "/img/raster/menu/scallop.jpg"
     }],
     "offers": [{
-      "price": 24.95
+      "price": 25.95
     }]
   }, {
     "name": "Halibut",
@@ -160,7 +155,7 @@
       "url": "/img/raster/menu/halibut.jpg"
     }],
     "offers": [{
-      "price": 27.95
+      "price": 28.95
     }]
   }, {
     "name": "Salmon",
@@ -172,7 +167,7 @@
       "url": "/img/raster/menu/salmon.jpg"
     }],
     "offers": [{
-      "price": 22.95
+      "price": 23.95
     }]
   }, {
     "name": "Crab",
@@ -228,11 +223,11 @@
       "url": "/img/raster/menu/catfish.jpg"
     }],
     "offers": [{
-      "price": 58.95
+      "price": 19.95
     }]
   }]
 }, {
-  "name": "The Range &amp; Sea",
+  "name": "Combinations",
   "identifier": "1e5b57ef-2f92-430e-8054-5150abd8a960",
   "description": "Create your own combination with any of our Steaks, Prime Rib or Seaffod. Just ask your served.",
   "hasMenuItem": [{
@@ -257,7 +252,11 @@
       "url": "/img/raster/menu/surf-and-turf.jpg"
     }],
     "offers": [{
-      "price": 66.95
+      "priceSpecification": [{
+        "maxPrice": 61.95,
+        "minPrice": 56.95,
+        "description": "Varies with market."
+      }]
     }]
   }, {
     "name": "Crab &amp; Steak",
@@ -319,7 +318,7 @@
 }, {
   "name": "Children's Plates",
   "identifier": "b865e3ff-cef9-46e7-a50a-ff7b9bd78b1a",
-  "description": "For under 12 only<br />All children's meals served with house salad, chees, bread, steak fries and dessert",
+  "description": "For under 12 only<br />All children's meals served with house salad, cheese, bread, steak fries and dessert",
   "hasMenuItem": [{
     "name": "Ground Sirloin",
     "identifier": "662943cc-8494-47c9-8744-828629232df3",
@@ -362,7 +361,7 @@
       "url": "/img/raster/menu/children/teriyaki-chicken.jpg"
     }],
     "offers": [{
-      "price": 7.95
+      "price": 8.95
     }]
   }, {
     "name": "Prime Rib",
