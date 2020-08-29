@@ -35,8 +35,9 @@
       "image": "network-wireless-signal-good"
     }, {
       "@type": "LocationFeatureSpecification",
-      "name": "A/C",
-      "value": "Yes"
+      "name": "Air Conditioning",
+      "value": "Yes",
+      "image": "snow"
     }],
     "photo": {
       "@type": "ImageObject",
@@ -84,8 +85,9 @@
       "image": "network-wireless-signal-good"
     }, {
       "@type": "LocationFeatureSpecification",
-      "name": "A/C",
-      "value": "Yes"
+      "name": "Air Conditioning",
+      "value": "Yes",
+      "image": "snow"
     }],
     "photo": {
       "@type": "ImageObject",
