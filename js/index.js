@@ -7,6 +7,7 @@ import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 import 'https://cdn.kernvalley.us/components/pwa/install.js';
+import 'https://cdn.kernvalley.us/components/weather-current.js';
 import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';

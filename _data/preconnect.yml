@@ -4,3 +4,5 @@
 - href: "https://cdn.kernvalley.us"
   crossorigin: anonymous
   referrerPolicy: no-referrer
+- href: "https://api.openweathermap.org"
+  crossorigin: anonymous

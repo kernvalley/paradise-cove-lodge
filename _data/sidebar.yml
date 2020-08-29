@@ -12,7 +12,7 @@
     <ol>
       <li><b>Bedrooms</b>: 4</li>
       <li><b>Bathroom</b>: 3&frac12;</li>
-      <li><b>Accomidates</b>:Up to 10</li>
+      <li><b>Accomodates</b>:Up to 10</li>
     </ol>
 - name: Vacation Rentals Available
   image:
@@ -28,5 +28,5 @@
      <ol>
       <li><b>Bedrooms</b>: 2</li>
       <li><b>Bathroom</b>: 1</li>
-      <li><b>Accomidates</b>: 1 &mdash; 3</li>
+      <li><b>Accomodates</b>: 1 &mdash; 3</li>
     </ol>
