@@ -2,14 +2,14 @@
   as: fetch
   type: text/html
 - href: "https://cdn.kernvalley.us/components/weather-current.css"
-  as: stylesheet
+  as: style
   type: text/css
   crossorigin: anonymous
 - href: "https://cdn.kernvalley.us/components/github/user.html"
   as: fetch
   type: text/html
 - href: "https://cdn.kernvalley.us/components/github/user.css"
-  as: stylesheet
+  as: style
   type: text/css
   crossorigin: anonymous
   referrerPolify: no-referrer
