@@ -36,22 +36,9 @@ subjects:
 - Special Occasion Reservation
 - Vacation Rentals
 ---
-<div class="center">
-	<div class="card inline-block" hidden="">
-		<h2>{{ site.data.business.name }}</h2>
-		<a href="{{ site.data.business.address.url }}" rel="external">
-			{% include address.html address=site.data.business.address %}
-		</a>
-		<br />
-		<a href="tel:{{ site.data.business.telephone }}" role="button" title="Call Paradise Cove Lodge" class="btn btn-primary btn-wide">
-			{% include icon.html icon="call-start" %}
-			<span>Call {{ site.data.business.telephone | replace: '+1-', '' }}</span>
-		</a>
-	</div>
-	<br />
-	<section id="faq" class="card shadow">
-		{% include faq.html faq=site.data.faq %}
-	</section>
-</div>
-<br />
-{% include contact-form.html phone=true subject=true method="POST" suggestedSubjects=page.subjects %}
+<section id="faq" class="card shadow">
+	{% include faq.html faq=site.data.faq %}
+</section>
+<section id="contact">
+	{% include contact-form.html phone=true subject=true method="POST" suggestedSubjects=page.subjects legend="Contact Us" %}
+</section>
