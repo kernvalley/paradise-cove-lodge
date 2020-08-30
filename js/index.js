@@ -60,6 +60,19 @@ $doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeig
 Promise.all([ready(), loadScript('https://cdn.polyfill.io/v3/polyfill.min.js')]).then(() =>{
 	if (location.pathname.startsWith('/lakecam')) {
 		updateImage(document.getElementById('lake-cam-img'), 15);
+	} else if (location.pathname.startsWith('/menu')) {
+		const now = new Date();
+		const day = now.getDay();
+		const hour = now.getHours();
+
+		/**
+		 * Sun, Wed, Thu, Fri, Sat
+		 * hours > 15 => starts @ 4:00 PM
+		 * hours < 20 => ends @ 8 PM
+		 */
+		if ([0, 3, 4, 5, 6].includes(day) && (hour > 15 && hour < 20)) {
+			$('#order-call-btn').unhide();
+		}
 	}
 
 	customElements.whenDefined('leaflet-map').then(() => {
