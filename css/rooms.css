@@ -31,13 +31,19 @@
 	grid-area: price;
 }
 
-.book-button {
+.btn.book-button {
 	grid-area: book;
-	min-width: 195px;
-	padding: 0.4em;
+	min-width: 210px;
+	padding: 12px;
 	transform: translate(-0.8em, -0.8em);
 	vertical-align: middle;
+	text-decoration: none;
 	--link-color: var(--alt-color);
+	transition: background-color 300ms ease-in;
+}
+
+.btn.book-button:hover, .btn.book-button:focus {
+	background-color: var(--button-primary-active-background);
 }
 
 a.book-button.alt-color:hover, a.book-button.alt-color:visited:hover {
@@ -52,7 +58,7 @@ a.book-button.alt-color:hover, a.book-button.alt-color:visited:hover {
 		padding: 0;
 	}
 
-	.book-button {
+	.btn.book-button {
 		transform: none;
 	}
 }
