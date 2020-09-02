@@ -57,7 +57,7 @@ if (typeof GA === 'string' && GA !== '') {
 $doc.css({'--viewport-height': `${window.innerHeight}px`});
 $doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeight}px`}));
 
-Promise.all([ready(), loadScript('https://cdn.polyfill.io/v3/polyfill.min.js')]).then(() =>{
+Promise.allSettled([ready(), loadScript('https://cdn.polyfill.io/v3/polyfill.min.js')]).finally(() =>{
 	if (location.pathname.startsWith('/lakecam')) {
 		updateImage(document.getElementById('lake-cam-img'), 15);
 	} else if (location.pathname.startsWith('/menu')) {
