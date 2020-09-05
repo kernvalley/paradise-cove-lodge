@@ -9,18 +9,9 @@
 	margin-bottom: 1.3em;
 }
 
-@media (max-width: 992px) {
-	.offer-container {
-		grid-template-areas: "image image image image" ". offer offer ." ". price price ." ". . book .";
-		grid-template-columns: 1em 1fr 1fr 1em;
-		grid-template-rows: 270px auto;
-		padding: 0;
-	}
-}
-
 .room-amenities-container svg {
-	font-size: 1.3em;
-	margin: 0.2em;
+	font-size: 1.1em;
+	margin: 0.1em;
 }
 
 .room-image {
@@ -40,7 +31,34 @@
 	grid-area: price;
 }
 
-.book-button {
+.btn.book-button {
 	grid-area: book;
+	min-width: 210px;
+	padding: 12px;
 	transform: translate(-0.8em, -0.8em);
+	vertical-align: middle;
+	text-decoration: none;
+	--link-color: var(--alt-color);
+	transition: background-color 300ms ease-in;
+}
+
+.btn.book-button:hover, .btn.book-button:focus {
+	background-color: var(--button-primary-active-background);
+}
+
+a.book-button.alt-color:hover, a.book-button.alt-color:visited:hover {
+	color: var(--alt-color);
+}
+
+@media (max-width: 992px) {
+	.offer-container {
+		grid-template-areas: "image image image image" ". offer offer ." ". price price ." ". . . ." ". book book ." ". . . .";
+		grid-template-columns: 1em 1fr 1fr 1em;
+		grid-template-rows: 270px auto;
+		padding: 0;
+	}
+
+	.btn.book-button {
+		transform: none;
+	}
 }

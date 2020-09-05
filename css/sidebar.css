@@ -1,2 +1,18 @@
-#sidebar {
+weather-current:defined {
+	margin: 0 0 0.6em 0;
+}
+
+.ad-block {
+	margin: 0 0 0.6em 0;
+}
+
+@media (max-width: 800px) {
+	#sidebar {
+		width: 95%;
+		transform: translatex(2.5%);
+	}
+
+	#sidebar > *:first-of-type {
+		margin-top: 0.6em;
+	}
 }

@@ -40,4 +40,8 @@ tags:
 			%}
 		{% endfor %}
 	</div>
+		<a href="tel:{{ site.data.restaurant.telephone | default: site.data.business.telephone }}" title="Call to place Order" role="button" id="order-call-btn" class="btn btn-primary sticky shadow" hidden="">
+			{% include icon.html icon="call-start" %}
+			<span>Order</span>
+		</a>
 </div>

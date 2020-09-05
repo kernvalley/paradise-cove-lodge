@@ -2,6 +2,7 @@
 	type="{{ include.type | default: 'text/javascript' }}"
 	src="{{ include.src }}"
 	{% if include.crossorigin %}crossorigin="{{ include.crossorigin }}"{% endif %}
+	{% if include.referrerPolicy %}referrerpolicy="{{ include.referrerPolicy }}"{% endif %}
 	{% if include.async %}async=""{% endif %}
 	{% if include.defer %}defer=""{% endif %}
 	{% if include.nomodule %}nomodule=""{% endif %}

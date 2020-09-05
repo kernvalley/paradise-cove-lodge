@@ -13,13 +13,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0] - 2020-08-29
+
+### Added
+- FAQ on Contact Page
+- [#KeepKernClean](https://www.kernriverconservancy.org/) badge
+- Call to place order button/link on menu page
+- Add `<weather-current>` to sidebar
+- Preload or preconnect to various required assets to improve load times
+
 ### Changed
+- Add margins for sidebar on mobile
 - Use `contact-form.html` template for contact page
 - Add "honeypot" to contact form
 - Update Super Linter and various config
+- Update menu section names, prices, etc.
+- Update room prices
+- Add FAQ to contact page
+- Add contact links (`tel:` & Maps link with address) to contact page
+- Replace Contact Page nav icon
 
 ### Fixed
 - `enctype` for contact form
+- Various typos
+
 ## [v1.0.5] 2020-08-01
 
 ### Added

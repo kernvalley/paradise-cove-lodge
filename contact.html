@@ -1,36 +1,28 @@
 ---
 layout: default
-title: Contact
+title: Contact and FAQ
 index: true
 permalink: contact/
 referrer: no-referrer
 pinned: true
-description: Contact form for Paradise Cove Lodge
+description: Contact form and FAQ for Paradise Cove Lodge
+itemtype: "https://schema.org/FAQPage"
 thumbnail:
   url: /img/raster/background/snow-400.jpg
-preload:
-- href: 'https://cdn.kernvalley.us/components/leaflet/map.html'
-  as: fetch
-  type: text/html
-  crossorigin: anonymous
-  referrerPolicy: no-referrer
-- href: 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css'
-  as: style
-  type: text/css
-  crossorigin: anonymous
-  referrerPolicy: no-referrer
-  integrity: sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
-preconnect:
-- href: 'https://maps.wikimedia.com'
-  crossorigin: anonymous
-  referrerPolicy: no-referrer
 tags:
   - Paradise Cove Lodge
   - contact
+  - FAQ
+  - frequently asked questions
 subjects:
 - Room Inquiry
 - General Community Info
 - Special Occasion Reservation
 - Vacation Rentals
 ---
-{% include contact-form.html phone=true subject=true method="POST" suggestedSubjects=page.subjects %}
+<section id="faq" class="card shadow">
+	{% include faq.html faq=site.data.faq %}
+</section>
+<section id="contact">
+	{% include contact-form.html phone=true subject=true method="POST" suggestedSubjects=page.subjects legend="Contact Us" %}
+</section>
