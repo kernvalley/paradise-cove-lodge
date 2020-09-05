@@ -9,6 +9,31 @@ referrer: no-referrer
 description: Rooms available starting at $85 / night
 thumbnail:
   url: /img/raster/background/motel-400.jpg
+preload:
+  - href: "/img/raster/background/rooms-1440.jpg"
+    as: image
+    type: image/jpeg
+    referrerPolicy: no-referrer-when-downgrade
+    media: "(min-width: 1441px)"
+    importance: high
+  - href: "/img/raster/background/rooms-1280.jpg"
+    as: image
+    type: image/jpeg
+    referrerPolicy: no-referrer-when-downgrade
+    media: "(max-width: 1440px) and (min-width: 1281px)"
+    importance: high
+  - href: "/img/raster/background/rooms-800.jpg"
+    as: image
+    type: image/jpeg
+    referrerPolicy: no-referrer-when-downgrade
+    media: "((min-width: 401px) and (max-width: 800px))"
+    importance: high
+  - href: "/img/raster/background/rooms-800.jpg"
+    as: image
+    type: image/jpeg
+    referrerPolicy: no-referrer-when-downgrade
+    media: "(max-width: 400px)"
+    importance: high
 tags:
   - motel
   - hotel
