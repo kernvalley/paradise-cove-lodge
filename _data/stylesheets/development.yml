@@ -1,2 +1,3 @@
-- href: /css/index.min.css
+- href: /css/index.css
+  referrerPolicy: no-referrer
   media: all

@@ -1,3 +1,4 @@
-- src: /js/index.min.js
-  # type: module
+- src: /js/index.js
+  type: module
+  referrerPolicy: no-referrer
   async: true
