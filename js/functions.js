@@ -1,26 +1,43 @@
+import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
+
+/* global ga */
+export function outbound() {
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'outbound',
+		eventAction: 'click',
+		eventLabel: this.href,
+		transport: 'beacon',
+	});
+}
+
+export function madeCall() {
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'call',
+		eventLabel: 'Called',
+		transport: 'beacon',
+	});
+}
+
 export function updateImage(img, t = 15) {
 	if (img instanceof HTMLImageElement) {
-		const image = new Image();
-		image.crossOrigin = img.crossOrigin;
-		image.alt = img.alt;
-		image.id = img.id;
-		image.className = img.className;
-
-		image.addEventListener('load', ({ target }) => {
-			requestAnimationFrame(() => {
-				image.width = image.naturalWidth;
-				image.height = image.naturalHeight;
-
-				img.replaceWith(target);
-				setTimeout(() => updateImage(target, t), t * 1000);
-			});
-		});
-
-		image.addEventListener('error', console.error);
-
 		const src = new URL(img.src);
 		src.searchParams.set('ts', Date.now());
-		image.src = src.href;
+
+		loadImage(src.href, {
+			crossOrigin: img.crossOrigin,
+			referrerPolicy: img.referrerPolicy,
+			width: img.width || img.naturalWidth,
+			height: img.height || img.naturalHeight,
+			classes: [...img.classList],
+			alt: img.alt,
+		}).then(updated => {
+			requestAnimationFrame(() => {
+				img.replaceWith(updated);
+				setTimeout(() => updateImage(updated, t), t * 1000);
+			});
+		}).catch(console.error);
 	} else {
 		throw new Error('No lake cam image provided');
 	}

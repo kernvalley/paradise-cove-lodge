@@ -11,51 +11,36 @@ import 'https://cdn.kernvalley.us/components/weather-current.js';
 import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
-import { updateImage } from './functions.js';
+import { updateImage, outbound, madeCall } from './functions.js';
 import { GA } from './consts.js';
 
-const $doc = $(document.documentElement);
 
-$doc.replaceClass('no-js', 'js');
-$doc.toggleClass('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
-$doc.toggleClass('no-details', document.createElement('details') instanceof HTMLUnknownElement);
+requestIdleCallback(() => {
+	const $doc = $(document.documentElement);
 
-if (typeof GA === 'string' && GA !== '') {
-	importGa(GA).then(async () => {
-		/* global ga */
-		ga('create', GA, 'auto');
-		ga('set', 'transport', 'beacon');
-		ga('send', 'pageview');
+	$doc.replaceClass('no-js', 'js');
+	$doc.toggleClass('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
+	$doc.toggleClass('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
+	$doc.css({'--viewport-height': `${window.innerHeight}px`});
+	$doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeight}px`}));
 
-		function outbound() {
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'outbound',
-				eventAction: 'click',
-				eventLabel: this.href,
-				transport: 'beacon',
-			});
-		}
+	if (typeof GA === 'string' && GA !== '') {
+		importGa(GA).then(async () => {
+			/* global ga */
+			ga('create', GA, 'auto');
+			ga('set', 'transport', 'beacon');
+			ga('send', 'pageview');
 
-		function madeCall() {
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'call',
-				eventLabel: 'Called',
-				transport: 'beacon',
-			});
-		}
+			await ready();
 
-		await ready();
+			$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
+			$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
+		}).catch(console.error);
+	}
 
-		$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
-		$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
-	}).catch(console.error);
-}
+});
 
-$doc.css({'--viewport-height': `${window.innerHeight}px`});
-$doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeight}px`}));
 
 Promise.allSettled([ready(), loadScript('https://cdn.polyfill.io/v3/polyfill.min.js')]).finally(() =>{
 	if (location.pathname.startsWith('/lakecam')) {
