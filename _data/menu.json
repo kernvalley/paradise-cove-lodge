@@ -3,6 +3,24 @@
   "identifier": "c6a0afec-013d-4edb-865e-6b0d03a66bc7",
   "description": "Serving All Natural Choice Angus beef",
   "hasMenuItem": [{
+    "name": "&#9733; Prime Rib &#9733;",
+    "identifier": "1ccd70e9-4b96-425b-82b3-72d0de9eae9c",
+    "description": "A slow-roasted House Speciality. <br /><b>Served Fri., Sat., and Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>",
+    "image": [{
+      "width": 320,
+      "height": 200,
+      "url": "/img/raster/menu/prime-rib.jpg"
+    }],
+    "offers": [{
+      "name": "Petite Cut",
+      "description": "10-12 oz",
+      "price": 29.95
+    }, {
+      "name": "Full Cut",
+      "description": "14-16 oz",
+      "price": 32.95
+    }]
+  }, {
     "name": "Rib Eye",
     "identifier": "e78d719e-f38c-4fd5-996e-efc79a34f1c4",
     "description": "14-16 oz. Pretty darn good",
@@ -85,24 +103,6 @@
     }],
     "offers": [{
       "price": 17.95
-    }]
-  }, {
-    "name": "&#9733; Prime Rib &#9733;",
-    "identifier": "1ccd70e9-4b96-425b-82b3-72d0de9eae9c",
-    "description": "A slow-roasted House Speciality. <br /><b>Served Fri., Sat., and Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>",
-    "image": [{
-      "width": 320,
-      "height": 200,
-      "url": "/img/raster/menu/prime-rib.jpg"
-    }],
-    "offers": [{
-      "name": "Petite Cut",
-      "description": "10-12 oz",
-      "price": 29.95
-    }, {
-      "name": "Full Cut",
-      "description": "14-16 oz",
-      "price": 32.95
     }]
   }]
 }, {
