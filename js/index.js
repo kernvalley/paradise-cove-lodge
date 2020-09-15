@@ -12,9 +12,9 @@ import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
-import { updateImage } from './functions.js';
+import { updateImage, viewHandler } from './functions.js';
 
-document.documentElement.style.setProperty('--viewport-height', window.innerHeight);
+document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
 document.documentElement.classList.replace('no-js', 'js');
 document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
 document.documentElement.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
@@ -60,6 +60,10 @@ Promise.allSettled([
 		 */
 		if ([0, 3, 4, 5, 6].includes(day) && (hour > 15 && hour < 20)) {
 			$('#order-call-btn').unhide();
+		}
+
+		if (('IntersectionObserver' in window) && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+			$('.food-menuitem').addClass('hidden').then($items => $items.each(viewHandler));
 		}
 	}
 
