@@ -1,9 +1,9 @@
 <aside id="sidebar">
 	{% if site.data.api.OpenWeatherMap %}
-		<weather-current id="weather-current" class="card shadow custom-element if-defined" postalcode="{{ site.data.business.address.postalCode }}" appid="{{ site.data.api.OpenWeatherMap }}"></weather-current>
+		<weather-current id="weather-current" class="card shadow custom-element if-defined content-visibility-auto" postalcode="{{ site.data.business.address.postalCode }}" appid="{{ site.data.api.OpenWeatherMap }}"></weather-current>
 	{% endif %}
 	{% for item in site.data.sidebar %}
-		<div class="ad-block card shadow" itemtype="https://schema.org/WPAdBlock" itemscope="">
+		<div class="ad-block card shadow content-visibility-auto" itemtype="https://schema.org/WPAdBlock" itemscope="">
 			<div class="center ad-image-container" itemprop="image" itemtype="https://schema.org/ImageObject" itemscope="">
 				<img class="ad-image" src="{{ item.image.url }}" height="{{ item.image.height }}" width="{{ item.image.width }}" alt="{{ item.image.name }}" decoding="async" loading="lazy" itemprop="url" />
 			</div>
