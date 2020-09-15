@@ -1,25 +1,5 @@
 import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 
-/* global ga */
-export function outbound() {
-	ga('send', {
-		hitType: 'event',
-		eventCategory: 'outbound',
-		eventAction: 'click',
-		eventLabel: this.href,
-		transport: 'beacon',
-	});
-}
-
-export function madeCall() {
-	ga('send', {
-		hitType: 'event',
-		eventCategory: 'call',
-		eventLabel: 'Called',
-		transport: 'beacon',
-	});
-}
-
 export function updateImage(img, t = 15) {
 	if (img instanceof HTMLImageElement) {
 		const src = new URL(img.src);
