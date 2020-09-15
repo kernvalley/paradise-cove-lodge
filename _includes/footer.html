@@ -1,5 +1,5 @@
 <footer id="footer">
-	<div class="social-links" data-cols="auto">
+	<div class="social-links content-visibility-auto" data-cols="auto">
 		{% if site.data.footer.social %}
 			<h3>Find us on&hellip;</h3>
 			<div class="social-links">
@@ -39,7 +39,7 @@
 		{% endif %}
 	</div>
 	{% if site.service_worker %}
-		<button is="pwa-install" class="btn btn-primary btn-big btn-wide" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate="">
+		<button is="pwa-install" class="btn btn-primary btn-big btn-wide content-visibility-auto" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate="">
 			<svg class="icon current-color" role="img" aria-hidden="true">
 				<use xlink:href="/img/icons.svg#system-software-install"></use>
 			</svg>
@@ -47,7 +47,7 @@
 		</button>
 	{% endif %}
 	<hr />
-	<div class="copyright">
+	<div class="copyright content-visibility-auto">
 		<span>&copy;</span>
 		<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
 		<span itemprop="copyrightHolder" itemtype="https://schema.org/{{ site.data.business.type | default: 'LocalBusiness' }}" itemscope="">
@@ -63,7 +63,7 @@
 	</div>
 	<hr />
 	<div class="site-author">
-		<github-user user="{{ site.repository.username }}">
+		<github-user user="{{ site.repository.username }}" class="content-visibility-auto">
 			<h3 slot="header">
 				<span>Created by Chris Zuber</span>
 			</h3>
