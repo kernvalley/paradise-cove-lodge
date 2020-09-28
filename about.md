@@ -39,12 +39,12 @@ preload:
     type: text/html
     crossOrigin: anonymous
     referrerPolicy: no-referrer
-  - href: 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css'
+  - href: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'
     as: style
     type: text/css
     crossOrigin: anonymous
     referrerPolicy: no-referrer
-    integrity: sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
+    integrity: sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==
 preconnect:
   - href: 'https://maps.wikimedia.com'
     crossOrigin: anonymous

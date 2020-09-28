@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Preloading of background images, complete with `media` to preload correct image before CSS has loaded
 - `content-visibility: auto` for most under-the-fold sections to improve rendering perf
 
+### Changed
+- Update Leaflet version to 1.7.1
 ## [v1.1.0] - 2020-08-29
 
 ### Added
