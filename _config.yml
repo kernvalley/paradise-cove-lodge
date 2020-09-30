@@ -98,6 +98,7 @@ plugins:
 - jekyll-paginate
 include:
 - _redirects
+- _headers
 exclude:
 - ".gitkeep"
 - "*.rb"
