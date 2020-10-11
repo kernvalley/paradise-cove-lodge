@@ -108,5 +108,5 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.
 Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
-{% include map.html geo=site.data.business.geo hidden=true %}
+{% include map.html geo=site.data.business.geo loading="lazy" hidden=true %}
 <!-- markdownlint-restore -->
