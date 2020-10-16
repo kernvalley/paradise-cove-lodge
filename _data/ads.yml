@@ -1,0 +1,33 @@
+source: paradise-cove-lodge
+medium: web
+sidebar:
+  - uuid: 572ec662-0b35-4ffa-9934-0e993b0241ee
+    label: Camping on the Kern
+    description: "Whether you're visiting for a family camping or rafting trip we want to take the hassle out of your vacation!"
+    image: "https://static.wixstatic.com/media/d474c7_75251426e5d54ad9927e4e030ac8b07c~mv2.png/v1/fill/w_245,h_134,al_c,q_85,usm_0.66_1.00_0.01/CAMPING%2520(2)_edited.webp"
+    callToAction: Book your Trailer Now!
+    layout: stack
+    theme: auto
+    url: https://www.campingonthekern.com
+    campaign: kv-ads
+    imageFit: contain
+    imagePosition: center
+  - uuid: 87873b5a-dad1-4d07-9b17-e24747793f94
+    label: Kernville Cowork
+    url: https://www.kernvillecowork.com/en
+    description: "At Kernville Cowork, we are working to create a community for collaboration, innovation, and continuous learning."
+    image: "https://www.kernvillecowork.com/en/business/getlogo?w=300&h=100&mode=pad"
+    imageFit: contain
+    imagePosition: center
+    callToAction: Work where you Play
+    layout: stack
+    theme: light
+  - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
+    label: Kern Valley Ads
+    description: Advertise on websites throughout the Kern River Valley
+    callToAction: Click here to get stated!
+    image: https://ads.kernvalley.us/img/favicon.svg
+    url: https://ads.kernvalley.us
+    layout: card
+    theme: auto
+    campaign: kv-ads

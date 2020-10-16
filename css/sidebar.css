@@ -16,3 +16,17 @@ weather-current:defined {
 		margin-top: 0.6em;
 	}
 }
+
+#sidebar {
+	--ad-block-width: 30vw;
+	--ad-block-stack-width: var(--ad-block-width);
+	--ad-block-text-width: var(--ad-block-width);
+	--ad-block-image-width: var(--ad-block-width);
+}
+
+@media (max-width: 600px) {
+	#sidebar {
+		--ad-block-width: 95vw;
+	}
+}
+
