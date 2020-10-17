@@ -11,4 +11,38 @@
 			<div class="ad-description" itemprop="description">{{ item.description }}</div>
 		</div>
 	{% endfor %}
+	{% if page.ads.sidebar %}{% for ad in page.ads.sidebar %}{% include ad.html
+                id=ad.uuid
+                label=ad.label
+                image=ad.image
+                description=ad.description
+                url=ad.url
+                callToAction=ad.callToAction
+                theme=ad.theme
+                layout=ad.layout
+                imageFit=ad.imageFit
+                imagePosition=ad.imagePosition
+                classList=ad.classList
+                campaign=ad.campaign
+                content='sidebar-ad'
+                loading="lazy"
+                media=ad.media
+        %}{% endfor %}{% else %}{% for ad in site.data.ads.sidebar %}{% include ad.html
+                id=ad.uuid
+                label=ad.label
+                image=ad.image
+                description=ad.description
+                url=ad.url
+                callToAction=ad.callToAction
+                theme=ad.theme
+                layout=ad.layout
+                imageFit=ad.imageFit
+                imagePosition=ad.imagePosition
+                classList=ad.classList
+                campaign=ad.campaign
+                content='sidebar-ad'
+                loading="lazy"
+                media=ad.media
+        %}{% endfor %}{% endif %}
+
 </aside>
