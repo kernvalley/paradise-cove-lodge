@@ -26,8 +26,7 @@ requestIdleCallback(() => {
 	$doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeight}px`}));
 
 	if (typeof GA === 'string' && GA !== '') {
-		importGa(GA).then(async () => {
-			/* global ga */
+		importGa(GA).then(async ({ ga }) => {
 			ga('create', GA, 'auto');
 			ga('set', 'transport', 'beacon');
 			ga('send', 'pageview');
