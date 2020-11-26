@@ -1,3 +1,7 @@
+/* @import url("https://cdn.kernvalley.us/css/core-css/theme/default/index.css"); */
+@import url("https://cdn.kernvalley.us/css/core-css/theme/properties.css");
+@import url("https://cdn.kernvalley.us/css/core-css/theme/default/index.css");
+
 @media (max-width: 800px) {
 	:root {
 		--scrollbar-width: auto;
@@ -6,10 +10,15 @@
 
 :root {
 	--accent-color-dark: #661E2A;
-	--button-active-background-dark: #511721;
 	--accent-color-light: var(--accent-color-dark);
+
+	--button-primary-background-light: var(--accent-color-light);
+	--button-primary-background-dark: var(--button-primary-background-light);
+	--button-primary-hover-background-light: var(--button-primary-background-light);
+	--button-primary-hover-background-dark: var(--button-primary-hover-background-light);
+	--button-primary-active-background-light: #511721;
+	--button-primary-active-background-dark: var(--button-primary-active-background-light);
 	--sidebar-max-width: 320px;
-	--button-active-background-light: var(--button-active-background-dark);
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
 	--scrollbar-width: thin;
