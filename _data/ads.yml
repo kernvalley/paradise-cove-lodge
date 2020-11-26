@@ -2,6 +2,16 @@ source: paradise-cove-lodge
 medium: web
 campaign: krv-ads
 sidebar:
+  - uuid: 87873b5a-dad1-4d07-9b17-e24747793f94
+    label: Kernville Cowork
+    url: https://www.kernvillecowork.com/en
+    description: "Want to work where you play?  Bring your laptop and get things done in scenic Kernville!"
+    image: "https://cdn.kernvalley.us/img/branding/kernville-cowork.svg"
+    imageFit: contain
+    imagePosition: center
+    callToAction: Click to see your options
+    layout: card
+    theme: light
   - uuid: 572ec662-0b35-4ffa-9934-0e993b0241ee
     label: Camping on the Kern
     description: "Whether you're visiting for a family camping or rafting trip we want to take the hassle out of your vacation!"
@@ -13,16 +23,6 @@ sidebar:
     campaign: kv-ads
     imageFit: contain
     imagePosition: center
-  - uuid: 87873b5a-dad1-4d07-9b17-e24747793f94
-    label: Kernville Cowork
-    url: https://www.kernvillecowork.com/en
-    description: "At Kernville Cowork, we are working to create a community for collaboration, innovation, and continuous learning."
-    image: "https://www.kernvillecowork.com/en/business/getlogo?w=300&h=100&mode=pad"
-    imageFit: contain
-    imagePosition: center
-    callToAction: Work where you Play
-    layout: stack
-    theme: light
   - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
     label: Kern Valley Ads
     description: Advertise on websites throughout the Kern River Valley
