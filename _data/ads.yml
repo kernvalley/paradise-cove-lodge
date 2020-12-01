@@ -6,12 +6,22 @@ sidebar:
     label: Kernville Cowork
     url: https://www.kernvillecowork.com/en
     description: "Want to work where you play?  Bring your laptop and get things done in scenic Kernville!"
-    image: "https://cdn.kernvalley.us/img/branding/kernville-cowork.svg"
-    imageFit: contain
+    image: "https://i.imgur.com/8XIumS9m.jpg"
+    imageFit: cover
     imagePosition: center
     callToAction: Click to see your options
     layout: card
-    theme: light
+    theme: auto
+  - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
+    label: Kern Valley Ads
+    description: Advertise on websites throughout the Kern River Valley
+    callToAction: Click here to get stated!
+    image: https://ads.kernvalley.us/img/favicon.svg
+    url: https://ads.kernvalley.us
+    layout: card
+    theme: auto
+    iamgeFit: contain
+    campaign: kv-ads
   - uuid: 572ec662-0b35-4ffa-9934-0e993b0241ee
     label: Camping on the Kern
     description: "Whether you're visiting for a family camping or rafting trip we want to take the hassle out of your vacation!"
@@ -23,12 +33,3 @@ sidebar:
     campaign: kv-ads
     imageFit: contain
     imagePosition: center
-  - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
-    label: Kern Valley Ads
-    description: Advertise on websites throughout the Kern River Valley
-    callToAction: Click here to get stated!
-    image: https://ads.kernvalley.us/img/favicon.svg
-    url: https://ads.kernvalley.us
-    layout: card
-    theme: auto
-    campaign: kv-ads
