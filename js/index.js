@@ -1,5 +1,6 @@
 import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
 import 'https://cdn.kernvalley.us/js/std-js/shims.js';
+import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://unpkg.com/@webcomponents/custom-elements@1.4.2/custom-elements.min.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
 import 'https://cdn.kernvalley.us/components/leaflet/map.js';
@@ -15,10 +16,13 @@ import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, gener
 import { GA } from './consts.js';
 import { updateImage, viewHandler } from './functions.js';
 
+$(document.documentElement).toggleClass({
+	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
+	'no-details': document.createElement('details') instanceof HTMLUnknownElement,
+	'js': true,
+	'no-js': false,
+});
 document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
-document.documentElement.classList.replace('no-js', 'js');
-document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
-document.documentElement.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
 requestIdleCallback(() => {
 	const $doc = $(document.documentElement);

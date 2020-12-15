@@ -1,6 +1,6 @@
 <aside id="sidebar">
 	{% if site.data.api.OpenWeatherMap %}
-		<weather-current id="weather-current" class="card shadow custom-element if-defined content-visibility-auto" postalcode="{{ site.data.business.address.postalCode }}" appid="{{ site.data.api.OpenWeatherMap }}"></weather-current>
+		{% include weather.html appId=site.data.api.OpenWeatherMap postalCode=site.data.business.address.postalCode theme="auto" %}
 	{% endif %}
 	{% for item in site.data.sidebar %}
 		<div class="ad-block card shadow content-visibility-auto" itemtype="https://schema.org/WPAdBlock" itemscope="">
