@@ -22,9 +22,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Leaflet version to 1.7.1
 - Lazy load `<leaflet-map>` and `<github-user>`
 - Update weather component
+- Move customElement shim to own script (as `<script nomodule>`)
+- Update nav layout
+- Disable lake cam link 
 
 ### Fixed
 - Add missing `"utm_campaign"` param [#152](https://github.com/kernvalley/paradise-cove-lodge/issues/152)
+- Fix bad custom property for nav link hover/active background
 
 ## [v1.1.0] - 2020-08-29
 

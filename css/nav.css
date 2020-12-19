@@ -1,8 +1,8 @@
 #nav {
 	font-size: 1.2em;
-	justify-content: space-around;
 	height: var(--nav-height, 4rem);
 	padding: 0;
+	gap: 6px;
 }
 
 #nav-container {
@@ -14,11 +14,12 @@
 .nav-link {
 	padding: 0.4rem 0.8rem;
 	justify-content: center;
+	max-width: 270px;
+	transition: background-color 600ms ease-in-out;
 }
 
 .nav-link:hover, .nav-link.current {
-	background-color: var(--button-active-background);
-	transition: background-color 600ms ease-in-out;
+	background-color: var(--button-primary-active-background);
 }
 
 .nav-link.current {

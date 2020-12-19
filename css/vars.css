@@ -18,7 +18,8 @@
 	--button-primary-hover-background-dark: var(--button-primary-hover-background-light);
 	--button-primary-active-background-light: #511721;
 	--button-primary-active-background-dark: var(--button-primary-active-background-light);
-	--sidebar-max-width: 320px;
+	--sidebar-min-width: 400px;
+	--sidebar-max-width: 420px;
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
 	--scrollbar-width: thin;
