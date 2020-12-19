@@ -41,6 +41,18 @@
 	transition: opacity 400ms ease-in-out;
 }
 
+@media (prefers-color-scheme: dark) {
+	.share-menuitem.btn.btn-outline {
+		color: #cdcdcd;
+	}
+}
+
+:root[data-theme="dark"] {
+	.share-menuitem.btn.btn-outline {
+		color: #cdcdcd;
+	}
+}
+
 .menuitem-name {
 	margin: 0;
 	grid-area: name;
