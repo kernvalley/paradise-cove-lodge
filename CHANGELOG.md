@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Preloading of background images, complete with `media` to preload correct image before CSS has loaded
 - `content-visibility: auto` for most under-the-fold sections to improve rendering perf
 - Add theme hanling via `cookieStore`
+- Add share buttons to menu items
 
 ### Changed
 - Update Leaflet version to 1.7.1
@@ -24,7 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update weather component
 - Move customElement shim to own script (as `<script nomodule>`)
 - Update nav layout
-- Disable lake cam link 
+- Disable lake cam link
+- Update contact page design (FAQ and contact form)
 
 ### Fixed
 - Add missing `"utm_campaign"` param [#152](https://github.com/kernvalley/paradise-cove-lodge/issues/152)

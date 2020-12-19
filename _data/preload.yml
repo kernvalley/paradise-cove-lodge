@@ -35,7 +35,7 @@
   type: text/css
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: "https://cdn.kernvalley.us/components/share-to-button/share-to-button.css"
+- href: "https://cdn.kernvalley.us/components/toast-message.css"
   as: style
   type: text/css
   crossOrigin: anonymous
