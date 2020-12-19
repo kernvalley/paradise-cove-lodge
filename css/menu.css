@@ -42,7 +42,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.share-menuitem.btn.btn-outline {
+	:root:not([data-theme="light"]) .share-menuitem.btn.btn-outline {
 		color: #cdcdcd;
 	}
 }
