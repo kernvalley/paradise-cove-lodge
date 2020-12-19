@@ -4,6 +4,12 @@
 	color: #fafafa;
 }
 
+@media (max-width: 800px) {
+	#footer {
+		text-align: center;
+	}
+}
+
 .social-links, .footer-link {
 	font-size: 1.3rem;
 	padding: 0.4em;

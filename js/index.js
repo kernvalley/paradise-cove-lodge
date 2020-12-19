@@ -71,6 +71,20 @@ Promise.allSettled([
 		if (('IntersectionObserver' in window) && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
 			$('.food-menuitem').addClass('hidden').then($items => $items.each(viewHandler));
 		}
+	} else if (location.pathname.startsWith('/contact')) {
+		$('contact-form').submit(() => {
+			if (window.ga instanceof Function) {
+				window.ga('send', {
+					hitType: 'event',
+					eventCategory: 'contact',
+					eventAction: 'contact',
+					eventLabel: 'contact',
+					transport: 'beacon',
+				});
+			}
+		}, {
+			passive: true,
+		});
 	}
 
 	customElements.whenDefined('leaflet-map').then(() => {
