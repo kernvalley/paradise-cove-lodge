@@ -18,12 +18,27 @@
 
 .food-menuitem {
 	display: grid;
-	grid-template-areas: "image name name" "image description description" "image offers diets";
+	grid-template-areas: "image name share" "image description description" "image offers diets";
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: 320px 1fr auto;
 	grid-gap: 0.6em;
 	padding: 0.4em;
 	margin-bottom: 0.4rem;
+}
+
+@media (min-width: 800px) {
+	.food-menuitem:not(:hover) .share-menuitem {
+		visibility: none;
+	}
+}
+
+.share-menuitem.btn.btn-outline {
+	grid-area: share;
+	border-radius: 12px;
+	color: var(--accent-color);
+	background-color: transparent;
+	border: 2px solid currentColor;
+	transition: opacity 400ms ease-in-out;
 }
 
 .menuitem-name {
@@ -51,16 +66,26 @@
 	margin: 1.2em 0;
 }
 
+@media (any-hover: hover) {
+	.food-menuitem:not(:hover) .share-menuitem {
+		opacity: 0;
+	}
+}
+
 @media (max-width: 1050px) {
 	.food-menuitem {
-		grid-template-areas: "name name" "image image" "description description" "offers diets";
+		grid-template-areas: "name name name" "image image image" "description description description" " offers offers diets" " . share .";
 		grid-template-rows: auto;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: 3em 1fr 3em;
 		justify-content: center;
 	}
 	
 	.menusection .menusection-header.sticky {
 		position: static;
+	}
+
+	.food-menuitem .share-menuitem {
+		padding: 0.6em;
 	}
 }
 

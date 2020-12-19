@@ -9,7 +9,6 @@ import 'https://cdn.kernvalley.us/components/github/user.js';
 import 'https://cdn.kernvalley.us/components/pwa/install.js';
 import 'https://cdn.kernvalley.us/components/weather-current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
-import 'https://cdn.kernvalley.us/components/share-to-button/share-to-button.js';
 import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
