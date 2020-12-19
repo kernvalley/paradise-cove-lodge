@@ -1,16 +1,10 @@
-<nav id="nav" class="sticky top shadow background-accent color-alt z-3 clearfix">
-	<div id="nav-container" class="nav-links">
-		{% for link in site.data.nav %}
-			<a href="{{ link.href }}" class="nav-link color-inherit flex column{% if page.url == link.href %} current disabled{% endif %}" title="{{ link.label }}">
-				<span>
-					{% include icon.html icon=link.icon %}
-					<span class="mobile-hidden">{{ link.label }}</span>
-				</span>
-			</a>
-		{% endfor %}
-	</div>
-	<!--
-	<button is="login-button" title="Sign In" class="btn btn-accept float-right" hidden="">Sign In</button>
-	<button is="logout-button" title="Sign Out" class="btn btn-reject float-right" hidden="">Sign Out</button>
-	-->
+<nav id="nav" class="sticky top shadow background-accent color-alt flex row no-wrap z-3">
+	{% for link in site.data.nav %}{% unless link.disabled %}
+		<a href="{{ link.href }}" class="nav-link color-inherit grow-1 flex column{% if page.url == link.href %} current disabled{% endif %}" title="{{ link.label }}">
+			<span class="center inline-block">
+				{% include icon.html icon=link.icon %}<br />
+				<span class="mobile-hidden">{{ link.label }}</span>
+			</span>
+		</a>
+	{% endunless %}{% endfor %}
 </nav>

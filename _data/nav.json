@@ -21,5 +21,6 @@
 }, {
   "label": "Lake Cam",
   "icon": "camera-video",
-  "href": "/lakecam/"
+  "href": "/lakecam/",
+  "disabled": true
 }]
