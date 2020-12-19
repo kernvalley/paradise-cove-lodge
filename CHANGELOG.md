@@ -24,7 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update weather component
 - Move customElement shim to own script (as `<script nomodule>`)
 - Update nav layout
-- Disable lake cam link 
+- Disable lake cam link
+- Update contact page design (FAQ and contact form)
 
 ### Fixed
 - Add missing `"utm_campaign"` param [#152](https://github.com/kernvalley/paradise-cove-lodge/issues/152)
