@@ -24,6 +24,11 @@ weather-current:defined {
 	--ad-block-image-width: var(--ad-block-width);
 }
 
+#sidebar > weather-current {
+	width: 100%;
+	max-width: 100%;
+}
+
 @media (max-width: 600px) {
 	#sidebar {
 		--ad-block-width: 95vw;
