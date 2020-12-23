@@ -99,6 +99,7 @@ plugins:
 include:
 - _redirects
 - _headers
+- '/.well-known/'
 exclude:
 - ".gitkeep"
 - "*.rb"
