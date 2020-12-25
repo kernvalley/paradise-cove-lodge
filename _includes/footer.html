@@ -38,14 +38,6 @@
 			</a>
 		{% endif %}
 	</div>
-	{% if site.service_worker %}
-		<button is="pwa-install" class="btn btn-primary btn-big btn-wide content-visibility-auto" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate="">
-			<svg class="icon current-color" role="img" aria-hidden="true">
-				<use xlink:href="/img/icons.svg#system-software-install"></use>
-			</svg>
-			<span>Install</span>
-		</button>
-	{% endif %}
 	<hr />
 	<div class="copyright content-visibility-auto">
 		<span>&copy;</span>

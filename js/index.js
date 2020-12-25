@@ -6,11 +6,10 @@ import 'https://cdn.kernvalley.us/components/leaflet/map.js';
 import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
-import 'https://cdn.kernvalley.us/components/pwa/install.js';
+// import 'https://cdn.kernvalley.us/components/pwa/install.js';
 import 'https://cdn.kernvalley.us/components/weather-current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
-import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { GA } from './consts.js';
 import { updateImage, viewHandler } from './functions.js';
@@ -20,14 +19,12 @@ $(document.documentElement).toggleClass({
 	'no-details': document.createElement('details') instanceof HTMLUnknownElement,
 	'js': true,
 	'no-js': false,
+}).then($doc => {
+	$doc.css({ '--viewport-height': `${window.innerHeight}px` });
+	$doc.debounce('resize', () => $doc.css({ '--viewport-height': `${window.innerHeight}px` }));
 });
-document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
 
 requestIdleCallback(() => {
-	const $doc = $(document.documentElement);
-
-	$doc.debounce('resize', () => $doc.css({'--viewport-height': `${window.innerHeight}px`}));
-
 	if (typeof GA === 'string' && GA !== '') {
 		importGa(GA).then(async ({ ga }) => {
 			if (ga instanceof Function) {
@@ -49,7 +46,6 @@ requestIdleCallback(() => {
 
 Promise.allSettled([
 	ready(),
-	loadScript('https://cdn.polyfill.io/v3/polyfill.min.js'),
 ]).then(() =>{
 	if (location.pathname.startsWith('/lakecam')) {
 		updateImage(document.getElementById('lake-cam-img'), 15);
@@ -86,7 +82,5 @@ Promise.allSettled([
 		});
 	}
 
-	customElements.whenDefined('leaflet-map').then(() => {
-		$('leaflet-map').unhide();
-	});
+	customElements.whenDefined('leaflet-map').then(() => $('leaflet-map[hidden]').unhide());
 });
