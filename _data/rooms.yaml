@@ -1,0 +1,84 @@
+---
+- "@context": https://schema.org
+  "@type": Offer
+  identifier: 8727d723-ee14-4c9f-af26-e5c91c96f5b2
+  name: King Room
+  description: "$95 (plus tax) per night"
+  url: https://reservation.worldweb.com/hotel/2062
+  priceSpecification:
+    "@type": 'PriceSpecification '
+    price: 95
+    priceCurrency: USD
+    description: "$95 per night"
+  itemOffered:
+    "@type": HotelRoom
+    name: King Room
+    occupancy: 2
+    numberOfRooms: 1
+    bed:
+      "@type": BedDetails
+      numberOfBeds: 1
+      typeOfBed: King
+    description: A room with a view and a king sized bed
+    petsAllowed: 'Yes'
+    smokingAllowed: 'No'
+    amenityFeature:
+    - "@type": LocationFeatureSpecification
+      name: Swimming Pool
+      value: 'Yes'
+    - "@type": LocationFeatureSpecification
+      name: Wi-Fi
+      value: 'Yes'
+      image: network-wireless-signal-good
+    - "@type": LocationFeatureSpecification
+      name: Air Conditioning
+      value: 'Yes'
+      image: snow
+    photo:
+      "@type": ImageObject
+      url: "/img/raster/rooms/king.jpg"
+  inventoryLevel:
+    "@type": QuantitativeValue
+    value: 4
+- "@context": https://schema.org
+  "@type": Offer
+  identifier: 8df1ee12-d903-4492-aa35-38fe82f313ed
+  name: Large Room
+  description: "$110 (plus tax) per night"
+  url: https://reservation.worldweb.com/hotel/2062
+  priceSpecification:
+    "@type": 'PriceSpecification '
+    price: 110
+    priceCurrency: USD
+    description: "$110 per night"
+  itemOffered:
+    "@type": HotelRoom
+    name: Large Room
+    occupancy: 4
+    numberOfRooms: 1
+    bed:
+      "@type": BedDetails
+      numberOfBeds: 2
+      typeOfBed: Queen
+    description: A room with a view and two queen sized bed
+    petsAllowed: 'Yes'
+    smokingAllowed: 'No'
+    amenityFeature:
+    - "@type": LocationFeatureSpecification
+      name: Swimming Pool
+      value: 'Yes'
+    - "@type": LocationFeatureSpecification
+      name: Wi-Fi
+      value: 'Yes'
+      image: network-wireless-signal-good
+    - "@type": LocationFeatureSpecification
+      name: Air Conditioning
+      value: 'Yes'
+      image: snow
+    photo:
+      "@type": ImageObject
+      url: "/img/raster/rooms/large.jpg"
+  inventoryLevel:
+    "@type": QuantitativeValue
+    value: 4
+
