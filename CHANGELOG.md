@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `content-visibility: auto` for most under-the-fold sections to improve rendering perf
 - Add theme hanling via `cookieStore`
 - Add share buttons to menu items
+- Implement `/.well-known/menu` redirecting to JSON-LD version of menu at `/menu/all.json`
 
 ### Changed
 - Update Leaflet version to 1.7.1

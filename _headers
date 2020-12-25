@@ -10,5 +10,13 @@
   X-Content-Type-Options: nosniff
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.kernvalley.us https://cdn.polyfill.io/v3/polyfill.min.js https://unpkg.com https://www.googletagmanager.com/gtag/js  https://www.google-analytics.com/analytics.js; style-src 'self' https://cdn.kernvalley.us https://unpkg.com; img-src *; font-src https://cdn.kernvalley.us/fonts/; connect-src 'self' https://cdn.kernvalley.us https://api.github.com  https://api.openweathermap.org/data/ https://www.google-analytics.com/j/collect https://www.google-analytics.com/collect;
 
+/.well-known/*
+  Access-Controll-Allow-Origin: *
+
+/:placeholder/:placeholder.json
+  X-Content-Type-Options: nosniff
+  Access-Controll-Allow-Origin: *
+  Content-Security-Policy: default-src 'self'
+
 /img/*
   Access-Control-Allow-Origin: *
