@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.1] - 2020-12-27
+
 ### Added
 - Preloading of background images, complete with `media` to preload correct image before CSS has loaded
 - `content-visibility: auto` for most under-the-fold sections to improve rendering perf
