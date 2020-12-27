@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.1] - 2020-12-27
+
 ### Added
 - Preloading of background images, complete with `media` to preload correct image before CSS has loaded
 - `content-visibility: auto` for most under-the-fold sections to improve rendering perf
@@ -32,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move shims/polyfills to external scripts
 - Convert JSON data to YAML in `_data/`
 - Update dependencies
+- Load `<leaflet-map>` and `<leaflet-marker>` components as separate `<script>`
 
 ### Fixed
 - Add missing `"utm_campaign"` param [#152](https://github.com/kernvalley/paradise-cove-lodge/issues/152)
@@ -56,6 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add FAQ to contact page
 - Add contact links (`tel:` & Maps link with address) to contact page
 - Replace Contact Page nav icon
+- Add `integrity` attribute to custom elements polyfill `<script>`
 
 ### Fixed
 - `enctype` for contact form

@@ -1,5 +1,6 @@
 import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { whenInViewport, whenNotInViewport } from 'https://cdn.kernvalley.us/js/std-js/viewport.js';
+import { lakeimg } from './consts.js';
 
 export async function viewHandler(el) {
 	await whenInViewport(el);
@@ -26,7 +27,7 @@ export async function viewHandler(el) {
 export function updateImage(img, t = 15) {
 	if (img instanceof HTMLImageElement) {
 		const src = new URL(img.src);
-		src.searchParams.set('ts', Date.now());
+		src.searchParams.set(lakeimg.queryParam, Date.now());
 
 		loadImage(src.href, {
 			crossOrigin: img.crossOrigin,
@@ -42,6 +43,11 @@ export function updateImage(img, t = 15) {
 			});
 		}).catch(console.error);
 	} else {
-		throw new Error('No lake cam image provided');
+		const { src, width, height, alt, loading, crossOrigin, referrerPolicy } = lakeimg;
+
+		loadImage(src, { width, height, alt, loading, crossOrigin, referrerPolicy }).then(img => {
+			document.querySelector(lakeimg.parentSelector).append(img);
+			setTimeout(() => updateImage(img, t), t * 1000);
+		}).catch(console.error);
 	}
 }
