@@ -1,9 +1,10 @@
 - src: https://unpkg.com/@webcomponents/custom-elements@1.4.2/custom-elements.min.js
   referrerPolicy: no-referrer
-  crossOrigin: anonymous
+  crossorigin: anonymous
   defer: true
   async: true
   nomodule: true
+  integrity: sha384-xyhN4T4+9VPh8uXl6uWjGzsqwNXN9C2tla8b6zSrSqYlMFUoeCdoxiEJU0js+GNE
 - src: /js/index.js
   type: module
   referrerPolicy: no-referrer

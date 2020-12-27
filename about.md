@@ -53,6 +53,11 @@ tags:
   - Paradise Cove Lodge
   - about
   - history
+scripts:
+  - src: /js/map.min.js
+    async: true
+    defer: true
+    referrerPolicy: no-referrer
 ---
 ## About Us
 In the 1950's Bo & Margaret Williams bought a cabin with about 30 acres.  Here
