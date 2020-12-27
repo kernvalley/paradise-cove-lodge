@@ -14,11 +14,11 @@
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:;
 
 /.well-known/*
-  Access-Controll-Allow-Origin: *
+  Access-Control-Allow-Origin: *
 
 /:placeholder/:placeholder.json
   X-Content-Type-Options: nosniff
-  Access-Controll-Allow-Origin: *
+  Access-Control-Allow-Origin: *
   Content-Security-Policy: default-src 'self'
 
 /img/*
