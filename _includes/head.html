@@ -68,13 +68,13 @@
 	<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
 	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
 	{% if site.data.scripts %}{% for script in site.data.scripts[jekyll.environment] %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossorigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if layout.scripts %}{% for script in layout.scripts %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossorigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if page.scripts %}{% for script in page.scripts %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossorigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if site.manifest %}
 		<link rel="manifest" href="{{ site.manifest }}" />
@@ -125,13 +125,13 @@
 			<link rel="prerender" href="{{ link.href }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.stylesheets %}{% for stylesheet in site.data.stylesheets[jekyll.environment] %}
-		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossOrigin=stylesheet.crossOrigin referrerPolicy=stylesheet.referrerPolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if layout.stylesheets %}{% for stylesheet in layout.stylesheets %}
-		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossOrigin=stylesheet.crossOrigin referrerPolicy=stylesheet.referrerPolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
-		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossOrigin=stylesheet.crossOrigin referrerPolicy=stylesheet.referrerPolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ site.feed.title | default: 'Feed' }}" />{% endif %}
 	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}
