@@ -1,15 +1,20 @@
+- src: https://cdn.kernvalley.us/js/std-js/no-console.js
+  async: true
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
 - src: https://cdn.polyfill.io/v3/polyfill.min.js
   nomodule: true
   defer: true
   async: true
-  crossorigin: anonymous
-  referrerPolicy: no-referrer
-- src: https://unpkg.com/@webcomponents/custom-elements@1.4.2/custom-elements.min.js
-  nomodule: true
-  defer: true
-  async: true
+  noModule: true
   crossOrigin: anonymous
   referrerPolicy: no-referrer
+- src: https://unpkg.com/@webcomponents/custom-elements@1.4.3/custom-elements.min.js
+  referrerPolicy: no-referrer
+  crossOrigin: anonymous
+  defer: true
+  async: true
+  noModule: true
   integrity: sha384-xyhN4T4+9VPh8uXl6uWjGzsqwNXN9C2tla8b6zSrSqYlMFUoeCdoxiEJU0js+GNE
 - src: /js/index.min.js
   referrerPolicy: no-referrer
