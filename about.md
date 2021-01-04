@@ -54,9 +54,10 @@ tags:
   - about
   - history
 scripts:
-  - src: /js/map.min.js
+  - src: https://cdn.kernvalley.us/components/leaflet/map.min.js
     async: true
     defer: true
+    crossOrigin: anonymous
     referrerPolicy: no-referrer
 ---
 ## About Us
@@ -113,5 +114,5 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.
 Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
-{% include map.html geo=site.data.business.geo loading="lazy" hidden=true %}
+{% include map.html geo=site.data.business.geo loading="lazy" hidden=true icon="https://cdn.kernvalley.us/img/markers/hotel.svg" %}
 <!-- markdownlint-restore -->
