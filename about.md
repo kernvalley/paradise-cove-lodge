@@ -114,5 +114,5 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.
 Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
-{% include map.html geo=site.data.business.geo loading="lazy" hidden=true icon="https://cdn.kernvalley.us/img/markers/hotel.svg" %}
+{% include map.html geo=site.data.business.geo loading="lazy" hidden=true icon="/img/adwaita-icons/actions/mark-location.svg" %}
 <!-- markdownlint-restore -->
