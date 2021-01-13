@@ -4,7 +4,7 @@
 			<h3>Find us on&hellip;</h3>
 			<div class="social-links">
 				{% for link in site.data.footer.social %}
-					<a href="{{ link.url }}" class="social-link inline-block center color-inherit" rel="noopener external">
+					<a href="{{ link.url }}" class="social-link inline-block center color-inherit" rel="noopener noreferrer external">
 						{% include icon.html icon=link.icon class="social-icon" height="48" %}
 						<br />
 						<span class="social-label link-text">{{ link.label }}</span>
@@ -26,7 +26,7 @@
 			</a>
 		{% endif %}
 		{% if site.data.business.address.url %}
-			<a class="footer-link inline-block color-inherit" href="{{ site.data.business.address.url }}" rel="noopener external">
+			<a class="footer-link inline-block color-inherit" href="{{ site.data.business.address.url }}" rel="noopener noreferrer external">
 				{% include icon.html icon="map" %}
 				<span class="link-text underline">Directions</span>
 			</a>
@@ -53,13 +53,17 @@
 			{% include address.html address=site.data.business.address %}
 		</span>
 	</div>
+	{% if site.data.app.related_applications %}
+		<hr />
+		{% include app-list.html apps=site.data.app.related_applications %}
+	{% endif %}
 	<hr />
-	<div class="site-author">
+	<div class="site-author flex row wrap space-evenly">
 		<github-user user="{{ site.repository.username }}" loading="lazy" class="content-visibility-auto">
 			<h3 slot="header">
 				<span>Created by Chris Zuber</span>
 			</h3>
-			<h4><a href="https://kernvalley.us" rel="noopener external">KernValley.US</a></h4>
+			<h4><a href="https://kernvalley.us" rel="noopener noreferrer external">KernValley.US</a></h4>
 		</github-user>
 		{% include keep-kern-clean.html %}
 	</div>
