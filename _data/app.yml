@@ -48,4 +48,6 @@ screenshots:
   - src: 'https://i.imgur.com/1SUdnXym.png'
     sizes: 320x156
     type: image/png
-related_applications: []
+related_applications:
+  - platform: webapp
+    url: https://www.paradisecovelodge.com/manifest.json

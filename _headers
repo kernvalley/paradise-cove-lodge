@@ -15,11 +15,18 @@
 
 /.well-known/*
   Access-Control-Allow-Origin: *
+  Content-Security-Policy: default-src 'none';
 
 /:placeholder/:placeholder.json
   X-Content-Type-Options: nosniff
   Access-Control-Allow-Origin: *
-  Content-Security-Policy: default-src 'self'
+  Content-Security-Policy: default-src 'none'
 
 /img/*
   Access-Control-Allow-Origin: *
+  Content-Security-Policy: default-src 'none
+
+/service-worker.js
+  Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' https://cdn.kernvalley.us/service-worker.js;
+  Link: <https://cdn.kernvalley.us/service-worker.js> rel=preload; as=script
+  Link: </sw-config.js> rel=preload; as=script
