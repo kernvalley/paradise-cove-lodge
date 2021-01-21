@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0] - 2021-01-21
+
+### Changed
+- Update data structure for consistency with other projects
+- Re-write to use `jekyll-common` submodule as `_includes/common/`
+
 ## [v1.1.1] - 2020-12-27
 
 ### Added

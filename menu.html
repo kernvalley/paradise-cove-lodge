@@ -52,7 +52,7 @@ tags:
 	<meta itemprop="priceRange" content="{{ site.data.restaurant.priceRange | default: '$$$' }}" />
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
-	<div hidden="">{% include address.html address=site.data.business.address %}</div>
+	<div hidden="">{% include common/address.html address=site.data.business.address %}</div>
 	<div class="status-box info pricing-notice">Prices subject to change.</div>
 	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
 		{% for menusection in site.data.menu %}
@@ -66,7 +66,7 @@ tags:
 		{% endfor %}
 	</div>
 		<a href="tel:{{ site.data.restaurant.telephone | default: site.data.business.telephone }}" title="Call to place Order" role="button" id="order-call-btn" class="btn btn-primary sticky shadow" hidden="">
-			{% include icon.html icon="call-start" %}
+			{% include common/icon.html icon="call-start" %}
 			<span>Order</span>
 		</a>
 </div>

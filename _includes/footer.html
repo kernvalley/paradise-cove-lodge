@@ -1,42 +1,61 @@
 <footer id="footer">
 	<div class="social-links content-visibility-auto" data-cols="auto">
-		{% if site.data.footer.social %}
+		{% if site.data.social %}
 			<h3>Find us on&hellip;</h3>
-			<div class="social-links">
-				{% for link in site.data.footer.social %}
-					<a href="{{ link.url }}" class="social-link inline-block center color-inherit" rel="noopener noreferrer external">
-						{% include icon.html icon=link.icon class="social-icon" height="48" %}
-						<br />
-						<span class="social-label link-text">{{ link.label }}</span>
-					</a>
-				{% endfor %}
-			</div>
+			{% if site.data.social.facebook %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					{% include common/icon.html icon="facebook" class="social-icon" fill="currentColor" width="48" height="48" %}
+					<br />
+					<span class="social-label link-text">Facebook</span>
+				</a>
+			{% endif %}{% if site.data.social.twitter %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.twitter }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					{% include common/icon.html icon="twitter" class="social-icon" fill="currentColor" width="48" height="48" %}
+					<br />
+					<span class="social-label link-text">Twitter</span>
+				</a>
+			{% endif %}{% if site.data.social.instagram %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.instagram }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					<img src="https://cdn.kernvalley.us/img/logos/instagram.svg" class="social-icon" width="48" height="48" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="" />
+					<br />
+					<span class="social-label link-text">Instagram</span>
+				</a>
+			{% endif %}{% if site.data.social.linkedIn %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.linkedIn }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					{% include common/icon.html icon="linkedin" class="social-icon" height="48" width="48" %}
+					<br />
+					<span class="social-label link-text">LinkedIn</span>
+				</a>
+			{% endif %}{% if site.data.social.youtube %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.youtube }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					{% include common/icon.html icon="youtube" class="social-icon" height="48" width="48"%}
+					<br />
+					<span class="social-label link-text">YouTube</span>
+				</a>
+			{% endif %}{% if site.data.social.yelp %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.yelp }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					{% include common/icon.html icon="yelp" class="social-icon" height="48" width="48" %}
+					<br />
+					<span class="social-label link-text">Yelp</span>
+				</a>
+			{% endif %}{% if site.data.social.tripAdvisor %}
+				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.tripAdvisor }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+					<br />
+					{% include common/icon.html icon="tripadvisor" class="social-icon" height="48" width="48" %}
+					<br />
+					<span class="social-label link-text">TripAdvisor</span>
+				</a>
+			{% endif %}
 			<hr />
 		{% endif %}
-		{% if site.data.business.telephone %}
-			<a class="footer-link inline-block color-inherit" href="tel:{{ site.data.business.telephone }}">
-				{% include icon.html icon="call-start" %}
-				<span class="link-text underline">{{ site.data.business.telephone | replace: '+1-', '' }}</span>
+		{% for link in site.data.links.footer %}
+			<a href="{{ link.href }}" class="footer-link inline-block color-inherit" rel="{{ link.rel | join: ' ' }}">
+				{% if link.icon %}
+					{% include common/icon.html icon=link.icon fill="currentColor" height="48" width="48" %}
+				{% endif %}
+				<span class="link-text underline">{{ link.label }}</span>
 			</a>
-		{% endif %}
-		{% if site.data.business.email %}
-			<a class="footer-link inline-block color-inherit" href="mailto:{{ site.data.business.email }}">
-				{% include icon.html icon="mail" %}
-				<span class="link-text underline">{{ site.data.business.email }}</span>
-			</a>
-		{% endif %}
-		{% if site.data.business.address.url %}
-			<a class="footer-link inline-block color-inherit" href="{{ site.data.business.address.url }}" rel="noopener noreferrer external">
-				{% include icon.html icon="map" %}
-				<span class="link-text underline">Directions</span>
-			</a>
-		{% endif %}
-		{% if site.repository %}
-			<a class="footer-link inline-block color-inherit" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}/issues" target="_blank" rel="external noopener">
-				{% include icon.html icon="issue-opened" %}
-				<span class="link-text underline">Report a Problem</span>
-			</a>
-		{% endif %}
+		{% endfor %}
 	</div>
 	<hr />
 	<div class="copyright content-visibility-auto">
@@ -50,12 +69,13 @@
 				<meta itemprop="image" content="{{ site.data.business.image }}" />
 				<meta itemprop="logo" content="{{ site.data.business.logo }}" />
 			</a>
-			{% include address.html address=site.data.business.address %}
+			{% include common/address.html address=site.data.business.address %}
 		</span>
 	</div>
-	{% if site.data.app.related_applications %}
+	{% assign apps=site.data.apps.related_applications | where_exp: 'platfrom', 'platform != "webapp"' %}
+	{% if apps %}
 		<hr />
-		{% include app-list.html apps=site.data.app.related_applications %}
+		<app-list id="app-stores" class="flex row space-evenly app-stores"></app-list>
 	{% endif %}
 	<hr />
 	<div class="site-author flex row wrap space-evenly">
@@ -65,6 +85,6 @@
 			</h3>
 			<h4><a href="https://kernvalley.us" rel="noopener noreferrer external">KernValley.US</a></h4>
 		</github-user>
-		{% include keep-kern-clean.html %}
+		{% if site.keep-kern-clean %}{% include common/keep-kern-clean.html %}{% endif %}
 	</div>
 </footer>

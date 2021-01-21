@@ -58,7 +58,7 @@ tags:
 		<br />
 		<strong>Plenty of free parking for boats or work trucks and equipment.</strong>
 	</p>
-	<div hidden="">{% include address.html address=site.data.business.address %}</div>
+	<div hidden="">{% include common/address.html address=site.data.business.address %}</div>
 	{% for offer in site.data.rooms %}
 		{% include room.html offer=offer %}
 	{% endfor %}

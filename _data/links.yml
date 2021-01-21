@@ -1,0 +1,39 @@
+---
+nav:
+  - label: Home
+    href: "/"
+    icon: icon-mono
+  - label: Restaurant
+    href: "/menu/"
+    icon: restaurant
+  - label: Rooms & Rates
+    href: "/rooms/"
+    icon: hotel
+  - label: About Us
+    href: "/about/"
+    icon: info
+  - label: Contact
+    href: "/contact/"
+    icon: mail
+  # - label: Lake Cam
+  #   icon: camera-video
+  #   href: "/lakecam/"
+  #   disabled: true
+footer:
+  - label: 760-379-2719
+    href: tel:+1-760-379-2719
+    icon: call-start
+  - label: Directions
+    href: https://goo.gl/maps/HVrsM1jr7cbRykck9
+    icon: map
+    rel:
+      - noopener
+      - noreferrer
+      - external
+  - label: Report a Problem
+    href: https://github.com/kernvalley/paradise-cove-lodge/issues
+    icon: issue-opened
+    rel:
+      - noopener
+      - noreferrer
+      - external
