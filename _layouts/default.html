@@ -4,8 +4,6 @@ theme: default
 og-type: website
 itemtype: 'https://schema.org/WebPage'
 sidebar: true
-recent-posts: 5
-pinned-posts: 5
 ---
 <!DOCTYPE html>
 <html
@@ -21,15 +19,15 @@ pinned-posts: 5
 	prefix="og: http://ogp.me/ns#"
 	itemscope=""
 >
-	{% include head.html %}
+	{% include common/head.html %}
 	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
 		{% include header.html %}
-		{% include nav.html %}
+		{% include common/nav.html %}
 		<main id="main" class="card">
 			{{ content }}
 		</main>
 		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
 		{% include footer.html %}
-		{% include share-button.html text=page.description %}
+		{% include common/share-button.html text=page.description %}
 	</body>
 </html>

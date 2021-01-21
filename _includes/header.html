@@ -11,21 +11,21 @@
 		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
 		{% if site.data.business.telephone %}
 			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block underline color-inherit">
-				{% include icon.html icon="call-start" %}
+				{% include common/icon.html icon="call-start" %}
 				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
 		{% endif %}
 		{% if site.data.business.email %}
 			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="color-inherit block">
-				{% include icon.html icon="mail" %}
+				{% include common/icon.html icon="mail" %}
 				<span>{{ site.data.business.email }}</span>
 			</a>
 		{% endif %}
-		{% include address.html address=site.data.business.address %}
+		{% include common/address.html address=site.data.business.address %}
 		<a href="{{ page.url }}#nav" class="block color-inherit" title="Skip to content">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
-			{% include icon.html icon="chevron-down" class="current-color skip-to-content-icon" height="48px" width="64px" %}
+			{% include common/icon.html icon="chevron-down" class="current-color skip-to-content-icon" height="48px" width="64px" %}
 		</a>
 	</div>
 </header>

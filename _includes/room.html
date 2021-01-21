@@ -11,16 +11,16 @@
 						<span class="room-amenity" title="{{ amenity.name }}: {{ amenity.value }}" itemprop="amenityFeature" itemtype="https://schema.org/LocationFeatureSpecification" itemscope="">
 							<meta itemprop="name" content="{{ amenity.name }}" />
 							<meta itemprop="value" content="{{ amenity.value }}"/>
-							{% if amenity.image %}{% include icon.html icon=amenity.image %}{% endif %}
+							{% if amenity.image %}{% include common/icon.html icon=amenity.image %}{% endif %}
 						</span>
 					{% endfor %}
 					{% if include.offer.itemOffered.smokingAllowed %}
 						<meta itemprop="smokingAllowed" content="{{ include.offer.itemOffered.smokingAllowed }}" />
 						<span class="smoking-{{ include.offer.itemOffered.smokingAllowed | downcase }}" title="Smoking: {{ include.offer.itemOffered.smokingAllowed }}">
 							{% if include.offer.itemOffered.smokingAllowed == 'Yes' %}
-								{% include icon.html icon="smoking" %}
+								{% include common/icon.html icon="smoking" %}
 							{% else %}
-								{% include icon.html icon="no-smoking" %}
+								{% include common/icon.html icon="no-smoking" %}
 							{% endif %}
 						</span>
 					{% endif %}
@@ -28,9 +28,9 @@
 						<meta itemprop="petsAllowed" content="{{ include.offer.itemOffered.petsAllowed }}" />
 						<span class="pets-{{ include.offer.itemOffered.petsAllowed | downcase }}" title="Pets Allowed: {{ include.offer.itemOffered.petsAllowed }}">
 							{% if include.offer.itemOffered.petsAllowed == 'Yes' %}
-								{% include icon.html icon="pets" %}
+								{% include common/icon.html icon="pets" %}
 							{% else %}
-								{% include icon.html icon="no-pets" %}
+								{% include common/icon.html icon="no-pets" %}
 							{% endif %}
 						</span>
 					{% endif %}
@@ -64,6 +64,6 @@
 	</div>
 	<a id="book-{{ include.offer.identifier }}" href="{{ include.offer.url }}" role="button" rel="noopener external" class="btn btn-primary btn-wide book-button center color-alt background-primary" title="Open booking page on WebRezPro">
 		<span class="color-inherit">Book Now</span>
-		{% include icon.html icon="link-external" %}
+		{% include common/icon.html icon="link-external" %}
 	</a>
 </div>
