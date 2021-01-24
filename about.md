@@ -97,5 +97,5 @@ Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
 {% capture popup %}<h3>{{ site.data.business.name }}</h3>{% endcapture %}
-{% include common/krv-map-embed.html geo=site.data.business.geo popup=popup icon="restaurant" %}
+{% include common/krv-map-embed.html geo=site.data.business.geo popup=popup icon="restaurant" tiles="osm" %}
 <!-- markdownlint-restore -->

@@ -14,9 +14,9 @@ sidebar:
     theme: auto
   - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
     label: Kern Valley Ads
-    description: Advertise on websites throughout the Kern River Valley
+    description: Advertise on local websites throughout the Kern River Valley
     callToAction: Click here to get stated!
-    image: https://ads.kernvalley.us/img/favicon.svg
+    image: https://cdn.kernvalley.us/img/branding/ads.kernvalley.us.svg
     url: https://ads.kernvalley.us
     layout: card
     theme: auto
