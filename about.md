@@ -34,14 +34,13 @@ preload:
     referrerPolicy: no-referrer
     media: "(max-width: 400px)"
     importance: high
-- preconnect
-  href: https://maps.kernvalley.us
-  referrerPolicy: no-referrer
+preconnect:
+  - href: https://maps.kernvalley.us
+    referrerPolicy: no-referrer
 tags:
   - Paradise Cove Lodge
   - about
   - history
-markers: []
 ---
 ## About Us
 In the 1950's Bo & Margaret Williams bought a cabin with about 30 acres.  Here
@@ -97,5 +96,6 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.
 Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
-{% include common/krv-map-embed.html geo=site.data.business.geo popup="<h3>Paradise Cove Lodge</h3>" icon="restaurant" markers=page.markers tiles="osm" %}
+{% capture popup %}<h3>{{ site.data.business.name }}</h3>{% endcapture %}
+{% include common/krv-map-embed.html geo=site.data.business.geo popup=popup icon="restaurant" %}
 <!-- markdownlint-restore -->
