@@ -34,31 +34,14 @@ preload:
     referrerPolicy: no-referrer
     media: "(max-width: 400px)"
     importance: high
-  - href: 'https://cdn.kernvalley.us/components/leaflet/map.html'
-    as: fetch
-    type: text/html
-    crossOrigin: anonymous
-    referrerPolicy: no-referrer
-  - href: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'
-    as: style
-    type: text/css
-    crossOrigin: anonymous
-    referrerPolicy: no-referrer
-    integrity: sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==
-preconnect:
-  - href: 'https://maps.wikimedia.com'
-    crossOrigin: anonymous
-    referrerPolicy: no-referrer
+- preconnect
+  href: https://maps.kernvalley.us
+  referrerPolicy: no-referrer
 tags:
   - Paradise Cove Lodge
   - about
   - history
-scripts:
-  - src: https://cdn.kernvalley.us/components/leaflet/map.min.js
-    async: true
-    defer: true
-    crossOrigin: anonymous
-    referrerPolicy: no-referrer
+markers: []
 ---
 ## About Us
 In the 1950's Bo & Margaret Williams bought a cabin with about 30 acres.  Here
@@ -114,5 +97,5 @@ to Las Vegas, Death Valley, the coast or Sequoia National Forest.
 Stay in one of our comfortable rooms and have dinner with great
 views of the lake and mountains.
 </div>
-{% include map.html geo=site.data.business.geo loading="lazy" hidden=true icon="/img/adwaita-icons/actions/mark-location.svg" %}
+{% include common/krv-map-embed.html geo=site.data.business.geo popup="<h3>Paradise Cove Lodge</h3>" icon="restaurant" markers=page.markers tiles="osm" %}
 <!-- markdownlint-restore -->
