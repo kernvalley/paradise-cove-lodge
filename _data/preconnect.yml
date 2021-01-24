@@ -1,8 +1,9 @@
-- href: "https://api.github.com"
+- href: https://api.github.com
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: "https://cdn.kernvalley.us"
+- href: https://cdn.kernvalley.us
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: "https://api.openweathermap.org"
+- href: https://api.openweathermap.org
   crossorigin: anonymous
+  referrerPolicy: no-referrer
