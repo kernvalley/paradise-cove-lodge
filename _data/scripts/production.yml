@@ -3,7 +3,6 @@
   crossOrigin: anonymous
   referrerPolicy: no-referrer
 - src: https://cdn.polyfill.io/v3/polyfill.min.js
-  nomodule: true
   defer: true
   async: true
   noModule: true
