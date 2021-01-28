@@ -2,12 +2,16 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
+  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=noreferrer;
+  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=noreferrer;
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.kernvalley.us https://cdn.polyfill.io/v3/polyfill.min.js https://unpkg.com https://www.googletagmanager.com/gtag/js  https://www.google-analytics.com/analytics.js; style-src 'self' https://cdn.kernvalley.us https://unpkg.com; img-src *; font-src https://cdn.kernvalley.us/fonts/; frame-src https://maps.kernvalley.us/embed; connect-src 'self' https://cdn.kernvalley.us https://api.github.com  https://api.openweathermap.org/data/ https://www.google-analytics.com/j/collect https://www.google-analytics.com/collect;
 
 /:placeholder/
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
+  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=noreferrer;
+  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=noreferrer;
   Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.kernvalley.us https://cdn.polyfill.io/v3/polyfill.min.js https://unpkg.com https://www.googletagmanager.com/gtag/js  https://www.google-analytics.com/analytics.js; style-src 'self' https://cdn.kernvalley.us https://unpkg.com; img-src *; font-src 'self' https://cdn.kernvalley.us/fonts/; frame-src https://maps.kernvalley.us/embed; connect-src 'self' https://*.kernvalley.us https://api.github.com  https://api.openweathermap.org/data/ https://www.google-analytics.com/j/collect https://www.google-analytics.com/collect;
 
 /admin
@@ -28,5 +32,5 @@
 
 /service-worker.js
   Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' https://cdn.kernvalley.us/service-worker.js;
-  Link: <https://cdn.kernvalley.us/service-worker.js> rel=preload; as=script
-  Link: </sw-config.js> rel=preload; as=script
+  Link: <https://cdn.kernvalley.us/service-worker.js>; rel=preload; as=script
+  Link: </sw-config.js>; rel=preload; as=script
