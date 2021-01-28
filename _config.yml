@@ -21,18 +21,18 @@ description: "Steakhouse & Motel in Lake Isabella California. Paradise Cove serv
 mobile-web-app-capable: true
 canonical: 'https://www.paradisecovelodge.com/'
 keywords:
-- Paradise Cove
-- Paradise Cove Lodge
-- lake isabella
-- kern valley
-- kern river valley
-- dining
-- lodging
-- steak
-- steakhouse
-- lobster
-- motel
-- hotel
+  - Paradise Cove
+  - Paradise Cove Lodge
+  - lake isabella
+  - kern valley
+  - kern river valley
+  - dining
+  - lodging
+  - steak
+  - steakhouse
+  - lobster
+  - motel
+  - hotel
 thumbnail:
   url: "/img/raster/logo.png"
 facebook-site-name: paradise-cove
@@ -40,93 +40,47 @@ repository:
   username: kernvalley
   project: paradise-cove-lodge
   title: Paradise Cove
-# twitter:
-# feed:
-#   url: /feed.rss
-#   type: application/rss+xml
-icons: '/img/icons.svg'
-# discus-identifier:
-# ad-sense:
+icons: /img/icons.svg
 webmaster-verifications:
   google: 4_GXTdS25bqc4x3QvWtuftfD-X2z8rlHoUyAtFPVOzo
 #   bing:
-defaults:
-- scope:
-    path: _posts
-  values:
-    layout: post
-    author:
-      givenName: Chris
-      familyName: Zuber
-      url: 'https://shgysk8zer0.github.io'
-      gravatar: '43578597e449298f5488c2407c8a8ae5'
-      github: shgysk8zer0
-      twitter: shgysk8zer0
-      linkedin: chris-zuber-455346141/
-    publisher:
-      name: 'KernValley.US'
-      url: 'https://kernvalley.us'
-      logo:
-        url: 'https://kernvalley.us/img/icon-256.png'
-    permalink: /posts/:categories/:year/:month/:day/:title/
-    comments: true
-    ads: false
-    index: true
-- scope:
-    path: _drafts
-  values:
-    layout: post
-    author:
-      givenName: Chris
-      familyName: Zuber
-      url: 'https://shgysk8zer0.github.io'
-      gravatar: '43578597e449298f5488c2407c8a8ae5'
-      github: 'shgysk8zer0'
-      twitter: shgysk8zer0
-    publisher:
-      name: 'KernValley.US'
-      url: 'https://kernvalley.us'
-      logo:
-        url: 'https://kernvalley.us/img/icon-256.png'
-    permalink: /posts/:categories/:year/:month/:day/:title/
-    comments: false
-    ads: false
+defaults: []
 plugins:
-- jekyll-gist
-- jekyll-youtube
-- jekyll-admin
-- jekyll-watch
-- jekyll-paginate
+  - jekyll-gist
+  - jekyll-youtube
+  - jekyll-admin
+  - jekyll-watch
+  - jekyll-paginate
 include:
-- _redirects
-- _headers
-- '/.well-known/'
+  - _redirects
+  - _headers
+  - '/.well-known/'
 exclude:
-- ".gitkeep"
-- "*.rb"
-- "*.gemspec"
-- "*.php"
-- "*.sh"
-- "*.csv"
-- "*.sfd"
-- "*.ai"
-- "*.psd"
-- "*.sketch"
-- "*.yml"
-- "*.lock"
-- "*.log"
-- "*.config.js"
-- ".gitkeep"
-- "tags.*"
-- docs/
-- "/.github/"
-- Gemfile
-- node_modules/
-- palette.xml
-- README.md
-- LICENSE
-- "/img/octicons/*.md"
-- "/img/octicons/LICENSE"
-- "/img/octicons/script"
-- "/img/adwaita-icons/docs"
-- "/img/adwaita-icons/LICENSE"
+  - ".gitkeep"
+  - "*.rb"
+  - "*.gemspec"
+  - "*.php"
+  - "*.sh"
+  - "*.csv"
+  - "*.sfd"
+  - "*.ai"
+  - "*.psd"
+  - "*.sketch"
+  - "*.yml"
+  - "*.lock"
+  - "*.log"
+  - "*.config.js"
+  - ".gitkeep"
+  - "tags.*"
+  - docs/
+  - "/.github/"
+  - Gemfile
+  - node_modules/
+  - palette.xml
+  - README.md
+  - LICENSE
+  - "/img/octicons/*.md"
+  - "/img/octicons/LICENSE"
+  - "/img/octicons/script"
+  - "/img/adwaita-icons/docs"
+  - "/img/adwaita-icons/LICENSE"

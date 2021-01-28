@@ -5,7 +5,7 @@ import 'https://cdn.kernvalley.us/components/current-year.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 // import 'https://cdn.kernvalley.us/components/pwa/install.js';
-import 'https://cdn.kernvalley.us/components/weather-current.js';
+import 'https://cdn.kernvalley.us/components/weather/current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
@@ -79,6 +79,4 @@ Promise.allSettled([
 			passive: true,
 		});
 	}
-
-	customElements.whenDefined('leaflet-map').then(() => $('leaflet-map[hidden]').unhide());
 });

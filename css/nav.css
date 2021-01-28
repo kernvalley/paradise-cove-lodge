@@ -12,7 +12,13 @@
 	height: 100%;
 }
 
-#nav > .nav-link {
+#nav > .nav-btn {
+	background-color: transparent;
+	color: inherit;
+	border: none;
+}
+
+#nav > .nav-link, #nav > .nav-btn:not([hidden]) {
 	padding: 0.4rem 0.8rem;
 	max-width: 270px;
 	transition: background-color 600ms ease-in-out;
@@ -24,11 +30,11 @@
 	align-items: center;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, #nav > .nav-btn:hover, .nav-link.active {
 	background-color: var(--button-primary-active-background);
 }
 
-.nav-link.active {
+.nav-link.active, #nav > .nav-btn:active {
 	border-bottom: 0.2em solid currentColor;
 }
 
