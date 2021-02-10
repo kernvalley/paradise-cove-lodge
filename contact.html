@@ -6,7 +6,7 @@ permalink: /contact/
 referrer: no-referrer
 pinned: true
 description: Contact form and FAQ for Paradise Cove Lodge
-itemtype: https://schema.org/ContactPage
+itemtype: "https://schema.org/FAQPage"
 thumbnail:
   url: /img/raster/background/fountain-400.jpg
 preload:
@@ -44,9 +44,12 @@ subjects:
   - General Community Info
   - Special Occasion Reservation
   - Vacation Rentals
+#scripts:
+#  - src: https://cdn.kernvalley.us/components/share-target.js
+#    crossOrigin: anonymuos
+#    referrerPolicy: no-referrer
 #    async: true
 ---
-<meta itemtype="additionalType" content="https://schema.org/FAQPage" />
 <section id="faq" class="card shadow content-visibility-auto">
 	{% include common/faq.html faq=site.data.faq %}
 </section>
