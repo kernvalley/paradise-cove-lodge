@@ -1,33 +1,14 @@
 ---
 name: default
 theme: default
+layout: base
 og-type: website
 itemtype: 'https://schema.org/WebPage'
 sidebar: true
 ---
-<!DOCTYPE html>
-<html
-	lang="{{ site.lang }}"
-	dir="{{ site.dir }}"
-	class="no-js border-box scroll-smooth"
-	data-theme="{{ page.theme | default: layout.theme }}"
-	data-layout="{{ layout.name }}"
-	{% if page.background %}data-background="{{ page.background }}"{% endif %}
-	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
-	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
-	itemtype="{{ page.itemtype | default: layout.itemtype }}"
-	prefix="og: http://ogp.me/ns#"
-	itemscope=""
->
-	{% include common/head.html %}
-	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
-		{% include header.html %}
-		{% include common/nav.html %}
-		<main id="main" class="card">
-			{{ content }}
-		</main>
-		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
-		{% include footer.html %}
-		{% include common/share-button.html text=page.description %}
-	</body>
-</html>
+{% include header.html %}
+{% include common/nav.html %}
+<main id="main" class="card">{{ content }}</main>
+{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
+{% include footer.html %}
+{% include common/share-button.html text=page.description %}
