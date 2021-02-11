@@ -13,8 +13,6 @@ sidebar: true
 	data-theme="{{ page.theme | default: layout.theme }}"
 	data-layout="{{ layout.name }}"
 	{% if page.background %}data-background="{{ page.background }}"{% endif %}
-	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
-	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
 	itemtype="{{ page.itemtype | default: layout.itemtype }}"
 	prefix="og: http://ogp.me/ns#"
 	itemscope=""

@@ -3,6 +3,7 @@ layout: default
 title: About
 permalink: about/
 index: true
+itemtype: https://schema.org/AboutPage
 referrer: no-referrer
 background: fountain
 description: History and info for Paradise Cove Lodge
