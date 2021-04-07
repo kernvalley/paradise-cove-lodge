@@ -4,13 +4,15 @@ import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
-// import 'https://cdn.kernvalley.us/components/pwa/install.js';
+// import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/weather/current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
-import { ready, $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
-import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
-import { GA, lakeimg } from './consts.js';
-import { updateImage, viewHandler } from './functions.js';
+import { ready } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { $ } from 'https://cdn.kernvalley.us/js/std-js/esQuery.js';
+import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
+import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler }
+	from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
+import { GA } from './consts.js';
 
 $(document.documentElement).toggleClass({
 	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
@@ -23,7 +25,7 @@ $(document.documentElement).toggleClass({
 });
 
 requestIdleCallback(() => {
-	if (typeof GA === 'string' && GA !== '') {
+	if (typeof GA === 'string' && GA.length !== 0) {
 		importGa(GA).then(async ({ ga }) => {
 			if (ga instanceof Function) {
 				ga('create', GA, 'auto');
@@ -45,9 +47,7 @@ requestIdleCallback(() => {
 Promise.allSettled([
 	ready(),
 ]).then(() =>{
-	if (location.pathname.startsWith(lakeimg.pathname)) {
-		updateImage(document.getElementById(lakeimg.id), lakeimg.timeout);
-	} else if (location.pathname.startsWith('/menu')) {
+	if (location.pathname.startsWith('/menu')) {
 		const now = new Date();
 		const day = now.getDay();
 		const hour = now.getHours();
@@ -61,8 +61,25 @@ Promise.allSettled([
 			$('#order-call-btn').unhide();
 		}
 
-		if (('IntersectionObserver' in window) && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-			$('.food-menuitem').addClass('hidden').then($items => $items.each(viewHandler));
+		if (('IntersectionObserver' in window) && ! prefersReducedMotion()) {
+			$('.food-menuitem').addClass('hidden').then($items =>{
+				$items.intersect(({ isIntersecting, target }) => {
+					if (isIntersecting) {
+						target.animate([{
+							transform: 'rotateX(-30deg) scale(0.85)',
+							opacity: 0.3,
+						}, {
+							transform: 'none',
+							opacity: 1,
+						}], {
+							duration: 300,
+							easing: 'ease-in-out',
+						});
+					}
+
+					target.classList.toggle('hidden', ! isIntersecting );
+				});
+			});
 		}
 	} else if (location.pathname.startsWith('/contact')) {
 		$('contact-form').submit(() => {

@@ -1,11 +1,12 @@
 import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
+import { animate } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { whenInViewport, whenNotInViewport } from 'https://cdn.kernvalley.us/js/std-js/viewport.js';
 import { lakeimg } from './consts.js';
 
 export async function viewHandler(el) {
 	await whenInViewport(el);
 
-	el.animate([{
+	animate(el, [{
 		transform: 'rotateX(-30deg) scale(0.85)',
 		opacity: 0.3,
 	}, {
@@ -14,7 +15,7 @@ export async function viewHandler(el) {
 	}], {
 		duration: 300,
 		easing: 'ease-in-out',
-	});
+	}).catch(console.error);
 
 	el.classList.remove('hidden');
 
