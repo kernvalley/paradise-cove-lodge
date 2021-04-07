@@ -7,7 +7,7 @@ import 'https://cdn.kernvalley.us/components/github/user.js';
 // import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/weather/current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
-import { ready, intersect } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { ready } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { $ } from 'https://cdn.kernvalley.us/js/std-js/esQuery.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { importGa, externalHandler, telHandler, mailtoHandler, geoHandler, genericHandler }
