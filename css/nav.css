@@ -52,3 +52,9 @@ a.disabled {
 		display: none;
 	}
 }
+
+@supports (display: flex) {
+	.nav-link > .nav-item-br {
+		display: none;
+	}
+}
