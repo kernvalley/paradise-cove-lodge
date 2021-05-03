@@ -1,36 +1,50 @@
 /
+  Referrer-Policy: no-referrer
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=noreferrer;
-  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=noreferrer;
+  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
+  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
+  Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
   Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' cdn.kernvalley.us api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect;
 
 /:placeholder/
+  Referrer-Policy: no-referrer
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=noreferrer;
-  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=noreferrer;
+  Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
+  Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
+  Link: </img/icons.svg>; rel=preload; as=image; referrerpolicy=no-referrer;
   Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src 'self' cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' *.kernvalley.us api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect;
+
+/favicon.ico
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: default-src 'none';
+  Link: no-op
 
 /admin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:;
+
 
 /.well-known/*
   Access-Control-Allow-Origin: *
   Content-Security-Policy: default-src 'none';
 
 /:placeholder/:placeholder.json
+  Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   Access-Control-Allow-Origin: *
   Content-Security-Policy: default-src 'none'
 
 /img/*
+  Referrer-Policy: no-referrer
   Access-Control-Allow-Origin: *
   Content-Security-Policy: default-src 'none
 
 /service-worker.js
+  Referrer-Policy: no-referrer
   Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' cdn.kernvalley.us/service-worker.js;
-  Link: <//cdn.kernvalley.us/service-worker.js>; rel=preload; as=script
-  Link: </sw-config.js>; rel=preload; as=script
+  Link: <//cdn.kernvalley.us/service-worker.js>; rel=preload; as=script;
+  Link: </sw-config.js>; rel=preload; as=script;
