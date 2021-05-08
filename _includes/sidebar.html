@@ -7,7 +7,7 @@
 			<div class="center ad-image-container" itemprop="image" itemtype="https://schema.org/ImageObject" itemscope="">
 				<img class="ad-image" src="{{ item.image.url }}" height="{{ item.image.height }}" width="{{ item.image.width }}" alt="{{ item.image.name }}" decoding="async" loading="lazy" itemprop="url" />
 			</div>
-			<h4 class="center ad-label" itemprop="name">{{ item.name }}</h4>
+			<div class="center ad-label" itemprop="name">{{ item.name }}</div>
 			<div class="ad-description" itemprop="description">{{ item.description }}</div>
 		</div>
 	{% endfor %}

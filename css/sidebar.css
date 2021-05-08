@@ -29,9 +29,14 @@ weather-current:defined {
 	max-width: 100%;
 }
 
+.ad-block .ad-label {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
 @media (max-width: 600px) {
 	#sidebar {
 		--ad-block-width: 95vw;
 	}
 }
-
