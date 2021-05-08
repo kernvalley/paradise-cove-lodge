@@ -5,7 +5,7 @@
     width: 320
     height: 213
   description: |-
-    <h5>Four bedroom home at Paradise Cove, Lake Isabella</h5>
+    <div class="ad-subheading">Four bedroom home at Paradise Cove, Lake Isabella</div>
     Available for 2 night or longer stays.<br />
     Call Pam for price and availability at
     <br />
@@ -21,7 +21,7 @@
     width: 320
     height: 213
   description: |-
-    <h5>Two bedroom home at Paradise Cove, Lake Isabella</h5>
+    <div class="ad-subheading">Two bedroom home at Paradise Cove, Lake Isabella</div>
     Available for 2 night or longer stays.<br />
     Call Pam for price and availability at
     <br />
