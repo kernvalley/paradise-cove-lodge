@@ -51,19 +51,17 @@ if (typeof GA === 'string' && GA.length !== 0) {
 	});
 }
 
-Promise.allSettled([
-	ready(),
-]).then(() =>{
+ready().then(() =>{
 	if (location.pathname.startsWith('/menu')) {
 		const now = new Date();
 		const day = now.getDay();
 		const hour = now.getHours();
 
 		/**
-		 * Sun, Wed, Thu, Fri, Sat
-		 * hours > 15 => starts @ 4:00 PM
-		 * hours < 20 => ends @ 8 PM
-		 */
+		* Sun, Wed, Thu, Fri, Sat
+		* hours > 15 => starts @ 4:00 PM
+		* hours < 20 => ends @ 8 PM
+		*/
 		if ([0, 3, 4, 5, 6].includes(day) && (hour > 15 && hour < 20)) {
 			attr('#order-call-btn', { hidden: false });
 		}
