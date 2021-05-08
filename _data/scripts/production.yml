@@ -9,6 +9,6 @@
   crossOrigin: anonymous
   noModule: true
   defer: true
-- src: /js/index.min.js
+- src: /js/index.js
+  type: module
   referrerPolicy: no-referrer
-  defer: true
