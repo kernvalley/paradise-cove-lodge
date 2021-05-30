@@ -14,14 +14,29 @@ sidebar:
     theme: auto
   - uuid: 267f9320-b48e-4615-99d1-a1348daa73a1
     label: Kern Valley Ads
+    disabled: true
     description: Advertise on local websites throughout the Kern River Valley
     callToAction: Click here to get stated!
     image: https://cdn.kernvalley.us/img/branding/ads.kernvalley.us.svg
     url: https://ads.kernvalley.us
     layout: card
     theme: auto
-    iamgeFit: contain
+    imageFit: contain
     campaign: kv-ads
+  - "@context": https://schema.org
+    "@type": WPAdBlock
+    version: 1.0.0
+    identifier: 8664509e-8317-417e-bcd5-071ad7e38818
+    title: ''
+    label: KRV Business Guide
+    description: Your virtual guide to exploring the Kern River Valley. Get the knowledge of locals at your fingertips!
+    image: https://cdn.kernvalley.us/img/branding/guide.kernvalley.us.svg
+    callToAction: Start exploring!
+    layout: card
+    theme: auto
+    url: https://guide.kernvalley.us
+    imageFit: contain
+    imagePosition: center
   - uuid: 572ec662-0b35-4ffa-9934-0e993b0241ee
     label: Camping on the Kern
     description: "Whether you're visiting for a family camping or rafting trip we want to take the hassle out of your vacation!"
