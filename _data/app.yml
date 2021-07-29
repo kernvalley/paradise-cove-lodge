@@ -50,7 +50,7 @@ screenshots:
     type: image/png
 related_applications:
   - platform: webapp
-    url: https://www.paradisecovelodge.com/manifest.json
+    url: https://www.paradisecovelodge.com/webapp.webmanifest
 # shortcuts:
 #   - name: Menu
 #     description: View our Menu
