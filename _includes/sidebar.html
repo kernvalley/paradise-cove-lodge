@@ -11,6 +11,7 @@
 			<div class="ad-description" itemprop="description">{{ item.description }}</div>
 		</div>
 	{% endfor %}
+	<krv-events class="card shadow content-visibility-auto"></krv-events>
 	{% if page.ads.sidebar %}{% for ad in page.ads.sidebar %}
 		{% include common/ad.html ad=ad content="sidebar" %}
 	{% endfor %}{% else %}{% for ad in site.data.ads.sidebar %}

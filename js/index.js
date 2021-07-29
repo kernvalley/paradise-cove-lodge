@@ -7,6 +7,7 @@ import 'https://cdn.kernvalley.us/components/github/user.js';
 // import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/weather/current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
+import 'https://cdn.kernvalley.us/components/krv/events.js';
 import {
 	ready, loaded, toggleClass, on, addClass, attr, css, intersect,
 } from 'https://cdn.kernvalley.us/js/std-js/dom.js';

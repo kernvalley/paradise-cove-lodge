@@ -9,6 +9,7 @@ const config = {
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'/manifest.json',
+		'https://events.kernvalley.us/events.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
@@ -20,6 +21,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/leaflet/map.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
 		'https://cdn.kernvalley.us/components/pwa/prompt.html',
+		'https://cdn.kernvalley.us/components/krv/events.html',
 
 		/* CSS */
 		'/css/index.min.css',
@@ -27,6 +29,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/github/user.css',
 		'https://cdn.kernvalley.us/components/pwa/prompt.css',
 		'https://cdn.kernvalley.us/components/toast-message.css',
+		'https://cdn.kernvalley.us/components/krv/events.css',
 
 		/* Images & Icons */
 		'/img/icons.svg',
@@ -48,9 +51,11 @@ const config = {
 		/https:\/\/\w+\.githubusercontent\.com\/u\/*/,
 		new URL('/img/', location.origin).href,
 		new URL('/img/raster/', location.origin).href,
+		/\.(png|jpg|webp|woff2)$/,
 	],
 	allowedFresh: [
 		'https://api.github.com/users/',
-		'https://api.openweathermap.org/data/2.5/weather'
+		'https://api.openweathermap.org/data/2.5/weather',
+		/\.(js|css|html|json)$/,
 	]
 };

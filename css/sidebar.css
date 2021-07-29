@@ -1,4 +1,4 @@
-weather-current:defined {
+weather-current:defined, krv-events:defined {
 	margin: 0 0 0.6em 0;
 }
 
@@ -24,7 +24,7 @@ weather-current:defined {
 	--ad-block-image-width: var(--ad-block-width);
 }
 
-#sidebar > weather-current {
+#sidebar > weather-current, #sidebar > krv-events {
 	width: 100%;
 	max-width: 100%;
 }

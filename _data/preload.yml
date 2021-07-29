@@ -14,15 +14,30 @@
   type: text/css
   crossOrigin: anonymous
   referrerPolicy: no-referrer
+- href: https://cdn.kernvalley.us/components/krv/events.html
+  as: fetch
+  type: text/html
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+- href: https://cdn.kernvalley.us/components/krv/events.css
+  as: style
+  type: text/css
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
+- href: https://events.kernvalley.us/events.json
+  as: fetch
+  type: application/json
+  crossOrigin: anonymous
+  referrerPolicy: no-referrer
 - href: https://cdn.kernvalley.us/components/ad/block.html
   as: fetch
   type: text/html
-  crossOrigin: anonymoous
+  crossOrigin: anonymous
   referrerPolicy: no-referrer
 - href: https://cdn.kernvalley.us/components/ad/block.css
   as: style
   type: text/css
-  crossOrigin: anonymoous
+  crossOrigin: anonymous
   referrerPolicy: no-referrer
 # - href: https://cdn.kernvalley.us/components/github/user.html
 #   as: fetch
