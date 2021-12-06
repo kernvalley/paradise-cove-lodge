@@ -2,6 +2,18 @@ source: paradise-cove-lodge
 medium: web
 campaign: krv-ads
 sidebar:
+  - "@context": https://schema.org
+    "@type": WPAdBlock
+    version: 1.0.0
+    identifier: cef968f1-865d-4575-96bf-6c6294281afc
+    label: Whiskey Flat Days App
+    image: https://i.imgur.com/8Lxv139.png
+    layout: image
+    theme: auto
+    url: https://whiskeyflatdays.com
+    campaign: krv-ads
+    imageFit: contain
+    imagePosition: center
   - uuid: 87873b5a-dad1-4d07-9b17-e24747793f94
     label: Kernville Cowork
     url: https://www.kernvillecowork.com/en
