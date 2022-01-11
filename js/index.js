@@ -2,7 +2,7 @@ import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
 import 'https://cdn.kernvalley.us/js/std-js/shims.js';
 import 'https://cdn.kernvalley.us/js/std-js/shims/trustedTypes.js';
 // import 'https://cdn.kernvalley.us/js/std-js/shims/sanitizer.js';
-import 'https://cdn.kernvalley.us/js/std-js/shims/cookieStore.js';
+// import 'https://cdn.kernvalley.us/js/std-js/shims/cookieStore.js';
 // import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
