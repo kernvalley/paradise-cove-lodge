@@ -34,12 +34,12 @@
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   Access-Control-Allow-Origin: *
-  Content-Security-Policy: default-src 'none'
+  Content-Security-Policy: default-src 'none';
 
 /img/*
   Referrer-Policy: no-referrer
   Access-Control-Allow-Origin: *
-  Content-Security-Policy: default-src 'none
+  Content-Security-Policy: default-src 'none';
 
 /service-worker.js
   Referrer-Policy: no-referrer

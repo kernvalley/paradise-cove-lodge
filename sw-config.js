@@ -8,7 +8,7 @@ const config = {
 	version: '{{ site.version }}',
 	fresh: [
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
-		'/manifest.json',
+		'/webapp.webmanifest',
 		'https://events.kernvalley.us/events.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
