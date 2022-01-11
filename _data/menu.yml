@@ -15,10 +15,10 @@
     offers:
     - name: Petite Cut
       description: 10-12 oz
-      price: 29.95
+      price: 31.95
     - name: Full Cut
       description: 14-16 oz
-      price: 32.95
+      price: 34.95
   - name: Rib Eye
     identifier: e78d719e-f38c-4fd5-996e-efc79a34f1c4
     description: 14-16 oz. Pretty darn good
@@ -45,7 +45,7 @@
       height: 200
       url: "/img/raster/menu/filet-mignon.jpg"
     offers:
-    - price: 34.95
+    - price: 37.95
   - name: Paul Bunyan
     identifier: 8776f25e-7174-4b08-8cda-ad3626db119b
     description: 28-32 oz. Top Sirloin&hellip; That's big!
@@ -54,7 +54,7 @@
       height: 200
       url: "/img/raster/menu/paul-bunyan.jpg"
     offers:
-    - price: 32.95
+    - price: 35.95
   - name: Top Sirloin
     identifier: 45547d91-d4b2-4708-9fbc-6727a8b432af
     description: 14-16 oz. Half the size of the Paul Bunyan
@@ -63,7 +63,7 @@
       height: 200
       url: "/img/raster/menu/top.jpg"
     offers:
-    - price: 23.95
+    - price: 28.95
   - name: Dinner Steak
     identifier: 9733e7d5-cd5a-4f84-b762-69a8a522fbff
     description: 8-10 oz. Top Sirloin
@@ -72,7 +72,7 @@
       height: 200
       url: "/img/raster/menu/dinner-steak.jpg"
     offers:
-    - price: 19.95
+    - price: 20.95
   - name: Ground Sirloin
     identifier: d3c347c1-618b-4db9-9212-d8402ebbbb8e
     description: Choice beef ground in-house served with or without grilled onions.
@@ -162,9 +162,9 @@
       url: "/img/raster/menu/trout.jpg"
     offers:
     - name: One Filet
-      price: 17.95
-    - name: Two Filets
-      price: 23.95
+      price: 19.95
+    # - name: Two Filets
+    #   price: 23.95
   - name: Catfish
     identifier: 57a20c7d-a148-487c-96d6-c5b35d303b87
     description: Breaded and deep fried with plenty of our house tartar sauce
@@ -187,7 +187,7 @@
       height: 200
       url: "/img/raster/menu/steak-and-shrimp.jpg"
     offers:
-    - price: 25.95
+    - price: 27.95
   - name: Surf &amp; Turf
     identifier: b23c29ee-3d49-43b9-87ce-74f03aec70dc
     description: Premium Cold Water Lobster Tail &amp; 8oz Top Sirloin
@@ -288,10 +288,9 @@
       url: "/img/raster/menu/children/prime-rib.jpg"
     description: "(<i>Fri., Sat. &amp; Sun.</i>)"
     offers:
-    - price: 7.95
+    - price: 14.95
 - name: Wine &amp; Beer
   identifier: cb36b644-6f3b-4b71-b193-2b689ee3523f
   description: "Excellent house wines, good selection of bottled wines; Beers: domestic,
     import and craft; also have a full bar-house specials are our pomegranate margarita
     and our Long Island Ice Tea."
-
