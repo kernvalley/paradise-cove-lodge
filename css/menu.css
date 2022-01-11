@@ -1,4 +1,4 @@
-.menusection-header {
+.menusection-header.top {
 	top: var(--nav-height, 3.5rem);
 	background: #710202;
 	color: #fafafa;
@@ -91,7 +91,7 @@
 		grid-template-columns: 3em 1fr 3em;
 		justify-content: center;
 	}
-	
+
 	.menusection .menusection-header.sticky {
 		position: static;
 	}
