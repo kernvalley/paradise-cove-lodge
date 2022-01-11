@@ -7,9 +7,9 @@
   url: https://reservation.worldweb.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 95
+    price: 110
     priceCurrency: USD
-    description: "$95 per night"
+    description: "$110 per night"
   itemOffered:
     "@type": HotelRoom
     name: King Room
@@ -44,13 +44,13 @@
   "@type": Offer
   identifier: 8df1ee12-d903-4492-aa35-38fe82f313ed
   name: Large Room
-  description: "$110 (plus tax) per night"
+  description: "$130 (plus tax) per night"
   url: https://reservation.worldweb.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 110
+    price: 130
     priceCurrency: USD
-    description: "$110 per night"
+    description: "$130 per night"
   itemOffered:
     "@type": HotelRoom
     name: Large Room
@@ -81,4 +81,3 @@
   inventoryLevel:
     "@type": QuantitativeValue
     value: 4
-
