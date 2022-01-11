@@ -5,7 +5,7 @@
   X-Content-Type-Options: nosniff
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
-  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' cdn.kernvalley.us events.kernvalley.us/events.json api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect;
+  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' cdn.kernvalley.us events.kernvalley.us/events.json api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect; require-trusted-types-for 'script'; trusted-types ga#script-url purify-raw#html purify#html goog#html;
 
 /:placeholder/
   Referrer-Policy: no-referrer
@@ -14,7 +14,7 @@
   X-Content-Type-Options: nosniff
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
-  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src 'self' cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' *.kernvalley.us api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect;
+  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us cdn.polyfill.io/v3/polyfill.min.js unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js; style-src 'self' cdn.kernvalley.us unpkg.com; img-src *; font-src 'self' cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' *.kernvalley.us api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect; trusted-types ga#script-url purify-raw#html purify#html goog#html;
 
 /favicon.ico
   Referrer-Policy: no-referrer

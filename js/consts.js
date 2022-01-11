@@ -1,4 +1,12 @@
 export const GA = 'UA-174653512-1';
+export const trustedScriptOrigins = [
+	location.origin,
+	'https://cdn.kernvalley.us',
+	'https://unpkg.com',
+	'https://www.googletagmanager.com',
+	'https://www.google-analytics.com',
+];
+
 export const lakeimg = {
 	pathname: '/lakecam',
 	src: 'https://www.tazdij.com/static/ftp/paradisecove/ftp/cameraview.jpg',
