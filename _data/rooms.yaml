@@ -4,7 +4,7 @@
   identifier: 8727d723-ee14-4c9f-af26-e5c91c96f5b2
   name: King Room
   description: "$95 (plus tax) per night"
-  url: https://reservation.worldweb.com/hotel/2062
+  url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
     price: 110
@@ -45,7 +45,7 @@
   identifier: 8df1ee12-d903-4492-aa35-38fe82f313ed
   name: Large Room
   description: "$130 (plus tax) per night"
-  url: https://reservation.worldweb.com/hotel/2062
+  url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
     price: 130
