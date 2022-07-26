@@ -12,7 +12,7 @@ import 'https://cdn.kernvalley.us/components/weather/current.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/krv/events.js';
 import {
-	ready, loaded, toggleClass, on, addClass, attr, css, intersect,
+	loaded, toggleClass, on, addClass, attr, css, intersect, interactive,
 } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
@@ -66,7 +66,7 @@ if (typeof GA === 'string' && GA.length !== 0) {
 	});
 }
 
-ready().then(() =>{
+interactive().then(() =>{
 	if (location.pathname.startsWith('/menu')) {
 		const now = new Date();
 		const day = now.getDay();
