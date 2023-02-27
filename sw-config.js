@@ -14,20 +14,23 @@ const config = {
 	stale: [
 		/* JS */
 		'/js/index.min.js',
+		'https://cdn.kernvalley.us/js/shims.min.js',
 
 		/* `customElements`, etc. */
-		'https://cdn.kernvalley.us/components/ad/block.html',
+		// 'https://cdn.kernvalley.us/components/ad/block.html',
+		'https://cdn.kernvalley.us/components/krv/ad.js',
 		'https://cdn.kernvalley.us/components/toast-message.html',
 		'https://cdn.kernvalley.us/components/leaflet/map.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/pwa/prompt.html',
+		// 'https://cdn.kernvalley.us/components/pwa/prompt.html',
 		'https://cdn.kernvalley.us/components/krv/events.html',
 
 		/* CSS */
 		'/css/index.min.css',
-		'https://cdn.kernvalley.us/components/ad/block.css',
+		// 'https://cdn.kernvalley.us/components/ad/block.css',
+		'https://cdn.kernvalley.us/components/krv/ad.css',
 		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/pwa/prompt.css',
+		// 'https://cdn.kernvalley.us/components/pwa/prompt.css',
 		'https://cdn.kernvalley.us/components/toast-message.css',
 		'https://cdn.kernvalley.us/components/krv/events.css',
 

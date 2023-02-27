@@ -1,13 +1,11 @@
-- src: https://cdn.polyfill.io/v3/polyfill.min.js
+---
+- src: https://cdn.kernvalley.us/js/shims.min.js
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-  noModule: true
   defer: true
-- src: https://unpkg.com/@webcomponents/custom-elements@1.4.3/custom-elements.min.js
-  referrerPolicy: no-referrer
-  integrity: sha384-xyhN4T4+9VPh8uXl6uWjGzsqwNXN9C2tla8b6zSrSqYlMFUoeCdoxiEJU0js+GNE
+- src: https://cdn.kernvalley.us/js/std-js/harden.js
   crossOrigin: anonymous
-  noModule: true
+  referrerPolicy: no-referrer
   defer: true
 - src: /js/index.js
   type: module
