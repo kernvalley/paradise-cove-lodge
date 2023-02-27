@@ -13,9 +13,9 @@
 	{% endfor %}
 	<krv-events class="card shadow content-visibility-auto" source="paradise-cove-lodge" content="sidebar" target="_blank"></krv-events>
 	{% if page.ads.sidebar %}{% for ad in page.ads.sidebar %}
-		{% include common/ad.html ad=ad content="sidebar" %}
+		{% include common/krv-ad.html ad=ad content="sidebar" %}
 	{% endfor %}{% else %}{% for ad in site.data.ads.sidebar %}
-		{% include common/ad.html ad=ad content="sidebar" %}
+		{% include common/krv-ad.html ad=ad content="sidebar" %}
 	{% endfor %}{% endif %}
 
 </aside>
