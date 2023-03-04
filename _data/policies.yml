@@ -1,0 +1,8 @@
+trusted:
+  - default
+  - empty#html
+  - empty#script
+  - weather-current#html
+
+# untrusted:
+#   foo#html

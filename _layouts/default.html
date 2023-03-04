@@ -10,11 +10,17 @@ sidebar: true
 	lang="{{ site.lang }}"
 	dir="{{ site.dir }}"
 	class="no-js border-box scroll-smooth"
-	data-theme="{{ page.theme | default: layout.theme }}"
-	data-layout="{{ layout.name }}"
-	{% if page.background %}data-background="{{ page.background }}"{% endif %}
 	itemtype="{{ page.itemtype | default: layout.itemtype }}"
-	prefix="og: http://ogp.me/ns#"
+	prefix="og: http://ogp.me/ns#"{% if page.policies.trusted %}
+	data-trusted-policies="{{ page.policies.trusted | join: ' ' }}"{% elsif layout.policies.trusted %}
+	data-trusted-policies="{{ layout.policies.trusted | join: ' ' }}"{% elsif site.data.policies.trusted %}
+	data-trusted-policies="{{ site.data.policies.trusted | join: ' ' }}"{% endif %}{% if page.policies.untrusted %}
+	data-untrusted-policies="{{ page.policies.untrusted | join: ' ' }}"{% elsif layout.policies.untrusted %}
+	data-untrusted-policies="{{ layout.policies.untrusted | join: ' ' }}"{% elsif site.data.policies.untrusted %}
+	data-untrusted-policies="{{ site.data.policies.untrusted | join: ' ' }}"{% endif %}
+	data-theme="{{ page.theme | default: layout.theme }}"
+	data-layout="{{ layout.name }}"{% if page.background %}
+	data-background="{{ page.background }}"{% endif %}
 	itemscope=""
 >
 	{% include common/head.html %}
