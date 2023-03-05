@@ -2,10 +2,10 @@ trusted:
   - default
   - empty#html
   - empty#script
-  - fetch#html
   - purify-raw#html
   - purify#html
   - weather-current#html
+  - krv-events#html
   - sanitizer-raw#html
   - ga#script-url
   - goog#html
