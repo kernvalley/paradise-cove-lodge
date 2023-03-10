@@ -1,0 +1,11 @@
+trusted:
+  - default
+  - empty#html
+  - empty#script
+  - purify-raw#html
+  - purify#html
+  - weather-current#html
+  - krv-events#html
+  - sanitizer-raw#html
+  - ga#script-url
+  - goog#html

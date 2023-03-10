@@ -1,27 +1,25 @@
 import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
-import 'https://cdn.kernvalley.us/js/std-js/shims.js';
-// import 'https://cdn.kernvalley.us/js/std-js/shims/trustedTypes.js';
-// import 'https://cdn.kernvalley.us/js/std-js/shims/sanitizer.js';
-// import 'https://cdn.kernvalley.us/js/std-js/shims/cookieStore.js';
-// import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 // import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/weather/current.js';
-import 'https://cdn.kernvalley.us/components/ad/block.js';
+// import 'https://cdn.kernvalley.us/components/ad/block.js';
+import 'https://cdn.kernvalley.us/components/krv/ad.js';
 import 'https://cdn.kernvalley.us/components/krv/events.js';
-import {
-	loaded, toggleClass, on, addClass, attr, css, intersect, interactive,
-} from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
+import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
+// import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
 import {
 	importGa, externalHandler, telHandler, mailtoHandler, geoHandler,
 	genericHandler, send, hasGa
 } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
-import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
-import { GA, trustedScriptOrigins } from './consts.js';
+import {
+	loaded, toggleClass, on, addClass, attr, css, intersect, interactive,
+} from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { GA } from './consts.js';
+
 
 toggleClass(document.documentElement, {
 	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
@@ -37,19 +35,30 @@ on(window, 'resize', debounce(() => {
 }), { passive: true });
 
 if (typeof GA === 'string' && GA.length !== 0) {
+	const googleOrigins = [
+		'https://www.googletagmanager.com',
+		'https://www.google-analytics.com',
+	];
+
+	createPolicy('default', {});
+
+	const googlePolicy = createPolicy('ga#script-url', {
+		createHTML: () => trustedTypes.emptyHTML,
+		createScript: () => trustedTypes.emptyScript,
+		createScriptURL: input => {
+			const url = new URL(input, document.baseURI);
+
+			if (googleOrigins.includes(url.origin)) {
+				return url.href;
+			} else {
+				throw new TypeError(`${url.origin} is not a known Google origin.`);
+			}
+		}
+	});
+
 	loaded().then(() => {
 		requestIdleCallback(async () => {
-			const policy = createPolicy('ga#script-url', {
-				createScriptURL: input => {
-					if (trustedScriptOrigins.includes(new URL(input, location.origin).origin)) {
-						return input;
-					} else {
-						throw new DOMException(`Untrusted script URL: <${input}>`);
-					}
-				}
-			});
-
-			const { ga } = await importGa(GA, {}, { policy });
+			const { ga } = await importGa(GA, {}, { policy: googlePolicy });
 
 			if (hasGa()) {
 				ga('create', GA, 'auto');

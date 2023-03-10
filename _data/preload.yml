@@ -29,12 +29,7 @@
   type: application/json
   crossOrigin: anonymous
   referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/ad/block.html
-  as: fetch
-  type: text/html
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/ad/block.css
+- href: https://cdn.kernvalley.us/components/krv/ad.css
   as: style
   type: text/css
   crossOrigin: anonymous
