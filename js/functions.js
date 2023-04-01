@@ -2,6 +2,26 @@ import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { animate } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { whenInViewport, whenNotInViewport } from 'https://cdn.kernvalley.us/js/std-js/viewport.js';
 import { lakeimg } from './consts.js';
+import {
+	title as setTitle,
+	description as setDescription,
+	thumbnail as setThumbnail,
+} from 'https://cdn.kernvalley.us/js/std-js/meta.js';
+
+export function setMenuItemMeta() {
+	if (location.hash.length === 37) {
+		const target = document.getElementById(location.hash.substr(1));
+
+		if (target instanceof HTMLElement && target.classList.contains('food-menuitem')) {
+			const title = target.querySelector('[itemprop~="name"]').textContent;
+			const description = target.querySelector('[itemprop~="description"]').textContent;
+			const image = target.querySelector('[itemprop~="image"]').currentSrc;
+			setTitle(`${title} | Paradise Cove Lodge`);
+			setDescription(description);
+			setThumbnail(image);
+		}
+	}
+}
 
 export async function viewHandler(el) {
 	await whenInViewport(el);

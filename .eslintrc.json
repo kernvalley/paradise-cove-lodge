@@ -39,6 +39,7 @@
       "cookieStore": "readonly",
       "showOpenFilePicker": "readonly",
       "showSaveFilePicker": "readonly",
-      "trustedTypes": "readonly"
+      "trustedTypes": "readonly",
+      "globalThis": "readonly"
     }
 }
