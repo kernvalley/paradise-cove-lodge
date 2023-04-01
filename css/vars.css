@@ -18,6 +18,7 @@
 	--button-primary-hover-background-dark: var(--button-primary-hover-background-light);
 	--button-primary-active-background-light: #511721;
 	--button-primary-active-background-dark: var(--button-primary-active-background-light);
+	--viewport-height: 100vh;
 	--sidebar-min-width: 400px;
 	--sidebar-max-width: 420px;
 	--scrollbar-track: var(--primary-color);
@@ -25,6 +26,12 @@
 	--scrollbar-width: thin;
 	--map-width: 100%;
 	--hero-grad: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%);
+}
+
+@supports (height: 1dvh) {
+	:root {
+		--viewport-height: 100dvh;
+	}
 }
 
 body {

@@ -4,13 +4,12 @@ import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 // import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/weather/current.js';
-// import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/krv/ad.js';
 import 'https://cdn.kernvalley.us/components/krv/events.js';
 import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
-// import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
+import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
 import {
 	importGa, externalHandler, telHandler, mailtoHandler, geoHandler,
 	genericHandler, send, hasGa
@@ -18,6 +17,7 @@ import {
 import {
 	loaded, toggleClass, on, addClass, attr, css, intersect, interactive,
 } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
 
 
@@ -28,37 +28,20 @@ toggleClass(document.documentElement, {
 	'no-js': false,
 });
 
-css(document.documentElement, { '--viewport-height': `${window.innerHeight}px`});
-
-on(window, 'resize', debounce(() => {
+if (! CSS.supports('height', '1dvh')) {
 	css(document.documentElement, { '--viewport-height': `${window.innerHeight}px`});
-}), { passive: true });
+
+	on(window, 'resize', debounce(() => {
+		css(document.documentElement, { '--viewport-height': `${window.innerHeight}px`});
+	}), { passive: true });
+}
 
 if (typeof GA === 'string' && GA.length !== 0) {
-	const googleOrigins = [
-		'https://www.googletagmanager.com',
-		'https://www.google-analytics.com',
-	];
-
-	createPolicy('default', {});
-
-	const googlePolicy = createPolicy('ga#script-url', {
-		createHTML: () => trustedTypes.emptyHTML,
-		createScript: () => trustedTypes.emptyScript,
-		createScriptURL: input => {
-			const url = new URL(input, document.baseURI);
-
-			if (googleOrigins.includes(url.origin)) {
-				return url.href;
-			} else {
-				throw new TypeError(`${url.origin} is not a known Google origin.`);
-			}
-		}
-	});
+	const policy = getGooglePolicy();
 
 	loaded().then(() => {
 		requestIdleCallback(async () => {
-			const { ga } = await importGa(GA, {}, { policy: googlePolicy });
+			const { ga } = await importGa(GA, {}, { policy });
 
 			if (hasGa()) {
 				ga('create', GA, 'auto');
@@ -73,6 +56,11 @@ if (typeof GA === 'string' && GA.length !== 0) {
 			}
 		});
 	});
+} else {
+	// Still create it so that name is not available
+	getGooglePolicy();
+	createPolicy('goog#script-url', {});
+	createPolicy('goog#html', {});
 }
 
 interactive().then(() =>{
@@ -110,6 +98,10 @@ interactive().then(() =>{
 				target.classList.toggle('hidden', ! isIntersecting );
 			});
 		}
+
+		setMenuItemMeta();
+
+		globalThis.addEventListener('hashchange', () => setMenuItemMeta(), { passive: true });
 	} else if (location.pathname.startsWith('/contact')) {
 		on('#contact-form', 'submit', ({ target }) => {
 			attr('button', { disabled: true }, { base: target });

@@ -39,7 +39,7 @@
 			{% endfor %}
 		{% endif %}
 	</div>
-	<button is="share-button" class="btn btn-outline share-menuitem" title="{{ include.name | escape }} | {{ site.title | escape | append: ' Menu' }}" file="{{ include.image[0].url }}" text="{{ include.description | escape }}" url="{{ page.url}}#{{ include.identifier }}" hidden="">
+	<button is="share-button" class="btn btn-outline share-menuitem" title="{{ include.name | escape }} | {{ site.title | escape | append: ' Menu' }}" file="{{ include.image[0].url }}" text="{{ include.description | strip_html | escape }}" url="{{ page.url}}#{{ include.identifier }}" hidden="">
 		<span class="share-label">Share</span>
 		{% include common/icon.html icon="public-share" fill="currentColor" width="18" height="18" %}
 	</button>
