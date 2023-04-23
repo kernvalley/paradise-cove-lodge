@@ -1,7 +1,7 @@
 <footer id="footer" class="content-visibility-auto">
-	<div class="social-links" data-cols="auto" role="list">
+	<div class="social-links" data-cols="auto" role="list" aria-labeledby="social-links-label">
 		{% if site.data.social %}
-			<h3>Find us on&hellip;</h3>
+			<h3 id="social-links-label">Find us on&hellip;</h3>
 			{% if site.data.social.facebook %}
 				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
 					{% include common/icon.html icon="facebook" class="social-icon" fill="currentColor" width="48" height="48" %}
@@ -46,7 +46,7 @@
 					<span class="social-label link-text">TripAdvisor</span>
 				</a>
 			{% endif %}
-			<hr />
+			<hr role="none" />
 		{% endif %}
 		{% for link in site.data.links.footer %}
 			<a href="{{ link.href }}" class="footer-link inline-block color-inherit" rel="{{ link.rel | join: ' ' }}" role="listitem">
