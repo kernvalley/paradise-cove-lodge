@@ -6,8 +6,8 @@
   - name: "&#9733; Prime Rib &#9733;"
     identifier: 1ccd70e9-4b96-425b-82b3-72d0de9eae9c
     description: A slow-roasted House Speciality. <br /><b>Served Fri., Sat., and
-      Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br
-      /><b>Add a side of Sauteed Mushrooms or Onions $4.95</b>
+      Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br />
+      <b>Add a side of Sauteed Mushrooms or Onions $4.95</b>
     image:
     - width: 320
       height: 200
@@ -176,12 +176,12 @@
     - price: 19.95
 - name: Combinations
   identifier: 1e5b57ef-2f92-430e-8054-5150abd8a960
-  description: Create your own combination with any of our Steaks, Prime Rib or Seaffod.
+  description: Create your own combination with any of our Steaks, Prime Rib or Seafood.
     Just ask your served.
   hasMenuItem:
   - name: Shrimp &amp; Steak
     identifier: b14eb5eb-96ab-4e77-be53-4b7625cc2419
-    description: Two Shrimp or Sacampi &amp; 8oz Top Sirloin
+    description: Two Shrimp or Scampi &amp; 8oz Top Sirloin
     image:
     - width: 320
       height: 200
