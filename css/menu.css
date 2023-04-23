@@ -1,3 +1,13 @@
+#menu-accessible-nav:focus-within {
+	width: 100%;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.menu-section :target {
+	scroll-margin-top: calc(var(--nav-height, 3.5rem) + 3.1em);
+}
+
 .menusection-header.top {
 	top: var(--nav-height, 3.5rem);
 	background: #710202;
@@ -24,6 +34,7 @@
 	grid-gap: 0.6em;
 	padding: 0.4em;
 	margin-bottom: 0.4rem;
+	min-height: calc(213px + 1.8em)
 }
 
 @media (min-width: 800px) {

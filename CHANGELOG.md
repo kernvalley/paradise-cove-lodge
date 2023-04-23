@@ -13,6 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.4.1] - 2023-04-23
+
+### Added
+- Page nav for keyboard users (main, nav, footer links)
+- Menu nav for keyboard users (jump to seafood, for example)
+
+### Fixed
+- Misc. screen reader issues
+- Scrolling to element by anchor fix for menu items/sections
+- Make focus ring more visible for keyboard navigation
+
 ## [v1.4.0] - 2023-03-04
 
 ### Added
