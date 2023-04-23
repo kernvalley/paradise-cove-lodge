@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Misc. screen reader issues
+- Scrolling to element by anchor fix for menu items/sections
 
 ## [v1.4.0] - 2023-03-04
 
