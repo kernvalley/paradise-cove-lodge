@@ -45,7 +45,7 @@ tags:
 ---
 <div class="menu-container" itemtype="https://schema.org/Restaurant" itemscope="">
 	<h3 itemprop="name" hidden="">{{ site.data.restaurant.name }}</h3>
-	<div id="menu-accessible-nav" class="visually-hidden flex row space-evenly">
+	<div id="menu-accessible-nav" class="visually-hidden flex row space-evenly" role="navigation" aria-label="Quick Menu Navigation">
 		{% for menusection in site.data.menu %}
 			<a href="{{ page.url }}#{{ menusection.identifier }}" class="btn btn-primary">{{ menusection.name }} Menu</a>
 		{% endfor %}

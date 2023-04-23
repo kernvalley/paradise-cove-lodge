@@ -1,5 +1,5 @@
 <footer id="footer" class="content-visibility-auto">
-	<div class="social-links content-visibility-auto" data-cols="auto">
+	<div class="social-links" data-cols="auto" role="list">
 		{% if site.data.social %}
 			<h3>Find us on&hellip;</h3>
 			{% if site.data.social.facebook %}
@@ -58,7 +58,7 @@
 		{% endfor %}
 	</div>
 	<hr />
-	<div class="copyright content-visibility-auto">
+	<div class="copyright ">
 		<span>&copy;</span>
 		<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
 		<span itemprop="copyrightHolder" itemtype="https://schema.org/{{ site.data.business.type | default: 'LocalBusiness' }}" itemscope="">
@@ -79,7 +79,7 @@
 	{% endif %}
 	<hr />
 	<div class="site-author flex row wrap space-evenly">
-		<github-user user="{{ site.repository.username }}" loading="lazy" class="content-visibility-auto">
+		<github-user user="{{ site.repository.username }}" loading="lazy">
 			<h3 slot="header">
 				<span>Created by Chris Zuber</span>
 			</h3>
