@@ -1,7 +1,7 @@
 <footer id="footer" class="content-visibility-auto">
-	<div class="social-links" data-cols="auto" role="list" aria-labeledby="social-links-label">
+	<div class="social-links" data-cols="auto" role="list" aria-label="Our Social Link">
 		{% if site.data.social %}
-			<h3 id="social-links-label">Find us on&hellip;</h3>
+			<h3 id="social-links-label" role="none">Find us on&hellip;</h3>
 			{% if site.data.social.facebook %}
 				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
 					{% include common/icon.html icon="facebook" class="social-icon" fill="currentColor" width="48" height="48" %}
