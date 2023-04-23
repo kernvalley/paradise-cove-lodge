@@ -3,7 +3,8 @@
 	height: var(--nav-height, 4rem);
 	padding: 0;
 	gap: 6px;
-	top: -1px;
+	top: 0;
+	overflow: visible;
 }
 
 #nav-container {

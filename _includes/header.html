@@ -1,4 +1,9 @@
 <header id="header" class="background-cover background-fixed">
+	<div id="page-tab-nav" class="visually-hidden absolute top left flex space-evenly">
+		<a href="{{ page.url }}#main" class="btn btn-primary">Skip to Content.</a>
+		<a href="{{ page.url }}#nav" class="btn btn-primary">Skip to Site Navigation.</a>
+		<a href="{{ page.url }}#footer" class="btn btn-primary">Skip to Footer.</a>
+	</div>
 	<div id="org-info" class="center" itemprop="about" itemtype="https://schema.org/LocalBusiness" itemscope="">
 		<h1 itemprop="name">{{ site.title }}</h1>
 		{% if site.data.business.logo %}
@@ -11,18 +16,18 @@
 		<meta itemprop="url" content="{{ site.data.business.url | absolute_url | default: site.url }}" />
 		{% if site.data.business.telephone %}
 			<a href="tel:{{ site.data.business.telephone }}" itemprop="telephone" content="{{ site.data.business.telephone }}" class="block underline color-inherit">
-				{% include common/icon.html icon="call-start" %}
+				{% include common/icon.html icon="call-start" label="Call" ariaHidden="false" %}
 				<span>{{ site.data.business.telephone | replace: '+1-', '' }}</span>
 			</a>
 		{% endif %}
 		{% if site.data.business.email %}
 			<a href="mailto:{{ site.data.business.email }}" itemprop="email" content="{{ site.data.email }}" class="color-inherit block">
-				{% include common/icon.html icon="mail" %}
+				{% include common/icon.html icon="mail" label="Email" %}
 				<span>{{ site.data.business.email }}</span>
 			</a>
 		{% endif %}
 		{% include common/address.html address=site.data.business.address %}
-		<a href="{{ page.url }}#nav" class="block color-inherit" title="Skip to content">
+		<a href="{{ page.url }}#nav" class="block color-inherit" title="Skip to content" tabindex="-1" aria-hidden="true">
 			<span class="mobile-hidden">Skip to Content</span>
 			<br class="mobile-hidden" />
 			{% include common/icon.html icon="chevron-down" class="current-color skip-to-content-icon" height="48px" width="64px" %}

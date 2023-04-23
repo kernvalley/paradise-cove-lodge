@@ -20,7 +20,6 @@ import {
 import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
 
-
 toggleClass(document.documentElement, {
 	'no-dialog': document.createElement('dialog') instanceof HTMLUnknownElement,
 	'no-details': document.createElement('details') instanceof HTMLUnknownElement,
