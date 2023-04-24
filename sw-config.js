@@ -14,6 +14,7 @@ const config = {
 	stale: [
 		/* JS */
 		'/js/index.min.js',
+		'/js/components.min.js',
 		'https://cdn.kernvalley.us/js/shims.min.js',
 
 		/* `customElements`, etc. */

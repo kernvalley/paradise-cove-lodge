@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Moved components into separate script
+- Make loading of GA background task
+
 ## [v1.4.1] - 2023-04-23
 
 ### Added
