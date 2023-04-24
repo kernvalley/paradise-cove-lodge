@@ -1,11 +1,4 @@
 import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
-import 'https://cdn.kernvalley.us/components/current-year.js';
-import 'https://cdn.kernvalley.us/components/share-button.js';
-import 'https://cdn.kernvalley.us/components/github/user.js';
-// import 'https://cdn.kernvalley.us/components/install/prompt.js';
-import 'https://cdn.kernvalley.us/components/weather/current.js';
-import 'https://cdn.kernvalley.us/components/krv/ad.js';
-import 'https://cdn.kernvalley.us/components/krv/events.js';
 import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
 import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
@@ -15,7 +8,7 @@ import {
 	genericHandler, send, hasGa
 } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import {
-	loaded, toggleClass, on, addClass, attr, css, intersect, interactive,
+	toggleClass, on, addClass, attr, css, intersect, interactive,
 } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
@@ -38,23 +31,21 @@ if (! CSS.supports('height', '1dvh')) {
 if (typeof GA === 'string' && GA.length !== 0) {
 	const policy = getGooglePolicy();
 
-	loaded().then(() => {
-		requestIdleCallback(async () => {
-			const { ga } = await importGa(GA, {}, { policy });
+	scheduler.postTask(async () => {
+		const { ga } = await importGa(GA, {}, { policy });
 
-			if (hasGa()) {
-				ga('create', GA, 'auto');
-				ga('set', 'transport', 'beacon');
-				ga('send', 'pageview');
+		if (hasGa()) {
+			ga('create', GA, 'auto');
+			ga('set', 'transport', 'beacon');
+			ga('send', 'pageview');
 
-				on('a[rel~="external"]', 'click', externalHandler, { passive: true, capture: true });
-				on('a[href^="tel:"]', 'click', telHandler, { passive: true, capture: true });
-				on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
-				on('a[href^="geo:"]', 'click', geoHandler, { passive: true, capture: true });
-				on('[data-event-category][data-event-label]', 'click', genericHandler, { passive: true, capture: true });
-			}
-		});
-	});
+			on('a[rel~="external"]', 'click', externalHandler, { passive: true, capture: true });
+			on('a[href^="tel:"]', 'click', telHandler, { passive: true, capture: true });
+			on('a[href^="mailto:"]', 'click', mailtoHandler, { passive: true, capture: true });
+			on('a[href^="geo:"]', 'click', geoHandler, { passive: true, capture: true });
+			on('[data-event-category][data-event-label]', 'click', genericHandler, { passive: true, capture: true });
+		}
+	}, { priority: 'background' });
 } else {
 	// Still create it so that name is not available
 	getGooglePolicy();

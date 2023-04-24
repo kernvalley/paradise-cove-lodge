@@ -19,3 +19,6 @@
 - src: /js/index.min.js
   referrerPolicy: no-referrer
   defer: true
+- src: /js/components.min.js
+  referrerPolicy: no-referrer
+  defer: true

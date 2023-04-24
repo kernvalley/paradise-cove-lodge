@@ -40,6 +40,7 @@
       "showOpenFilePicker": "readonly",
       "showSaveFilePicker": "readonly",
       "trustedTypes": "readonly",
-      "globalThis": "readonly"
+      "globalThis": "readonly",
+      "scheduler": "readonly"
     }
 }
