@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved components into separate script
 - Make loading of GA background task
 
+### Fixed
+- Disable polyfill for `:focus-within` - `:not(:focus-within), :not([focus-within])`
+
 ## [v1.4.1] - 2023-04-23
 
 ### Added

@@ -7,13 +7,6 @@
 	background-position-x: center;
 }
 
-.visually-hidden:not(:focus-within) {
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	contain: layout paint style;
-}
-
 #page-tab-nav:focus-within {
 	width: 100%;
 }
