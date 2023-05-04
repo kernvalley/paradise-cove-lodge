@@ -3,58 +3,74 @@
 		{% if site.data.social %}
 			<h3 id="social-links-label" role="none">Find us on&hellip;</h3>
 			{% if site.data.social.facebook %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					{% include common/icon.html icon="facebook" class="social-icon" fill="currentColor" width="48" height="48" %}
-					<br />
-					<span class="social-label link-text">Facebook</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include common/icon.html icon="facebook" class="social-icon" fill="currentColor" width="48" height="48" %}
+						<br />
+						<span class="social-label link-text">Facebook</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.twitter %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.twitter }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					{% include common/icon.html icon="twitter" class="social-icon" fill="currentColor" width="48" height="48" %}
-					<br />
-					<span class="social-label link-text">Twitter</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.twitter }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include common/icon.html icon="twitter" class="social-icon" fill="currentColor" width="48" height="48" %}
+						<br />
+						<span class="social-label link-text">Twitter</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.instagram %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.instagram }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					<img src="https://cdn.kernvalley.us/img/logos/instagram.svg" class="social-icon" width="48" height="48" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="" />
-					<br />
-					<span class="social-label link-text">Instagram</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.instagram }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						<img src="https://cdn.kernvalley.us/img/logos/instagram.svg" class="social-icon" width="48" height="48" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="" />
+						<br />
+						<span class="social-label link-text">Instagram</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.linkedIn %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.linkedIn }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
-					{% include common/icon.html icon="linkedin" class="social-icon" height="48" width="48" %}
-					<br />
-					<span class="social-label link-text">LinkedIn</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.linkedIn }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include common/icon.html icon="linkedin" class="social-icon" height="48" width="48" %}
+						<br />
+						<span class="social-label link-text">LinkedIn</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.youtube %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.youtube }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					{% include common/icon.html icon="youtube" class="social-icon" height="48" width="48"%}
-					<br />
-					<span class="social-label link-text">YouTube</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.youtube }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include common/icon.html icon="youtube" class="social-icon" height="48" width="48"%}
+						<br />
+						<span class="social-label link-text">YouTube</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.yelp %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.yelp }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					{% include common/icon.html icon="yelp" class="social-icon" height="48" width="48" %}
-					<br />
-					<span class="social-label link-text">Yelp</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.yelp }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include common/icon.html icon="yelp" class="social-icon" height="48" width="48" %}
+						<br />
+						<span class="social-label link-text">Yelp</span>
+					</a>
+				</span>
 			{% endif %}{% if site.data.social.tripAdvisor %}
-				<a class="social-link inline-block center color-inherit" href="{{ site.data.social.tripAdvisor }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs" role="listitem">
-					<br />
-					{% include common/icon.html icon="tripadvisor" class="social-icon" height="48" width="48" %}
-					<br />
-					<span class="social-label link-text">TripAdvisor</span>
-				</a>
+				<span role="listitem">
+					<a class="social-link inline-block center color-inherit" href="{{ site.data.social.tripAdvisor }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						<br />
+						{% include common/icon.html icon="tripadvisor" class="social-icon" height="48" width="48" %}
+						<br />
+						<span class="social-label link-text">TripAdvisor</span>
+					</a>
+				</span>
 			{% endif %}
 			<hr role="none" />
 		{% endif %}
 		{% for link in site.data.links.footer %}
-			<a href="{{ link.href }}" class="footer-link inline-block color-inherit" rel="{{ link.rel | join: ' ' }}" role="listitem">
-				{% if link.icon %}
-					{% include common/icon.html icon=link.icon fill="currentColor" height="48" width="48" %}
-				{% endif %}
-				<span class="link-text underline">{{ link.label }}</span>
-			</a>
+			<span role="listitem">
+				<a href="{{ link.href }}" class="footer-link inline-block color-inherit" rel="{{ link.rel | join: ' ' }}">
+					{% if link.icon %}
+						{% include common/icon.html icon=link.icon fill="currentColor" height="48" width="48" %}
+					{% endif %}
+					<span class="link-text underline">{{ link.label }}</span>
+				</a>
+			</span>
 		{% endfor %}
 	</div>
 	<hr />
