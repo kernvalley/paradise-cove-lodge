@@ -1,12 +1,12 @@
-import { loadImage } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
-import { animate } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
-import { whenInViewport, whenNotInViewport } from 'https://cdn.kernvalley.us/js/std-js/viewport.js';
+import { loadImage } from 'loader';
+import { animate } from 'dom';
+import { whenInViewport, whenNotInViewport } from 'viewport';
 import { lakeimg } from './consts.js';
 import {
 	title as setTitle,
 	description as setDescription,
 	thumbnail as setThumbnail,
-} from 'https://cdn.kernvalley.us/js/std-js/meta.js';
+} from 'meta';
 
 export function setMenuItemMeta() {
 	if (location.hash.length === 37) {

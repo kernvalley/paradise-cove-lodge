@@ -1,0 +1,20 @@
+{
+  "imports": {
+    "dom": "https://cdn.kernvalley.us/js/std-js/dom.js",
+    "events": "https://cdn.kernvalley.us/js/std-js/events.js",
+    "media-queries": "https://cdn.kernvalley.us/js/std-js/media-queries.js",
+    "trust": "https://cdn.kernvalley.us/js/std-js/trust.js",
+    "trust-policies": "https://cdn.kernvalley.us/js/std-js/trust-policies.js",
+    "google-analytics": "https://cdn.kernvalley.us/js/std-js/google-analytics.js",
+    "loader": "https://cdn.kernvalley.us/js/std-js/loader.js",
+    "viewport": "https://cdn.kernvalley.us/js/std-js/viewport.js",
+    "meta": "https://cdn.kernvalley.us/js/std-js/meta.js",
+    "weather-current": "https://cdn.kernvalley.us/components/weather/current.js",
+    "krv-ad": "https://cdn.kernvalley.us/components/krv/ad.js",
+    "krv-events": "https://cdn.kernvalley.us/components/krv/events.js",
+    "current-year": "https://cdn.kernvalley.us/components/current-year.js",
+    "share-button": "https://cdn.kernvalley.us/components/share-button.js",
+    "github-user": "https://cdn.kernvalley.us/components/github/user.js"
+  }
+}
+

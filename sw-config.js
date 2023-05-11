@@ -15,7 +15,8 @@ const config = {
 		/* JS */
 		'/js/index.min.js',
 		'/js/components.min.js',
-		'https://cdn.kernvalley.us/js/shims.min.js',
+		'https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js',
+		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js',
 
 		/* `customElements`, etc. */
 		// 'https://cdn.kernvalley.us/components/ad/block.html',

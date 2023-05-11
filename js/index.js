@@ -1,15 +1,14 @@
-import 'https://cdn.kernvalley.us/js/std-js/deprefixer.js';
-import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
-import { prefersReducedMotion } from 'https://cdn.kernvalley.us/js/std-js/media-queries.js';
-import { createPolicy } from 'https://cdn.kernvalley.us/js/std-js/trust.js';
-import { getGooglePolicy } from 'https://cdn.kernvalley.us/js/std-js/trust-policies.js';
+import { debounce } from 'events';
+import { prefersReducedMotion } from 'media-queries';
+import { createPolicy } from 'trust';
+import { getGooglePolicy } from 'trust-policies';
 import {
 	importGa, externalHandler, telHandler, mailtoHandler, geoHandler,
 	genericHandler, send, hasGa
-} from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
+} from 'google-analytics';
 import {
 	toggleClass, on, addClass, attr, css, intersect, interactive,
-} from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+} from 'dom';
 import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
 
