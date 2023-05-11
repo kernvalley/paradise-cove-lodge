@@ -11,7 +11,7 @@ export default {
 		sourcemap: true,
 	},
 	plugins: [
-		rollupImport(['_data/imports.json']),
+		rollupImport(['_data/importmap.json']),
 		urlResolve(),
 		terser(),
 	],
