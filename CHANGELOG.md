@@ -13,10 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0] - 2023-05-11
+
+### Added
+- Import map
+
 ### Changed
 - Moved components into separate script
 - Make loading of GA background task
 - Do not make scrollbar thin
+- Update `netlify-js-app` with support for `importmap`
 
 ### Fixed
 - Disable polyfill for `:focus-within` - `:not(:focus-within), :not([focus-within])`
