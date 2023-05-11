@@ -3,7 +3,8 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Link: <//cdn.kernvalley.us/js/shims.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </js/components.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
@@ -14,7 +15,8 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Link: <//cdn.kernvalley.us/js/shims.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </js/components.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
