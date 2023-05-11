@@ -72,8 +72,7 @@
     "version:bump:major": "npm version --no-git-tag-version major"
   },
   "dependencies": {
-    "@shgysk8zer0/rollup-import": "^0.0.1",
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-js-app": "^2.1.2"
+    "netlify-js-app": "^2.1.3"
   }
 }

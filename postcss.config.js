@@ -1,20 +1,17 @@
 /* eslint-env node */
-import PostCSSImport from 'postcss-import';
-import PostCSSURL from 'postcss-url';
-import PostCSSImportURL from 'postcss-import-url';
-import PostCSSPresetEnv from 'postcss-preset-env';
-import PostCSSDiscardComments from 'postcss-discard-comments';
-// import CSSNano from 'cssnano';
+import pcImport from 'postcss-import';
+import pcURL from 'postcss-url';
+import pcImportURL from 'postcss-import-url';
+import pcEnv from 'postcss-preset-env';
+import pcDiscardComments from 'postcss-discard-comments';
+import pcCustomProperties from 'postcss-custom-properties';
+import pcMediaMinMax from 'postcss-media-minmax';
+import CSSNano from 'cssnano';
+import postcssNesting  from 'postcss-nesting';
 export default {
-	map: { inline: false },
+	map: {inline: false},
 	plugins: [
-		PostCSSImport(),
-		PostCSSURL(),
-		PostCSSImportURL(),
-		PostCSSPresetEnv(),
-		PostCSSDiscardComments(),
-		// require('postcss-custom-properties'),
-		// require('postcss-media-minmax'),
-		// CSSNano(),
+		pcImport, pcURL,pcImportURL, pcEnv, pcDiscardComments, pcCustomProperties,
+		pcMediaMinMax, CSSNano, postcssNesting
 	]
 };
