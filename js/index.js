@@ -1,14 +1,14 @@
-import { debounce } from 'events';
-import { prefersReducedMotion } from 'media-queries';
-import { createPolicy } from 'trust';
-import { getGooglePolicy } from 'trust-policies';
+import { debounce } from 'std-js/events.js';
+import { prefersReducedMotion } from 'std-js/media-queries.js';
+import { createPolicy } from 'std-js/trust.js';
+import { getGooglePolicy } from 'std-js/trust-policies.js';
 import {
 	importGa, externalHandler, telHandler, mailtoHandler, geoHandler,
 	genericHandler, send, hasGa
-} from 'google-analytics';
+} from 'std-js/google-analytics.js';
 import {
 	toggleClass, on, addClass, attr, css, intersect, interactive,
-} from 'dom';
+} from 'std-js/dom.js';
 import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
 

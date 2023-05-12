@@ -14,7 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Fixed
-- Preload correct polfills & harden scripts
+- Preload correct polyfills & harden scripts
+
+### Changed
+- Update import mapping for modules
 
 ## [v2.0.0] - 2023-05-11
 
