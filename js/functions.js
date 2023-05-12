@@ -1,12 +1,12 @@
-import { loadImage } from 'loader';
-import { animate } from 'dom';
-import { whenInViewport, whenNotInViewport } from 'viewport';
+import { loadImage } from 'std-js/loader.js';
+import { animate } from 'std-js/dom.js';
+import { whenInViewport, whenNotInViewport } from 'std-js/viewport.js';
 import { lakeimg } from './consts.js';
 import {
 	title as setTitle,
 	description as setDescription,
 	thumbnail as setThumbnail,
-} from 'meta';
+} from 'std-js/meta.js';
 
 export function setMenuItemMeta() {
 	if (location.hash.length === 37) {
