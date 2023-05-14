@@ -4,7 +4,7 @@
   crossOrigin: anonymous
   referrerPolicy: no-referrer
   defer: true
-- src: https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js
+- src: https://unpkg.com/@shgysk8zer0/kazoo@0.0.11/harden.js
   integrity: sha384-55L/wO9o0uIVTeubRIDQB4bewfNqyxrj4OXuxlW24NMEk+ioZwMHVw/tFV78mM+k
   crossOrigin: anonymous
   referrerPolicy: no-referrer

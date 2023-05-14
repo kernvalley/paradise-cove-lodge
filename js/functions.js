@@ -1,12 +1,10 @@
-import { loadImage } from 'std-js/loader.js';
-import { animate } from 'std-js/dom.js';
-import { whenInViewport, whenNotInViewport } from 'std-js/viewport.js';
+import { loadImage } from '@shgysk8zer0/kazoo/loader.js';
 import { lakeimg } from './consts.js';
 import {
 	title as setTitle,
 	description as setDescription,
 	thumbnail as setThumbnail,
-} from 'std-js/meta.js';
+} from '@shgysk8zer0/kazoo/meta.js';
 
 export function setMenuItemMeta() {
 	if (location.hash.length === 37) {
@@ -21,28 +19,6 @@ export function setMenuItemMeta() {
 			setThumbnail(image);
 		}
 	}
-}
-
-export async function viewHandler(el) {
-	await whenInViewport(el);
-
-	animate(el, [{
-		transform: 'rotateX(-30deg) scale(0.85)',
-		opacity: 0.3,
-	}, {
-		transform: 'none',
-		opacity: 1,
-	}], {
-		duration: 300,
-		easing: 'ease-in-out',
-	}).catch(console.error);
-
-	el.classList.remove('hidden');
-
-	await whenNotInViewport(el);
-
-	el.classList.add('hidden');
-	viewHandler(el);
 }
 
 export function updateImage(img, t = 15) {

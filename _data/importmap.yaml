@@ -1,11 +1,13 @@
 ---
 nonce: 187c44d8-7a5f-46d4-95a1-c2105e594f08
 imports:
-  'std-js/': https://cdn.kernvalley.us/js/std-js/
-  '@shgysk8zer0/kazoo/': https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/
+  '@shgysk8zer0/kazoo/': https://unpkg.com/@shgysk8zer0/kazoo@0.0.11/
   '@shgysk8zer0/konami': https://unpkg.com/@shgysk8zer0/konami/konami.js
   '@shgysk8zer0/polyfills': https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js
   '@shgysk8zer0/polyfills/': https://unpkg.com/@shgysk8zer0/polyfills/
-  '@shgysk8zer0/components/': https://cdn.kernvalley.us/components/
-  '@kernvalley/components/': https://cdn.kernvalley.us/components/krv/
+  '@shgysk8zer0/components/': https://unpkg.com/@shgysk8zer0/components@0.0.3/
+  '@kernvalley/components/': https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/
   'leaflet': https://unpkg.com/leaflet@1.9.3/dist/leaflet-src.esm.js
+  'firebase/': https://www.gstatic.com/firebasejs/9.16.0/
+  'url-pattern': https://unpkg.com/urlpattern-polyfill@1.0.0-rc1/dist/index.modern.js
+  'custom-elements': https://unpkg.com/@webcomponents/custom-elements@1.4.2/custom-elements.min.js
