@@ -1,14 +1,14 @@
-import { debounce } from 'std-js/events.js';
-import { prefersReducedMotion } from 'std-js/media-queries.js';
-import { createPolicy } from 'std-js/trust.js';
-import { getGooglePolicy } from 'std-js/trust-policies.js';
+import { debounce } from '@shgysk8zer0/kazoo/events.js';
+import { prefersReducedMotion } from '@shgysk8zer0/kazoo/media-queries.js';
+import { createPolicy } from '@shgysk8zer0/kazoo/trust.js';
+import { getGooglePolicy } from '@shgysk8zer0/kazoo/trust-policies.js';
 import {
 	importGa, externalHandler, telHandler, mailtoHandler, geoHandler,
 	genericHandler, send, hasGa
-} from 'std-js/google-analytics.js';
+} from '@shgysk8zer0/kazoo/google-analytics.js';
 import {
 	toggleClass, on, addClass, attr, css, intersect, interactive,
-} from 'std-js/dom.js';
+} from '@shgysk8zer0/kazoo/dom.js';
 import { setMenuItemMeta } from './functions.js';
 import { GA } from './consts.js';
 

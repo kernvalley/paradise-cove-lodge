@@ -16,25 +16,23 @@ const config = {
 		'/js/index.min.js',
 		'/js/components.min.js',
 		'https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js',
-		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.5/harden.js',
+		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.11/harden.js',
 
 		/* `customElements`, etc. */
-		// 'https://cdn.kernvalley.us/components/ad/block.html',
-		'https://cdn.kernvalley.us/components/krv/ad.js',
-		'https://cdn.kernvalley.us/components/toast-message.html',
-		'https://cdn.kernvalley.us/components/leaflet/map.html',
-		'https://cdn.kernvalley.us/components/github/user.html',
-		// 'https://cdn.kernvalley.us/components/pwa/prompt.html',
-		'https://cdn.kernvalley.us/components/krv/events.html',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/ad.js',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/toast-message.html',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/leaflet/map.html',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/github/user.html',
+		// 'https://unpkg.com/@shgysk8zer0/components@0.0.3/pwa/prompt.html',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/events.html',
 
 		/* CSS */
 		'/css/index.min.css',
-		// 'https://cdn.kernvalley.us/components/ad/block.css',
-		'https://cdn.kernvalley.us/components/krv/ad.css',
-		'https://cdn.kernvalley.us/components/github/user.css',
-		// 'https://cdn.kernvalley.us/components/pwa/prompt.css',
-		'https://cdn.kernvalley.us/components/toast-message.css',
-		'https://cdn.kernvalley.us/components/krv/events.css',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/ad.css',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/github/user.css',
+		// 'https://unpkg.com/@shgysk8zer0/components@0.0.3/pwa/prompt.css',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/toast-message.css',
+		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/events.css',
 
 		/* Images & Icons */
 		'/img/icons.svg',

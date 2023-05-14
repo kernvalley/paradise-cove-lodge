@@ -3,7 +3,7 @@ import urlResolve from 'rollup-plugin-url-resolve';
 import terser from '@rollup/plugin-terser';
 import { rollupImport } from '@shgysk8zer0/rollup-import';
 
-const config = {
+export default {
 	input: 'js/components.js',
 	output: {
 		file: 'js/components.min.js',
@@ -16,5 +16,3 @@ const config = {
 		terser(),
 	],
 };
-console.log(config);
-export default config;
