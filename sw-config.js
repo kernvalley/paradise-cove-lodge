@@ -15,24 +15,24 @@ const config = {
 		/* JS */
 		'/js/index.min.js',
 		'/js/components.min.js',
-		'https://unpkg.com/@shgysk8zer0/polyfills@0.0.5/all.min.js',
-		'https://unpkg.com/@shgysk8zer0/kazoo@0.0.11/harden.js',
+		'{{ site.data.importmap.imports["@shgysk8zer0/polyfills"] }}',
+		'{{ site.data.importmap.imports["@shgysk8zer0/kazoo/"] }}harden.js',
 
 		/* `customElements`, etc. */
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/ad.js',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/toast-message.html',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/leaflet/map.html',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/github/user.html',
-		// 'https://unpkg.com/@shgysk8zer0/components@0.0.3/pwa/prompt.html',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/events.html',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}ad.js',
+		// '{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}toast-message.html',
+		// '{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}leaflet/map.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.html',
+		// '{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}pwa/prompt.html',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.html',
 
 		/* CSS */
 		'/css/index.min.css',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/ad.css',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/github/user.css',
-		// 'https://unpkg.com/@shgysk8zer0/components@0.0.3/pwa/prompt.css',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/toast-message.css',
-		'https://unpkg.com/@shgysk8zer0/components@0.0.3/krv/events.css',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}ad.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.css',
+		// '{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}pwa/prompt.css',
+		// '{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}toast-message.css',
+		'{{ site.data.importmap.imports["@kernvalley/components/"] }}events.css',
 
 		/* Images & Icons */
 		'/img/icons.svg',
