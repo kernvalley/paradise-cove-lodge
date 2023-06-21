@@ -1,18 +1,14 @@
 /* eslint-env node */
-import urlResolve from 'rollup-plugin-url-resolve';
-import terser from '@rollup/plugin-terser';
-import { rollupImport } from '@shgysk8zer0/rollup-import';
+import { getConfig } from '@shgysk8zer0/js-utils/rollup';
+import { rollupImport, rollupImportMeta } from '@shgysk8zer0/rollup-import';
+import { importmap } from '@shgysk8zer0/importmap';
 
-export default {
-	input: 'js/components.js',
-	output: {
-		file: 'js/components.min.js',
-		format: 'iife',
-		sourcemap: true,
-	},
+export default getConfig('./js/components.js', {
 	plugins: [
-		rollupImport(['_data/importmap.yaml']),
-		urlResolve(),
-		terser(),
+		rollupImport(importmap),
+		rollupImportMeta({ baseURL: 'https://dev.kernvalley.us/' }),
 	],
-};
+	format: 'iife',
+	minify: true,
+	sourcemap: true,
+});
