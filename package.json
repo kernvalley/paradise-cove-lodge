@@ -1,6 +1,6 @@
 {
   "name": "paradise-cove-lodge",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "type": "module",
   "description": "Steakhouse & Motel in Lake Isabella California",
@@ -43,7 +43,7 @@
     "preinstall": "npm run git:submodules",
     "postinstall": "npm run build",
     "preversion": "npm test",
-    "create:lock": "npm i --package-lock-only --ignore-scripts",
+    "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",
     "git:fetch": "git fetch --prune --tags",
     "git:submodules": "if [ -f '.gitmodules' ]; then git submodule update --init --recursive; fi",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
@@ -67,12 +67,12 @@
     "netlify:live": "netlify dev --live",
     "netlify:link": "netlify link",
     "version:bump": "npm run version:bump:patch",
-    "version:bump:patch": "npm version --no-git-tag-version patch",
-    "version:bump:minor": "npm version --no-git-tag-version minor",
-    "version:bump:major": "npm version --no-git-tag-version major"
+    "version:bump:patch": "npm version --no-git-tag-version patch && npm run create:lock",
+    "version:bump:minor": "npm version --no-git-tag-version minor && npm run create:lock",
+    "version:bump:major": "npm version --no-git-tag-version major && npm run create:lock"
   },
   "dependencies": {
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-js-app": "^3.2.2"
+    "netlify-js-app": "^3.3.0"
   }
 }

@@ -6,7 +6,7 @@ import { importmap } from '@shgysk8zer0/importmap';
 export default getConfig('./js/index.js', {
 	plugins: [
 		rollupImport(importmap),
-		rollupImportMeta({ baseURL: 'https://dev.kernvalley.us/' }),
+		rollupImportMeta({ baseURL: 'https://www.paradisecovelodge.com/' }),
 	],
 	format: 'iife',
 	minify: true,
