@@ -1,4 +1,4 @@
-export const GA = 'UA-174653512-1';
+export const GA = 'G-8CN4YZTYLP';
 export const trustedScriptOrigins = [
 	location.origin,
 	'https://cdn.kernvalley.us',
