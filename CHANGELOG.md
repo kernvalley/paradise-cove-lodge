@@ -13,6 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.1.2] - 2023-10-26
+
+### Changed
+- Update prices on rooms
+- Update grid layout for empty space on left side (`1fr` instead of `auto`)
+- Update GA code
+- Switch to using `@shgyk8zer0/core-css` from unpkg.com
+
+### Removed
+- Comment-out 2-room vacation rental
+
 ## [v2.1.1] - 2023-07-04
 
 ### Changed

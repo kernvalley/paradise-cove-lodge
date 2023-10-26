@@ -1,6 +1,6 @@
-/* @import url("https://cdn.kernvalley.us/css/core-css/theme/default/index.css"); */
-@import url("https://cdn.kernvalley.us/css/core-css/theme/properties.css");
-@import url("https://cdn.kernvalley.us/css/core-css/theme/default/index.css");
+/* @import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/theme/default/index.css"); */
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/theme/properties.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/theme/default/index.css");
 
 @media (max-width: 800px) {
 	:root {

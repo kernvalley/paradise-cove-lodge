@@ -1,20 +1,26 @@
 @charset "UTF-8";
 @import url("./vars.css");
 @import url("https://cdn.kernvalley.us/css/normalize/normalize.css");
-@import url("https://cdn.kernvalley.us/css/core-css/rem.css");
-@import url("https://cdn.kernvalley.us/css/core-css/viewport.css");
-@import url("https://cdn.kernvalley.us/css/core-css/element.css");
-@import url("https://cdn.kernvalley.us/css/core-css/class-rules.css");
-@import url("https://cdn.kernvalley.us/css/core-css/cdn-fonts.css");
-@import url("https://cdn.kernvalley.us/css/core-css/animations.css");
-@import url("https://cdn.kernvalley.us/css/core-css/scrollbar.css");
-@import url("https://cdn.kernvalley.us/css/core-css/forms.css");
-@import url("https://cdn.kernvalley.us/css/core-css/accordion.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/rem.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/viewport.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/element.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/class-rules.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/cdn-fonts.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/animations.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/scrollbar.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/forms.css");
+@import url("https://unpkg.com/@shgysk8zer0/core-css@2.5.3/accordion.css");
 @import url("./layout.css");
 @import url("./contact.css");
 @import url("./menu.css");
 @import url("./rooms.css");
 @import url("./home.css");
+
+@media (min-width: 801px) {
+	:root:not([data-layout]) > body.grid, :root[data-layout="default"] > body.grid {
+		grid-template-columns: 1fr minmax(var(--main-min-width,320px),var(--main-max-width,1200px)) minmax(var(--sidebar-min-width,300px),var(--sidebar-max-width,400px));
+	}
+}
 
 #sidebar .ad-block:not(:last-of-type) {
 	margin-bottom: 0.4em;

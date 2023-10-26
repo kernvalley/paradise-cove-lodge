@@ -14,19 +14,19 @@
       <li><b>Bathroom</b>: 3&frac12;</li>
       <li><b>Accomodates</b>:Up to 10</li>
     </ol>
-- name: Vacation Rentals Available
-  image:
-    name: View from sunroom
-    url: "/img/raster/rentals/balcony.jpg"
-    width: 320
-    height: 213
-  description: |-
-    <div class="ad-subheading">Two bedroom home at Paradise Cove, Lake Isabella</div>
-    Available for 2 night or longer stays.<br />
-    Call Pam for price and availability at
-    <br />
-     <ol>
-      <li><b>Bedrooms</b>: 2</li>
-      <li><b>Bathroom</b>: 1</li>
-      <li><b>Accomodates</b>: 1 &mdash; 3</li>
-    </ol>
+# - name: Vacation Rentals Available
+#   image:
+#     name: View from sunroom
+#     url: "/img/raster/rentals/balcony.jpg"
+#     width: 320
+#     height: 213
+#   description: |-
+#     <div class="ad-subheading">Two bedroom home at Paradise Cove, Lake Isabella</div>
+#     Available for 2 night or longer stays.<br />
+#     Call Pam for price and availability at
+#     <br />
+#      <ol>
+#       <li><b>Bedrooms</b>: 2</li>
+#       <li><b>Bathroom</b>: 1</li>
+#       <li><b>Accomodates</b>: 1 &mdash; 3</li>
+#     </ol>
