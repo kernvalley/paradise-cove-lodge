@@ -3,13 +3,13 @@
   "@type": Offer
   identifier: 8727d723-ee14-4c9f-af26-e5c91c96f5b2
   name: King Room
-  description: "$95 (plus tax) per night"
+  description: "$120 (plus tax) per night"
   url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 110
+    price: 120
     priceCurrency: USD
-    description: "$110 per night"
+    description: "$120 per night"
   itemOffered:
     "@type": HotelRoom
     name: King Room
@@ -44,13 +44,13 @@
   "@type": Offer
   identifier: 8df1ee12-d903-4492-aa35-38fe82f313ed
   name: Large Room
-  description: "$130 (plus tax) per night"
+  description: "$140 (plus tax) per night"
   url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 130
+    price: 140
     priceCurrency: USD
-    description: "$130 per night"
+    description: "$140 per night"
   itemOffered:
     "@type": HotelRoom
     name: Large Room
