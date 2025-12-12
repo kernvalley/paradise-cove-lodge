@@ -2,7 +2,7 @@ author: Chris Zuber
 title: Paradise Cove Lodge
 url: 'https://www.paradisecovelodge.com'
 markdown: kramdown
-version: 2.1.2
+version: 2.1.3
 timezone: America/Los_Angeles
 lang: en
 dir: ltr
