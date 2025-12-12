@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.1.3] - 2025-12-11
+
+### Changed
+- Update polyfills and nvm and dependencies
+
 ## [v2.1.2] - 2023-10-26
 
 ### Changed
