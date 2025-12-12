@@ -4,12 +4,11 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Permissions-Policy: geolocation=()
-  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.2.0/all.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
-  Link: <https://unpkg.com/@shgysk8zer0/kazoo@0.2.0/harden.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.5.1/browser.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </js/components.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
-  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us unpkg.com www.googletagmanager.com/gtag/js www.google-analytics.com/analytics.js 'nonce-187c44d8-7a5f-46d4-95a1-c2105e594f08'; style-src 'self' cdn.kernvalley.us unpkg.com blob:; img-src *; font-src cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' unpkg.com/@shgysk8zer0/ unpkg.com/@kernvalley/ events.kernvalley.us/events.json ads.kernvalley.us/api/events api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect www.google-analytics.com/g/collect; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; trusted-types default empty#html empty#script purify-raw#html purify#html weather-current#html krv-events#html github-user#html sanitizer-raw#html ga#script-url goog#html; require-trusted-types-for 'script';
+  Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us unpkg.com www.googletagmanager.com/gtag/js www.google-analytics.com/analytics.js 'nonce-187c44d8-7a5f-46d4-95a1-c2105e594f08'; style-src 'self' cdn.kernvalley.us unpkg.com blob:; img-src *; font-src cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' unpkg.com/@shgysk8zer0/ unpkg.com/@kernvalley/ events.kernvalley.us/events.json ads.kernvalley.us/api/events api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect www.google-analytics.com/g/collect; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; trusted-types default aegis-sanitizer#html weather-current#html krv-events#html github-user#html ga#script-url goog#html; require-trusted-types-for 'script';
 
 /:placeholder/
   Referrer-Policy: no-referrer
@@ -17,12 +16,11 @@
   Permissions-Policy: geolocation=()
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
-  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.2.0/all.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
-  Link: <https://unpkg.com/@shgysk8zer0/kazoo@0.2.0/harden.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
+  Link: <https://unpkg.com/@shgysk8zer0/polyfills@0.5.1/all.min.js>; rel=preload; as=script; referrerpolicy=no-referrer; crossorigin=anonymous;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </js/components.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
-  Content-Security-Policy: default-src 'self'; script-src 'self' unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js 'nonce-187c44d8-7a5f-46d4-95a1-c2105e594f08'; style-src 'self' cdn.kernvalley.us unpkg.com blob:; img-src * data:; font-src 'self' cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' *.kernvalley.us ads.kernvalley.us/api/events unpkg.com/@shgysk8zer0/ unpkg.com/@kernvalley/ api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect www.google-analytics.com/g/collect; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; trusted-types default empty#html empty#script purify-raw#html purify#html weather-current#html krv-events#html github-user#html sanitizer-raw#html ga#script-url goog#html; require-trusted-types-for 'script';
+  Content-Security-Policy: default-src 'self'; script-src 'self' unpkg.com www.googletagmanager.com/gtag/js  www.google-analytics.com/analytics.js 'nonce-187c44d8-7a5f-46d4-95a1-c2105e594f08'; style-src 'self' cdn.kernvalley.us unpkg.com blob:; img-src * data:; font-src 'self' cdn.kernvalley.us/fonts/; frame-src maps.kernvalley.us/embed; connect-src 'self' *.kernvalley.us ads.kernvalley.us/api/events unpkg.com/@shgysk8zer0/ unpkg.com/@kernvalley/ api.github.com  api.openweathermap.org/data/ www.google-analytics.com/j/collect www.google-analytics.com/collect www.google-analytics.com/g/collect; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; trusted-types default aegis-sanitizer#html weather-current#html krv-events#html github-user#html ga#script-url goog#html; require-trusted-types-for 'script';
 
 /favicon.ico
   Referrer-Policy: no-referrer
