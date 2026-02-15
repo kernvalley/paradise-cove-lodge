@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.1.4] - 2026-02-15
+
+### Added
+- Add use of Navigation API as a progressive enhancment
+
 ## [v2.1.3] - 2025-12-11
 
 ### Changed
