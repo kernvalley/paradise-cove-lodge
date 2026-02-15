@@ -1,5 +1,4 @@
 trusted:
-  - default
   - empty#html
   - empty#script
   - ga#script-url
@@ -7,3 +6,4 @@ trusted:
   - weather-current#html
   - krv-events#html
   - github-user#html
+  - navigation#html

@@ -52,61 +52,106 @@ if (typeof GA === 'string' && GA.length !== 0) {
 	createPolicy('goog#html', {});
 }
 
-interactive().then(() =>{
-	if (location.pathname.startsWith('/menu')) {
-		const now = new Date();
-		const day = now.getDay();
-		const hour = now.getHours();
+function init() {
+	interactive().then(() =>{
+		if (location.pathname.startsWith('/menu')) {
+			const now = new Date();
+			const day = now.getDay();
+			const hour = now.getHours();
 
-		/**
-		* Sun, Wed, Thu, Fri, Sat
-		* hours > 15 => starts @ 4:00 PM
-		* hours < 20 => ends @ 8 PM
-		*/
-		if ([0, 3, 4, 5, 6].includes(day) && (hour > 15 && hour < 20)) {
-			attr('#order-call-btn', { hidden: false });
-		}
+			/**
+			* Sun, Wed, Thu, Fri, Sat
+			* hours > 15 => starts @ 4:00 PM
+			* hours < 20 => ends @ 8 PM
+			*/
+			if ([0, 3, 4, 5, 6].includes(day) && (hour > 15 && hour < 20)) {
+				attr('#order-call-btn', { hidden: false });
+			}
 
-		if (('IntersectionObserver' in window) && ! prefersReducedMotion()) {
-			const items = addClass('.food-menuitem', 'hidden');
+			if (('IntersectionObserver' in window) && ! prefersReducedMotion()) {
+				const items = addClass('.food-menuitem', 'hidden');
 
-			intersect(items, ({ isIntersecting, target }) => {
-				if (isIntersecting) {
-					target.animate([{
-						transform: 'rotateX(-30deg) scale(0.85)',
-						opacity: 0.3,
-					}, {
-						transform: 'none',
-						opacity: 1,
-					}], {
-						duration: 300,
-						easing: 'ease-in-out',
-					});
-				}
+				intersect(items, ({ isIntersecting, target }) => {
+					if (isIntersecting) {
+						target.animate([{
+							transform: 'rotateX(-30deg) scale(0.85)',
+							opacity: 0.3,
+						}, {
+							transform: 'none',
+							opacity: 1,
+						}], {
+							duration: 300,
+							easing: 'ease-in-out',
+						});
+					}
 
-				target.classList.toggle('hidden', ! isIntersecting );
-			});
-		}
-
-		setMenuItemMeta();
-
-		globalThis.addEventListener('hashchange', () => setMenuItemMeta(), { passive: true });
-	} else if (location.pathname.startsWith('/contact')) {
-		on('#contact-form', 'submit', ({ target }) => {
-			attr('button', { disabled: true }, { base: target });
-			attr('input', { readonly: true }, { base: target });
-
-			if (hasGa()) {
-				send({
-					hitType: 'event',
-					eventCategory: 'contact',
-					eventAction: 'contact',
-					eventLabel: 'contact',
-					transport: 'beacon',
+					target.classList.toggle('hidden', ! isIntersecting );
 				});
 			}
-		}, {
-			passive: true,
-		});
-	}
-});
+
+			setMenuItemMeta();
+
+			globalThis.addEventListener('hashchange', setMenuItemMeta, { passive: true });
+		} else if (location.pathname.startsWith('/contact')) {
+			on('#contact-form', 'submit', ({ target }) => {
+				attr('button', { disabled: true }, { base: target });
+				attr('input', { readonly: true }, { base: target });
+
+				if (hasGa()) {
+					send({
+						hitType: 'event',
+						eventCategory: 'contact',
+						eventAction: 'contact',
+						eventLabel: 'contact',
+						transport: 'beacon',
+					});
+				}
+			}, {
+				passive: true,
+			});
+		}
+	});
+}
+
+init();
+
+if ('navigation' in globalThis) {
+	// Pretty sure all browsers supporting Navigation also support TrustedTypes
+	const policy = trustedTypes.createPolicy('navigation#html', {
+		createHTML(input) {
+			return input;
+		}
+	});
+
+	globalThis.navigation.addEventListener('navigate', event => {
+		if (event.canIntercept) {
+			event.intercept({
+				async handler() {
+					const resp = await fetch(event.destination.url, { signal: event.signal });
+
+					if (resp.ok) {
+						const html = await resp.text();
+						const doc = Document.parseHTMLUnsafe(policy.createHTML(html));
+						const replace = 'meta:not([charset]), link:not([rel="stylesheet"])';
+
+						// Update `<head>`, keeping fixed things like scripts and stylesheets
+						document.head.querySelectorAll(replace).forEach(el => el.remove());
+						document.head.append(...doc.head.querySelectorAll(replace));
+						document.title = doc.title;
+						document.body.replaceChildren(...doc.body.childNodes);
+						init();
+						requestAnimationFrame(() => document.getElementById('main').scrollIntoView({ behavior: 'smooth' }));
+					} else {
+						throw new DOMException(`<${resp.url} [${resp.status}]>`, 'NetworkError');
+					}
+				}
+			});
+		}
+	});
+} else if ('trustedTypes' in globalThis) {
+	trustedTypes.createPolicy('navigation#html', {
+		input() {
+			return trustedTypes.emptyHTML;
+		}
+	});
+}
