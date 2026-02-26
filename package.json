@@ -77,6 +77,6 @@
   },
   "devDependencies": {
     "@shgysk8zer0/eslint-config": "^1.0.5",
-    "eslint-plugin-frontmatter2": "^1.0.0"
+    "eslint-plugin-frontmatter2": "^1.0.1"
   }
 }
