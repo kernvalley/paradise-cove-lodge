@@ -2,7 +2,6 @@
 layout: null
 ---
 'use strict';
-/* eslint-env serviceworker */
 /* eslint no-unused-vars: 0 */
 const config = {
 	version: '{{ site.version }}',
