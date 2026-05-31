@@ -7,9 +7,9 @@
   url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 120
+    price: 125
     priceCurrency: USD
-    description: "$120 per night"
+    description: "$125 per night"
   itemOffered:
     "@type": HotelRoom
     name: King Room
@@ -48,9 +48,9 @@
   url: https://secure.webrez.com/hotel/2062
   priceSpecification:
     "@type": 'PriceSpecification '
-    price: 140
+    price: 150
     priceCurrency: USD
-    description: "$140 per night"
+    description: "$150 per night"
   itemOffered:
     "@type": HotelRoom
     name: Large Room

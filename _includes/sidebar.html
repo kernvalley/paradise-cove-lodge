@@ -2,7 +2,7 @@
 	{% if site.data.api.OpenWeatherMap %}
 		{% include common/weather.html appId=site.data.api.OpenWeatherMap postalCode=site.data.business.address.postalCode theme="auto" %}
 	{% endif %}
-	{% for item in site.data.sidebar %}
+	{% comment %}{% for item in site.data.sidebar %}
 		<div class="ad-block card shadow content-visibility-auto" itemtype="https://schema.org/WPAdBlock" itemscope="">
 			<div class="center ad-image-container" itemprop="image" itemtype="https://schema.org/ImageObject" itemscope="">
 				<img class="ad-image" src="{{ item.image.url }}" height="{{ item.image.height }}" width="{{ item.image.width }}" alt="{{ item.image.name }}" decoding="async" loading="lazy" itemprop="url" />
@@ -10,7 +10,7 @@
 			<div class="center ad-label" itemprop="name">{{ item.name }}</div>
 			<div class="ad-description" itemprop="description">{{ item.description }}</div>
 		</div>
-	{% endfor %}
+	{% endfor %}{% endcomment %}
 	<krv-events class="card shadow content-visibility-auto" source="paradise-cove-lodge" content="sidebar" target="_blank"></krv-events>
 	{% if page.ads.sidebar %}{% for ad in page.ads.sidebar %}
 		{% include common/krv-ad.html ad=ad content="sidebar" %}
