@@ -132,15 +132,15 @@
       url: "/img/raster/menu/salmon.jpg"
     offers:
     - price: 23.95
-  - name: Crab
-    identifier: 4f970a65-1ad3-4ecb-bc20-510373deb97e
-    description: 1lb Alaskan King
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/crab.jpg"
-    offers:
-    - price: 48.95
+  # - name: Crab
+  #   identifier: 4f970a65-1ad3-4ecb-bc20-510373deb97e
+  #   description: 1lb Alaskan King
+  #   image:
+  #   - width: 320
+  #     height: 200
+  #     url: "/img/raster/menu/crab.jpg"
+  #   offers:
+  #   - price: 48.95
   - name: Lobster
     identifier: 63d2f68a-c43e-440f-9c57-53007bd99d20
     description: Some of the best in the world prepared with special house recipe.
@@ -200,15 +200,15 @@
       - maxPrice: 61.95
         minPrice: 56.95
         description: Varies with market.
-  - name: Crab &amp; Steak
-    identifier: b7fa9c2c-061c-47df-a7b6-36d3c73c28b8
-    description: "&frac34; lb King Crab &amp; 8oz Top Sirloin"
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/crab-and-steak.jpg"
-    offers:
-    - price: 48.95
+  # - name: Crab &amp; Steak
+  #   identifier: b7fa9c2c-061c-47df-a7b6-36d3c73c28b8
+  #   description: "&frac34; lb King Crab &amp; 8oz Top Sirloin"
+  #   image:
+  #   - width: 320
+  #     height: 200
+  #     url: "/img/raster/menu/crab-and-steak.jpg"
+  #   offers:
+  #   - price: 48.95
 - name: The Ranch &amp; Garden
   identifier: ae03d617-083c-499c-a9c2-dc318d29ae6d
   description: All dinners served with House Salad, Cheese Bread, &amp; Choice of

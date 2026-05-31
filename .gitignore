@@ -75,3 +75,4 @@ typings/
 .netlify
 .buildconfig
 img/icons.svg
+deno.lock
