@@ -6,3 +6,15 @@ servesCuisine:
 - Steak
 priceRange: $$$
 acceptsReservations: Yes
+openingHoursSpecification:
+- '@type': OpeningHoursSpecification
+  name: Dining Room Hours
+  description: Wednesday through Sunday, 4:30 PM to 6:30 PM
+  dayOfWeek:
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+  opens: '16:30'
+  closes: '18:30'

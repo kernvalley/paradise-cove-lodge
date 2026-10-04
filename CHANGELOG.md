@@ -13,6 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2026-10-04
+
+### Added
+- Dining hours metadata and FAQ copy.
+- `.npmrc` and `stylelint` configuration files for the current toolchain.
+
+### Changed
+- Updated restaurant content and menu pricing.
+- Refreshed the import map and frontend package dependencies.
+- Bumped the Node.js version.
+
+### Security
+- Hardened GitHub Actions by pinning action SHAs and restricting permissions to read-only defaults.
+- Implemented Step Security runner hardening.
+- Added dependency review and OSSF scorecard jobs to improve repository security posture.
+
 ## [v2.1.4] - 2026-02-15
 
 ### Added

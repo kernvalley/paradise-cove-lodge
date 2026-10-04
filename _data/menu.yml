@@ -7,7 +7,6 @@
     identifier: 1ccd70e9-4b96-425b-82b3-72d0de9eae9c
     description: A slow-roasted House Speciality. <br /><b>Served Fri., Sat., and
       Sun.</b> (<i>other nights with advance order of 8 or more servings</i>).<br />
-      <b>Add a side of Sauteed Mushrooms or Onions $4.95</b>
     image:
     - width: 320
       height: 200
@@ -15,10 +14,10 @@
     offers:
     - name: Petite Cut
       description: 10-12 oz
-      price: 31.95
+      price: 36.95
     - name: Full Cut
       description: 14-16 oz
-      price: 34.95
+      price: 41.95
   - name: Rib Eye
     identifier: e78d719e-f38c-4fd5-996e-efc79a34f1c4
     description: 14-16 oz. Pretty darn good
@@ -27,7 +26,7 @@
       height: 200
       url: "/img/raster/menu/ribeye.jpg"
     offers:
-    - price: 42.95
+    - price: 41.95
   - name: New York
     identifier: 6ce3c8c0-83cc-4420-8839-368f0f7737e4
     description: 14-16 oz Just a <em>great</em> steak.
@@ -36,7 +35,7 @@
       height: 200
       url: "/img/raster/menu/new-york.jpg"
     offers:
-    - price: 28.95
+    - price: 33.95
   - name: Filet Mignon
     identifier: a667a3fd-4601-4ee9-95e9-9e7d9a492b26
     description: The most tender cut. 8-10 oz.
@@ -45,7 +44,7 @@
       height: 200
       url: "/img/raster/menu/filet-mignon.jpg"
     offers:
-    - price: 37.95
+    - price: 42.95
   - name: Paul Bunyan
     identifier: 8776f25e-7174-4b08-8cda-ad3626db119b
     description: 28-32 oz. Top Sirloin&hellip; That's big!
@@ -54,7 +53,7 @@
       height: 200
       url: "/img/raster/menu/paul-bunyan.jpg"
     offers:
-    - price: 35.95
+    - price: 41.95
   - name: Top Sirloin
     identifier: 45547d91-d4b2-4708-9fbc-6727a8b432af
     description: 14-16 oz. Half the size of the Paul Bunyan
@@ -63,7 +62,7 @@
       height: 200
       url: "/img/raster/menu/top.jpg"
     offers:
-    - price: 28.95
+    - price: 31.95
   - name: Dinner Steak
     identifier: 9733e7d5-cd5a-4f84-b762-69a8a522fbff
     description: 8-10 oz. Top Sirloin
@@ -72,7 +71,7 @@
       height: 200
       url: "/img/raster/menu/dinner-steak.jpg"
     offers:
-    - price: 20.95
+    - price: 25.95
   - name: Ground Sirloin
     identifier: d3c347c1-618b-4db9-9212-d8402ebbbb8e
     description: Choice beef ground in-house served with or without grilled onions.
@@ -81,7 +80,7 @@
       height: 200
       url: "/img/raster/menu/ground-sirloin.jpg"
     offers:
-    - price: 17.95
+    - price: 21.95
 - name: Seafood
   identifier: 73ce7553-72bd-473b-8989-502060aee28b
   description: All dinners served with House Salad, Cheese Bread, &amp; Choice of
@@ -95,7 +94,7 @@
       height: 200
       url: "/img/raster/menu/shrimp.jpg"
     offers:
-    - price: 21.95
+    - price: 27.95
   - name: Scampi
     identifier: 13e14ed8-40a2-456a-8683-37ac408d9211
     description: Shrimp sautéed in garlic butter
@@ -104,7 +103,7 @@
       height: 200
       url: "/img/raster/menu/scampi.jpg"
     offers:
-    - price: 22.95
+    - price: 29.95
   - name: Scallops
     identifier: 895ab9a3-292e-4223-b54f-42bb3db973e3
     description: Pan seared
@@ -113,7 +112,7 @@
       height: 200
       url: "/img/raster/menu/scallop.jpg"
     offers:
-    - price: 25.95
+    - price: 35.95
   - name: Halibut
     identifier: c7ed9f57-761e-497b-b224-ca6021dbcd13
     description: Charbroiled with a hint of seasoned butter
@@ -122,7 +121,7 @@
       height: 200
       url: "/img/raster/menu/halibut.jpg"
     offers:
-    - price: 28.95
+    - price: 40.95
   - name: Salmon
     identifier: 1dae92e8-4874-4e50-997b-d07ccacabf39
     description: Charbroiled with Mango white wine reduction
@@ -131,7 +130,7 @@
       height: 200
       url: "/img/raster/menu/salmon.jpg"
     offers:
-    - price: 23.95
+    - price: 28.95
   # - name: Crab
   #   identifier: 4f970a65-1ad3-4ecb-bc20-510373deb97e
   #   description: 1lb Alaskan King
@@ -141,7 +140,7 @@
   #     url: "/img/raster/menu/crab.jpg"
   #   offers:
   #   - price: 48.95
-  - name: Lobster
+  - name: Lobster Tail
     identifier: 63d2f68a-c43e-440f-9c57-53007bd99d20
     description: Some of the best in the world prepared with special house recipe.
     image:
@@ -149,11 +148,12 @@
       height: 200
       url: "/img/raster/menu/lob.jpg"
     offers:
-    - priceSpecification:
-      - maxPrice: 58.95
-        minPrice: 48.95
-        description: Varies with market.
-  - name: Trout
+    - price: 61.95
+    # - priceSpecification:
+    #   - maxPrice: 58.95
+    #     minPrice: 48.95
+    #     description: Varies with market.
+  - name: Rainbow Trout
     identifier: 4b32a697-c622-4173-832e-44c740135144
     description: Boneless Broiled Idaho
     image:
@@ -162,7 +162,7 @@
       url: "/img/raster/menu/trout.jpg"
     offers:
     - name: One Filet
-      price: 19.95
+      price: 25.95
     # - name: Two Filets
     #   price: 23.95
   - name: Catfish
@@ -173,7 +173,7 @@
       height: 200
       url: "/img/raster/menu/catfish.jpg"
     offers:
-    - price: 19.95
+    - price: 23.95
 - name: Combinations
   identifier: 1e5b57ef-2f92-430e-8054-5150abd8a960
   description: Create your own combination with any of our Steaks, Prime Rib or Seafood.
@@ -187,7 +187,7 @@
       height: 200
       url: "/img/raster/menu/steak-and-shrimp.jpg"
     offers:
-    - price: 27.95
+    - price: 32.95
   - name: Surf &amp; Turf
     identifier: b23c29ee-3d49-43b9-87ce-74f03aec70dc
     description: Premium Cold Water Lobster Tail &amp; 8oz Top Sirloin
@@ -196,10 +196,11 @@
       height: 200
       url: "/img/raster/menu/surf-and-turf.jpg"
     offers:
-    - priceSpecification:
-      - maxPrice: 61.95
-        minPrice: 56.95
-        description: Varies with market.
+    - price: 72.95
+    # - priceSpecification:
+    #   - maxPrice: 61.95
+    #     minPrice: 56.95
+    #     description: Varies with market.
   # - name: Crab &amp; Steak
   #   identifier: b7fa9c2c-061c-47df-a7b6-36d3c73c28b8
   #   description: "&frac34; lb King Crab &amp; 8oz Top Sirloin"
@@ -222,7 +223,7 @@
       height: 200
       url: "/img/raster/menu/teryiakichicken.jpg"
     offers:
-    - price: 18.95
+    - price: 23.95
   - name: Artichoke Chicken
     identifier: 480e5138-5c54-4108-bffb-952d298001b8
     description: Charbroiled chicken served with our housemade artichoke sauce
@@ -231,8 +232,8 @@
       height: 200
       url: "/img/raster/menu/artichoke-chicken.jpg"
     offers:
-    - price: 19.95
-  - name: Portabello Ravioli
+    - price: 25.95
+  - name: Mushroom Ravioli
     identifier: d843fda8-34da-445f-984c-47d0330ed3ff
     description: Mushroom stuffed with light alfredo sauce
     image:
@@ -240,55 +241,55 @@
       height: 200
       url: "/img/raster/menu/ravoli.jpg"
     offers:
-    - price: 18.95
+    - price: 24.95
     suitableForDiet:
     - VegetarianDiet
-- name: Children's Plates
-  identifier: b865e3ff-cef9-46e7-a50a-ff7b9bd78b1a
-  description: For under 12 only<br />All children's meals served with house salad,
-    cheese, bread, steak fries and dessert
-  hasMenuItem:
-  - name: Ground Sirloin
-    identifier: 662943cc-8494-47c9-8744-828629232df3
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/children/ground.jpg"
-    offers:
-    - price: 6.95
-  - name: Shrimp
-    identifier: a9045963-7c32-4570-a9d4-1a5e8215db42
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/children/shrimp.jpg"
-    offers:
-    - price: 9.95
-  - name: Steak
-    identifier: 4ce02bb9-a96a-451b-8859-15c908dc303b
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/children/steak.jpg"
-    offers:
-    - price: 9.95
-  - name: Teriyaki Chicken
-    identifier: 8e5a7d2b-b24e-49ad-a308-d899cf5da666
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/children/teriyaki-chicken.jpg"
-    offers:
-    - price: 8.95
-  - name: Prime Rib
-    identifier: 13f4de8a-456c-48cb-b064-2f4001fdc775
-    image:
-    - width: 320
-      height: 200
-      url: "/img/raster/menu/children/prime-rib.jpg"
-    description: "(<i>Fri., Sat. &amp; Sun.</i>)"
-    offers:
-    - price: 14.95
+# - name: Children's Plates
+#   identifier: b865e3ff-cef9-46e7-a50a-ff7b9bd78b1a
+#   description: For under 12 only<br />All children's meals served with house salad,
+#     cheese, bread, steak fries and dessert
+#   hasMenuItem:
+#   - name: Ground Sirloin
+#     identifier: 662943cc-8494-47c9-8744-828629232df3
+#     image:
+#     - width: 320
+#       height: 200
+#       url: "/img/raster/menu/children/ground.jpg"
+#     offers:
+#     - price: 6.95
+#   - name: Shrimp
+#     identifier: a9045963-7c32-4570-a9d4-1a5e8215db42
+#     image:
+#     - width: 320
+#       height: 200
+#       url: "/img/raster/menu/children/shrimp.jpg"
+#     offers:
+#     - price: 9.95
+#   - name: Steak
+#     identifier: 4ce02bb9-a96a-451b-8859-15c908dc303b
+#     image:
+#     - width: 320
+#       height: 200
+#       url: "/img/raster/menu/children/steak.jpg"
+#     offers:
+#     - price: 9.95
+#   - name: Teriyaki Chicken
+#     identifier: 8e5a7d2b-b24e-49ad-a308-d899cf5da666
+#     image:
+#     - width: 320
+#       height: 200
+#       url: "/img/raster/menu/children/teriyaki-chicken.jpg"
+#     offers:
+#     - price: 8.95
+#   - name: Prime Rib
+#     identifier: 13f4de8a-456c-48cb-b064-2f4001fdc775
+#     image:
+#     - width: 320
+#       height: 200
+#       url: "/img/raster/menu/children/prime-rib.jpg"
+#     description: "(<i>Fri., Sat. &amp; Sun.</i>)"
+#     offers:
+#     - price: 14.95
 - name: Wine &amp; Beer
   identifier: cb36b644-6f3b-4b71-b193-2b689ee3523f
   description: "Excellent house wines, good selection of bottled wines; Beers: domestic,

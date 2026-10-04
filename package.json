@@ -1,6 +1,6 @@
 {
   "name": "paradise-cove-lodge",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "private": true,
   "type": "module",
   "description": "Steakhouse & Motel in Lake Isabella California",
@@ -52,6 +52,7 @@
     "lint:html": "if [ -f .htmlhintrc ]; then htmlhint ${npm_package_config_dir_html}; fi",
     "fix:css": "stylelint './**.css' --fix",
     "fix:js": "eslint . --fix",
+    "update:importmap": "npx --package @shgysk8zer0/importmap importmap-utils -i _data/importmap.json -o _data/importmap.json",
     "build": "npm run build:icons && npm run build:css && npm run build:js && npm run build:components",
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
@@ -78,5 +79,14 @@
   "devDependencies": {
     "@shgysk8zer0/eslint-config": "^1.0.9",
     "eslint-plugin-frontmatter2": "^1.0.1"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.6": true,
+    "fsevents@2.3.3": true,
+    "sharp@0.34.5": true,
+    "unix-dgram@2.0.7": true,
+    "esbuild@0.28.1": true,
+    "netlify-cli@26.2.0": true,
+    "esbuild@0.28.0": true
   }
 }
