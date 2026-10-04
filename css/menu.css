@@ -1,3 +1,43 @@
+#restaurant-hours {
+	margin: 1rem 0;
+	padding: 0.5rem 0 0.5rem 1rem;
+	border-left: 3px double currentColor;
+	opacity: 0.9;
+
+	.hours-listing {
+		margin-bottom: 0.75rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.hours-label {
+		margin: 0 0 0.25rem 0;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		&::after {
+			content: "";
+			height: 1px;
+			flex-grow: 1;
+			background-color: currentColor;
+			opacity: 0.2;
+		}
+	}
+
+	.hours-text {
+		margin: 0;
+		font-size: 1.15rem;
+		line-height: 1.4;
+	}
+}
+
 #menu-accessible-nav:focus-within {
 	width: 100%;
 	gap: 8px;

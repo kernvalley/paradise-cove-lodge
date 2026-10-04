@@ -6,6 +6,9 @@
 ###########################
 name: Lint Code Base
 
+permissions:
+  contents: read
+
 #
 # Documentation:
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
@@ -34,10 +37,6 @@ on:
 ###############
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      # matrix:
-      #   language:
     # Name the Job
     name: Lint Code Base
     # Set the agent to run on
@@ -57,8 +56,17 @@ jobs:
       ##########################
       # Checkout the code base #
       ##########################
+      - name: Harden the runner (Block disallowed outbound calls)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            44.226.107.201:443
+
       - name: Checkout Code
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           # super-linter needs the full git history to get the
           # list of files that changed across commits
@@ -68,7 +76,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: super-linter/super-linter@v8.7.0
+        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918 # v8.7.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # DEFAULT_BRANCH: master
@@ -85,7 +93,7 @@ jobs:
           # JAVASCRIPT_ES_CONFIG_FILE: 'eslint.config.js'
           # CSS_FILE_NAME: '.stylelintrc.json'
 
-          # Valate Languages - Un`omment to Enable
+          # Valate Languages - Uncomment to Enable
           # JS/TS/JSON Disabled until ESLint in super-linter is updated
           # VALIDATE_HTML: true
           # VALIDATE_CSS: true

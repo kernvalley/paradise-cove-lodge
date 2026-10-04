@@ -1,5 +1,7 @@
 ---
 name: Node CI
+permissions:
+  contents: read
 on:
   push:
     branches:
@@ -10,33 +12,33 @@ on:
       - master
       - release/*
 jobs:
-  npm-test:
-    name: NPM Install and Test
+  build:
+    permissions:
+      contents: read
+    name: Node CI
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          lfs: true
-          submodules: true
-      - name: Setup Node
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: '.nvmrc'
-          cache: npm
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-      - name: Restore cache
-        uses: actions/cache@v6
-        # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
-        id: npm-cache
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
-      - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund
-      - name: Run npm test
-        run: npm test --if-present
+    - name: Harden the runner (Block disallowed outbound calls)
+      uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+      with:
+        egress-policy: audit
+        allowed-endpoints: >
+          api.github.com:443
+          github.com:443
+          uploads.github.com:443
+          unpkg.com:443
+          fonts.googleapis.com:443
+          registry.npmjs.org:443
+          release-assets.githubusercontent.com:443
+          168.63.129.16:80
+
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        submodules: true
+    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      with:
+        node-version-file: '.nvmrc'
+        cache: npm
+    - run: npm ci --no-audit --no-fund --strict-allow-scripts
+    - run: npm run build --if-present
+    - run: npm test

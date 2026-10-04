@@ -58,6 +58,19 @@ tags:
 	<meta itemprop="servesCuisine" content="{{ site.data.restaurant.servesCuisine | join: ', ' }}" />
 	<meta itemprop="acceptsReservations" content="{{ site.data.restaurant.acceptsReservations | default: 'No' }}" />
 	<div hidden="">{% include common/address.html address=site.data.business.address %}</div>
+	<section id="restaurant-hours">
+		{% for hours in site.data.restaurant.openingHoursSpecification %}
+			<div class="hours-listing" itemprop="openingHoursSpecification" itemtype="https://schema.org/OpeningHoursSpecification" itemscope="">
+				<h3 class="hours-label" itemprop="name">{{ hours.name }}</h3>
+				<p class="hours-text" itemprop="description">{{ hours.description }}</p>
+				{% for day in hours.dayOfWeek %}
+					<link itemprop="dayOfWeek" href="https://schema.org/{{ day }}">
+				{% endfor %}
+				<meta itemprop="opens" content="{{ hours.opens }}" />
+				<meta itemprop="closes" content="{{ hours.closes }}" />
+			</div>
+		{% endfor %}
+	</section>
 	<div class="status-box info pricing-notice">Prices subject to change.</div>
 	<div itemprop="hasMenu" itemtype="https://schema.org/Menu" itemscope="">
 		{% for menusection in site.data.menu %}
