@@ -27,7 +27,7 @@
       height: 200
       url: "/img/raster/menu/ribeye.jpg"
     offers:
-    - price: 33.95
+    - price: 42.95
   - name: New York
     identifier: 6ce3c8c0-83cc-4420-8839-368f0f7737e4
     description: 14-16 oz Just a <em>great</em> steak.
